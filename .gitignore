@@ -68,7 +68,5 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
-# Fonts
-src/assets/webfonts
 # Local Netlify folder
 .netlify
