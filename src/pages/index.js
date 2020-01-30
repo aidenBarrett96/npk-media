@@ -6,7 +6,7 @@ import Button from '../components/button/button'
 import NumberedCard from '../components/numberedCard/numberedCard'
 import ProjectCard from '../components/projectCard/projectCard'
 import projectImg from '../images/project_image_placeholder.png'
-
+import TeamCard from '../components/teamCard/teamCard'
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -60,6 +60,14 @@ const IndexPage = () => (
         client="Mills"
         image={projectImg}
       />
+    </section>
+
+    <hr />
+
+    {/* Team cards */}
+    <section style={{ padding: '50px' }}>
+      <h1>Team Cards</h1>
+      <TeamCard name="Aiden Barrett" image={projectImg} role="Software Engineer" />
     </section>
   </Layout>
 )
