@@ -1,15 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './nav.css'
-import { Link } from 'gatsby'
+import { Link } from "gatsby"
 
 // Nav component
 const Nav = ({ open }) => {
+
+    // Change styles depending on props
     const styles = {
         transform: `translateY(-${open ? 0 : 40}px)`,
         opacity: open ? 1 : 0,
         visibility: open ? 'visible' : 'hidden'
     }
+
     return (
+        // Links inside an unordered list
         <ul className="nav" style={styles}>
             <li className="nav-link">
                 <Link to="/" activeClassName="nav-link-active">Home<span /></Link>

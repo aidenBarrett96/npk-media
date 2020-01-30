@@ -1,0 +1,133 @@
+.card-project {
+  width: 238px;
+  height: 321px;
+  background: #fff;
+  border: 3px solid #000;
+  filter: drop-shadow(0px 3px 20px rgba(0, 0, 0, 0.16));
+}
+
+.card-project .image-container {
+  height: 130px;
+}
+
+.card-project-body {
+  padding: 16px 35px;
+  box-sizing: border-box;
+}
+
+.card-project .card-project-body h4 {
+  font-weight: normal;
+  font-size: 17px;
+  color: #de4a3f;
+  margin: 0;
+}
+
+.card-project .card-project-body h2 {
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: left;
+  color: #46444c;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.card-project .card-project-body p {
+  display: none;
+}
+
+.card-project .card-project-body a {
+  font-weight: 900;
+  font-size: 12px;
+  color: #de4a3f;
+  margin: 0;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.card-project .card-project-body a span {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  max-width: 27px;
+  width: 100%;
+  height: 0;
+  border: 1.5px solid #de4a3f;
+  border-radius: 40px;
+  transition: all 0.2s ease-out;
+}
+
+.card-project .card-project-body a:hover span {
+  max-width: 45px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .card-project {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 100%;
+    background: transparent;
+    border: none;
+    height: 440px;
+    padding: 0;
+  }
+
+  .card-project .card-project-body,
+  .card-project .image-container {
+    box-sizing: border-box;
+    height: 100%;
+    background: #fff;
+    border: 3px solid #000;
+    filter: drop-shadow(0px 3px 20px rgba(0, 0, 0, 0.16));
+  }
+
+  .card-project .card-project-body {
+    width: 325px;
+    background: #fff;
+    border: 3px solid #000;
+    margin-right: 25px;
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-project .image-container {
+    max-width: 660px;
+  }
+
+  .card-project .card-project-body h2 {
+    margin-bottom: 20px;
+  }
+
+  .card-project .card-project-body h4 {
+    font-size: 25px;
+    line-height: 31.25px;
+  }
+
+  .card-project .card-project-body p {
+    display: block;
+    font-size: 22px;
+    line-height: 27.5px;
+    margin: 0;
+  }
+
+  .card-project .card-project-body a {
+    font-size: 18px;
+  }
+
+  .card-project .card-project-body a span {
+    max-width: 37px;
+  }
+
+  .card-project .card-project-body a:hover span {
+    max-width: 55px;
+  }
+  .card-project .image-container img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+  }
+}

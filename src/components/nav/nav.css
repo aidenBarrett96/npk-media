@@ -39,6 +39,7 @@
   width: 100%;
   max-width: 0%;
   background-color: #46444c;
+  border-radius: 40px;
   transition: all 0.2s ease-out;
 }
 

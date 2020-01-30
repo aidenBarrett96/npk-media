@@ -15,7 +15,9 @@ const Header = ({ siteTitle }) => {
     <header>
       {/* Home link and logo */}
       <Link to="/" className="logo">
+        {/* Logo image */}
         <img alt="NPK Media Logo" src={logo} />
+        {/* Site title */}
         <span className="logo-title">
           {siteTitle}
         </span>
@@ -30,10 +32,12 @@ const Header = ({ siteTitle }) => {
   )
 }
 
+// Acceptable prop types
 Header.propTypes = {
   siteTitle: PropTypes.string,
 }
 
+// Default props
 Header.defaultProps = {
   siteTitle: ``,
 }
