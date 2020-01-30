@@ -1,0 +1,10 @@
+.button {
+  font-family: "Brandon Grotesque";
+  background: transparent;
+  line-height: 55px;
+  width: 230px;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+}

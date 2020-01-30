@@ -1,0 +1,29 @@
+/* Dont show menu button on large screen */
+.menu-button {
+  display: block;
+  font-weight: 900;
+  font-size: 20px;
+  color: #46444c;
+  border: none;
+  background: none;
+  height: auto;
+  position: relative;
+  outline: none;
+  font-family: "Brandon Grotesque";
+  font-size: 20px;
+  color: #46444c;
+  font-weight: 900;
+}
+
+.menu-button span {
+  display: block;
+  height: 3px;
+  margin: 0 15%;
+  background-color: black;
+}
+
+@media only screen and (min-width: 1024px) {
+  .menu-button {
+    display: none;
+  }
+}
