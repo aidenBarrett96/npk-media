@@ -90,6 +90,6 @@
   }
 
   .nav-link:last-child a span {
-    background: rgb(222, 74, 63);
+    background: rgb(222, 74, 63) !important;
   }
 }

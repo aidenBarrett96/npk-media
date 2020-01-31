@@ -1,0 +1,7 @@
+.skyline-section {
+    position: relative;
+}
+
+.skyline-section .image-container {
+    position: absolute;
+}

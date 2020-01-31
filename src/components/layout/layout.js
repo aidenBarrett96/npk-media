@@ -8,11 +8,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import TimeBG from '../timeBg/timeBg'
 import Header from "../header/header"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, timeBG }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,9 +25,11 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={data.site.siteMetadata.title} whiteNav={timeBG} />
       <div>
-        <main>{children}</main>
+        <main>
+          {timeBG ? <TimeBG>{children}</TimeBG> : children}
+          </main>
         <footer>
         </footer>
       </div>

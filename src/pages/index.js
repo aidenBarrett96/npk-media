@@ -7,15 +7,18 @@ import NumberedCard from '../components/numberedCard/numberedCard'
 import ProjectCard from '../components/projectCard/projectCard'
 import projectImg from '../images/project_image_placeholder.png'
 import TeamCard from '../components/teamCard/teamCard'
-const IndexPage = () => (
-  <Layout>
+import TimeBG from '../components/timeBg/timeBg'
+import SkylineBG from '../components/skylineBg/skylineBg'
+
+const IndexPage = () => {
+
+  return (
+  <Layout timeBG={true}>
     <SEO title="Home" />
-    <h1>Hello World</h1>
 
     {/* Buttons */}
     <section style={{
       padding: '20px',
-      margin: '20px 0'
     }}>
       <h1>Buttons</h1>
       <div style={{ padding: '50px', background: 'black', width: 'auto' }}>
@@ -69,7 +72,12 @@ const IndexPage = () => (
       <h1>Team Cards</h1>
       <TeamCard name="Aiden Barrett" image={projectImg} role="Software Engineer" />
     </section>
+
+      {/* Skyline background */}
+      <SkylineBG>
+        <h1>Hello World</h1>
+        </SkylineBG>
   </Layout>
-)
+)}
 
 export default IndexPage
