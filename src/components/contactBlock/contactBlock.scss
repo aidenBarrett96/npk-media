@@ -1,0 +1,98 @@
+// Contact block styling
+.contact-block {
+  height: 640px;
+  background: white;
+  position: relative;
+
+  //   Icons positioning
+  .icons-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      position: absolute;
+    }
+
+    // individual positions
+    img:nth-child(1) {
+      top: 12%;
+      right: 55%;
+    }
+
+    img:nth-child(2) {
+      bottom: 24%;
+      right: 10%;
+    }
+
+    img:nth-child(3) {
+      bottom: 5%;
+      left: 10%;
+    }
+  }
+
+  //   body text styling
+  .contact-block-body {
+    height: 100%;
+    //   Center items with flex display
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      font-weight: 300;
+      font-size: 30px;
+      color: #46444c;
+      margin-bottom: 10px;
+    }
+
+    p {
+      width: 310px;
+      font-weight: 300;
+      font-size: 16px;
+      color: #46444c;
+      margin-bottom: 30px;
+    }
+  }
+
+  //   desktop styling for component
+  @media only screen and (min-width: 1024px) {
+    height: 850px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // Icon positions and sizes
+    .icons-section {
+      position: relative;
+      height: 450px;
+      width: 45%;
+
+      img {
+        width: 160px;
+      }
+    }
+
+    // text positioning and sizes
+    .contact-block-body {
+      flex: 1;
+      padding-left: 20%;
+      align-items: flex-start;
+
+      h2 {
+        font-size: 56px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        width: 420px;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 31.25px;
+      }
+    }
+  }
+}

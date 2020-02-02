@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './timeBg.css'
 
 // Time Background
 const TimeBG = ({ children }) => {

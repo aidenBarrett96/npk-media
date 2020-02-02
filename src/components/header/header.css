@@ -26,15 +26,6 @@ header {
   margin-left: 10px;
 }
 
-.white-header .nav .nav-link a,
-.white-header .logo .logo-title {
-  color: white;
-}
-
-.white-header .nav .nav-link a span {
-  background: white;
-}
-
 @media only screen and (min-width: 1024px) {
   header {
     padding: 0 100px;
@@ -42,6 +33,15 @@ header {
     width: auto;
     background: transparent;
     box-shadow: none;
+  }
+
+  .white-header .nav .nav-link a,
+  .white-header .logo .logo-title {
+    color: white;
+  }
+
+  .white-header .nav .nav-link a span {
+    background: white;
   }
 
   .logo-title {

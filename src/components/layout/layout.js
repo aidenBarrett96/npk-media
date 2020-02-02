@@ -11,8 +11,11 @@ import { useStaticQuery, graphql } from "gatsby"
 import TimeBG from '../timeBg/timeBg'
 import Header from "../header/header"
 import "./layout.css"
+import Footer from '../footer/footer'
 
+// Global layout component
 const Layout = ({ children, timeBG }) => {
+  // Query metadata the site title
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,14 +28,14 @@ const Layout = ({ children, timeBG }) => {
 
   return (
     <>
+      {/* Header component */}
       <Header siteTitle={data.site.siteMetadata.title} whiteNav={timeBG} />
-      <div>
-        <main>
-          {timeBG ? <TimeBG>{children}</TimeBG> : children}
-          </main>
-        <footer>
-        </footer>
-      </div>
+      {/* Main content */}
+      <main>
+        {timeBG ? <TimeBG>{children}</TimeBG> : children}
+      </main>
+      {/* Footer section */}
+      <Footer />
     </>
   )
 }

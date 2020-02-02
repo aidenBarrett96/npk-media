@@ -7,77 +7,40 @@ import NumberedCard from '../components/numberedCard/numberedCard'
 import ProjectCard from '../components/projectCard/projectCard'
 import projectImg from '../images/project_image_placeholder.png'
 import TeamCard from '../components/teamCard/teamCard'
-import TimeBG from '../components/timeBg/timeBg'
 import SkylineBG from '../components/skylineBg/skylineBg'
+import PeakInterest from '../components/peakInterest/peakInterest'
+import ContactBlock from '../components/contactBlock/contactBlock'
+import '../components/pageStyles/index.scss'
 
 const IndexPage = () => {
 
   return (
-  <Layout timeBG={true}>
-    <SEO title="Home" />
+    <Layout timeBG={true}>
+      <SEO title="Home" />
 
-    {/* Buttons */}
-    <section style={{
-      padding: '20px',
-    }}>
-      <h1>Buttons</h1>
-      <div style={{ padding: '50px', background: 'black', width: 'auto' }}>
-        <Button color="white" variant="primary">White</Button> <br />
-      </div>
-      <Button color="red" variant="alternate">Red</Button> <br />
-      <Button color="black" variant="alternate">Black</Button> <br />
-    </section>
+      {/* Story section */}
+      <section className="story">
 
-    <hr />
+        <div className="story-section">
+          <h2><strong className="underlined">Videography, websites, social media</strong> and <strong className="underlined">branding.</strong> All done for you. By us.</h2>
+          <Button color="white">SEE WHAT WE CAN DO</Button>
+        </div>
 
-    {/* Numbered Cards */}
-    <h1>Numbered Cards</h1>
-    <section
-      style={{
-        padding: '20px',
-        display: 'flex',
-        justifyContent: 'space-evenly',
-        alignItems: 'center',
-        margin: '20px 0',
-        overflow: 'scroll',
-        boxSizing: 'border-box'
-      }}>
-      <NumberedCard number={1}>
-        <h2>Pre-Production</h2>
-        <p>We deliver professionally produced videos for product promotion, social media campaigns and television. Our productions offer your sutlers a fresh way to interact with your brand.</p>
-      </NumberedCard>
-      <NumberedCard number={2}>
-        <h2>Pre-Production</h2>
-        <p>We deliver professionally produced videos for product promotion, social media campaigns and television. Our productions offer your sutlers a fresh way to interact with your brand.</p>
-      </NumberedCard>
-    </section>
+        <div className="story-section">
+          <h2>We help you <strong>reach potential customers.</strong></h2>
+        </div>
 
-    <hr />
+        <div className="story-section">
+          <h2>Based in <strong>Liverpool</strong>, we help companies <strong>throughout the UK</strong> & <strong>worldwide.</strong></h2>
+        </div>
 
-    {/* Project cards */}
-    <section style={{ padding: '50px' }}>
-      <h1>Project Cards</h1>
-      <ProjectCard
-        title="Mills Autopot Video 2019"
-        description="A video to remember the incredible acts who performed for Mills at the Autopot summer social."
-        client="Mills"
-        image={projectImg}
-      />
-    </section>
+      </section>
 
-    <hr />
-
-    {/* Team cards */}
-    <section style={{ padding: '50px' }}>
-      <h1>Team Cards</h1>
-      <TeamCard name="Aiden Barrett" image={projectImg} role="Software Engineer" />
-    </section>
-
-      {/* Skyline background */}
       <SkylineBG>
-        <h1>Hello World</h1>
-        </SkylineBG>
-  </Layout>
-)}
+
+      </SkylineBG>
+    </Layout >
+  )
+}
 
 export default IndexPage
