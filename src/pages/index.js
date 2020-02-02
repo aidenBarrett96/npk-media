@@ -18,6 +18,8 @@ const IndexPage = () => {
     <Layout timeBG={true}>
       <SEO title="Home" />
 
+      <Link to="/components">View all components</Link>
+
       {/* Story section */}
       <section className="story">
 
