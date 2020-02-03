@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="51.278" height="37.103" viewBox="0 0 51.278 37.103">
+  <g id="dumbel" transform="translate(5.196 1.151) rotate(7)">
+    <g id="Group_136" data-name="Group 136" transform="translate(33.931 0)">
+      <path id="Path_329" data-name="Path 329" d="M0,28.568c1.018,0,3.326,1.865,5.13-1.41s2.392-6.493,2.084-11.69C7.038,12.491,6.934,6.58,5.13,2.762S0,.2,0,.2" transform="translate(3.537 0)" fill="#fff" stroke="#000" stroke-width="3"/>
+      <path id="Path_330" data-name="Path 330" d="M3.009,0C.419,0-.431,10.04.2,14.94s-.287,12.152,2.81,13.1,4.389-7.9,4-13.1S5.6,0,3.009,0Z" transform="translate(0 0.529)" fill="#fff" stroke="#000" stroke-width="3"/>
+    </g>
+    <g id="Rectangle_1006" data-name="Rectangle 1006" transform="translate(7.122 11.163)" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+      <rect width="31.034" height="6.621" stroke="none"/>
+      <rect x="1.5" y="1.5" width="28.034" height="3.621" fill="none"/>
+    </g>
+    <g id="Group_135" data-name="Group 135" transform="translate(0 0)">
+      <path id="Path_329-2" data-name="Path 329" d="M0,28.568c1.018,0,3.326,1.865,5.13-1.41s2.392-6.493,2.084-11.69C7.038,12.491,6.934,6.58,5.13,2.762S0,.2,0,.2" transform="translate(3.537 0)" fill="#fff" stroke="#000" stroke-width="3"/>
+      <path id="Path_330-2" data-name="Path 330" d="M3.009,0C.419,0-.431,10.04.2,14.94s-.287,12.152,2.81,13.1,4.389-7.9,4-13.1S5.6,0,3.009,0Z" transform="translate(0 0.529)" fill="#fff" stroke="#000" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

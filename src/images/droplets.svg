@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36.372" height="54.824" viewBox="0 0 36.372 54.824">
+  <g id="droplets" transform="matrix(0.966, -0.259, 0.259, 0.966, -0.963, 10.08)">
+    <path id="Path_325" data-name="Path 325" d="M10.767,0A52.015,52.015,0,0,1,5.913,10.367C3.341,14.294-.181,16.379.007,21.855.4,33.382,6.176,33.612,10.767,33.612s9.482-3.354,9.482-11.757c0-3.529-3.6-4.614-5.969-10.077A61.862,61.862,0,0,1,10.767,0Z" transform="translate(0 10.81)" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="Path_326" data-name="Path 326" d="M6.091,0A26.474,26.474,0,0,0,9.209,5.645C10.862,7.783,13.124,8.918,13,11.9c-.254,6.277-3.963,6.4-6.912,6.4S0,16.475,0,11.9C0,9.978,2.312,9.388,3.835,6.413A29.848,29.848,0,0,0,6.091,0Z" transform="translate(18.84 0)" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  </g>
+</svg>

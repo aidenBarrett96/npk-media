@@ -1,0 +1,53 @@
+.button {
+  font-family: "Brandon Grotesque";
+  background: transparent;
+  min-width: 230px;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+  height: 45px;
+
+  svg {
+    display: none;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    height: 55px;
+
+    span,
+    svg {
+      transition: all 0.2s ease-out;
+      transform: translateX(24px);
+    }
+
+    &:hover span,
+    &:hover svg {
+      transform: translateX(0);
+    }
+
+    svg {
+      display: block;
+      margin-left: 8px;
+      width: 40px;
+      visibility: hidden;
+      height: 100%;
+      opacity: 0;
+    }
+
+    &:hover svg {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &:hover {
+      border-width: 0px !important;
+    }
+  }
+}

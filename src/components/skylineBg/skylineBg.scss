@@ -1,12 +1,15 @@
 /* Overflow image to not show borders and move left 1 viewport width */
 .skyline-section .image-container {
-  width: 102vw;
-  margin-left: -1vw;
+  // width: 102vw;
+  // margin-left: -1vw;
+  overflow: hidden;
 }
 
 /* make image span full width */
 .skyline-section .image-container img {
-  width: 100%;
+  min-width: 910px;
+  width: 102vw;
+  margin-left: -8px;
 }
 
 /* Give inner of component a white background */
