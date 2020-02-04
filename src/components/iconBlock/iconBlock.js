@@ -4,7 +4,7 @@ import "./iconBlock.scss"
 // Icon block component
 // Accepts background colour, children, images and image alts as props
 const IconBlock = ({
-  bgColor,
+  variant,
   children,
   icon1,
   icon1Alt,
@@ -14,13 +14,10 @@ const IconBlock = ({
   icon3Alt,
 }) => {
   // Set background colour from props
-  const blockStyle = {
-    background: bgColor,
-  }
 
   return (
     //   Icon area
-    <div className="icon-block" style={blockStyle}>
+    <div className={!variant ? "icon-block" : "icon-block__dark"}>
       <div className="icons">
         {/* Get icons from props */}
         <img src={icon1} alt={icon1Alt} />

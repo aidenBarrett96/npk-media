@@ -40,6 +40,8 @@ const IndexPage = () => {
           <Button color="white">See what we can do</Button>
         </div>
 
+        <PeakInterest text="View our story" />
+
         <BaloonAnimation />
 
         <div className="story-section">
@@ -67,31 +69,42 @@ const IndexPage = () => {
             <strong>people who matter most.</strong>
           </h2>
         </div>
-        <IconBlock
-          bgColor="white"
-          icon1={cutlery}
-          icon1Alt="Cutlery icon"
-          icon2={dumbell}
-          icon2Alt="Dumbell icon"
-          icon3={drink}
-          icon3Alt="Drink icon"
-        >
-          <h2>
-            Our <strong>research first</strong> approach means we can{" "}
-            <strong>target your ideal consumer</strong>, no matter your
-            business.
-          </h2>
-          <Button color="red">See our work</Button>
-        </IconBlock>
-        <IconBlock
-          bgColor="#46444C"
-          icon1={droplets}
-          icon1Alt="droplets icon"
-          icon2={bulb}
-          icon2Alt="bulb icon"
-          icon3={plant}
-          icon2Alt="plant icon"
-        ></IconBlock>
+
+        <PeakInterest text="Who have we helped?" />
+
+        <div className="two-columns-large">
+          <IconBlock
+            icon1={cutlery}
+            icon1Alt="Cutlery icon"
+            icon2={dumbell}
+            icon2Alt="Dumbell icon"
+            icon3={drink}
+            icon3Alt="Drink icon"
+          >
+            <h2>
+              Our <strong>research first</strong> approach means we can{" "}
+              <strong>target your ideal consumer</strong>, no matter your
+              business.
+            </h2>
+            <Button color="red">See our work</Button>
+          </IconBlock>
+          <IconBlock
+            variant="dark"
+            icon1={droplets}
+            icon1Alt="droplets icon"
+            icon2={bulb}
+            icon2Alt="bulb icon"
+            icon3={plant}
+            icon2Alt="plant icon"
+          >
+            <h2>
+              Our <strong>consumer first approach</strong> has worked wonders
+              for the emerging hydroponics industry.
+            </h2>
+            <Button color="white">View our work</Button>
+          </IconBlock>
+        </div>
+        <ContactBlock />
       </SkylineBG>
     </Layout>
   )

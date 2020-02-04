@@ -8,10 +8,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import TimeBG from '../timeBg/timeBg'
+import TimeBG from "../timeBg/timeBg"
 import Header from "../header/header"
-import "./layout.css"
-import Footer from '../footer/footer'
+import "./layout.scss"
+import Footer from "../footer/footer"
 
 // Global layout component
 const Layout = ({ children, timeBG }) => {
@@ -31,9 +31,7 @@ const Layout = ({ children, timeBG }) => {
       {/* Header component */}
       <Header siteTitle={data.site.siteMetadata.title} whiteNav={timeBG} />
       {/* Main content */}
-      <main>
-        {timeBG ? <TimeBG>{children}</TimeBG> : children}
-      </main>
+      <main>{timeBG ? <TimeBG>{children}</TimeBG> : children}</main>
       {/* Footer section */}
       <Footer />
     </>

@@ -57,4 +57,12 @@ main {
   main {
     margin-top: 0;
   }
+
+  // Two columns on a large screen but normal on mobile
+  .two-columns-large {
+    display: flex;
+    > div {
+      flex: 1;
+    }
+  }
 }
