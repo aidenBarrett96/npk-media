@@ -18,6 +18,7 @@
 
     img {
       position: absolute;
+      width: 15%;
       transition: all 0.3s ease-out;
     }
 
@@ -84,17 +85,19 @@
 
     .icons {
       img {
-        width: 90px;
+        // width: 90px;
+        max-height: 15%;
       }
     }
 
     .body {
-      width: 630px;
+      width: auto;
+      padding: 0 5%;
       align-items: flex-start;
 
       h2 {
-        font-size: 56px;
-        line-height: 70px;
+        font-size: 48px;
+        line-height: 60px;
         text-align: left;
       }
     }

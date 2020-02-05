@@ -13,12 +13,12 @@ import ContactBlock from "../components/contactBlock/contactBlock"
 import "../components/pageStyles/index.scss"
 import BaloonAnimation from "../components/animatedComponents/baloon.js"
 import IconBlock from "../components/iconBlock/iconBlock"
-import cutlery from "../images/cutlery.svg"
-import dumbell from "../images/dumbell.svg"
-import drink from "../images/drink.svg"
-import droplets from "../images/droplets.svg"
-import bulb from "../images/bulb.svg"
-import plant from "../images/plant.svg"
+import cutlery from "../assets/story icons/cutlery.svg"
+import dumbell from "../assets/story icons/dumbell.svg"
+import drink from "../assets/story icons/drink.svg"
+import droplets from "../assets/story icons/water droplets.svg"
+import bulb from "../assets/story icons/lightbulb.svg"
+import plant from "../assets/story icons/plant.svg"
 
 const IndexPage = () => {
   return (

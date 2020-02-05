@@ -1,5 +1,7 @@
-import React from "react"
+import React, { useState } from "react"
 import "./iconBlock.scss"
+import { useInView } from "react-intersection-observer"
+import { useSpring, animated } from "react-spring"
 
 // Icon block component
 // Accepts background colour, children, images and image alts as props
@@ -13,7 +15,51 @@ const IconBlock = ({
   icon3,
   icon3Alt,
 }) => {
-  // Set background colour from props
+  const [ref, inView] = useInView({
+    threshold: 0.7,
+  })
+
+  const [reversed, setReversed] = useState(false)
+
+  // Icon 1 animation
+  const springOne = useSpring({
+    top: !inView ? "6%" : "12%",
+    right: !inView ? "65%" : "55%",
+    ...(inView && {
+      transform: `rotate(${!reversed ? "-10" : "10"}deg)`,
+    }),
+    config: {
+      friction: 10,
+      velocity: 42,
+    },
+    onRest: () => setReversed(!reversed),
+  })
+
+  // Icon 2 animation
+  const springTwo = useSpring({
+    bottom: !inView ? "18%" : "24%",
+    right: !inView ? "4%" : "10%",
+    ...(inView && {
+      transform: `rotate(${reversed ? "-10" : "10"}deg)`,
+    }),
+    config: {
+      friction: 10,
+      velocity: 42,
+    },
+  })
+
+  // icon 3 Animation
+  const springThree = useSpring({
+    bottom: !inView ? "2%" : "5%",
+    left: !inView ? "6%" : "10%",
+    ...(inView && {
+      transform: `rotate(${!reversed ? "-10" : "10"}deg)`,
+    }),
+    config: {
+      friction: 10,
+      velocity: 42,
+    },
+  })
 
   return (
     //   Icon area

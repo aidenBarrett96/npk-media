@@ -1,7 +1,7 @@
 // Contact block styling
 .contact-block {
   height: 640px;
-  background: white;
+  // background: white;
   position: relative;
 
   //   Icons positioning
@@ -11,9 +11,11 @@
     left: 0;
     width: 100%;
     height: 100%;
+    pointer-events: none;
 
     img {
       position: absolute;
+      width: 20%;
     }
 
     // individual positions
@@ -31,10 +33,21 @@
       bottom: 5%;
       left: 10%;
     }
+
+    @keyframes iconShake {
+      from {
+        transform: rotate(-10deg);
+      }
+      to {
+        transform: rotate(10deg);
+      }
+    }
   }
 
   //   body text styling
   .contact-block-body {
+    position: relative;
+    z-index: 1;
     height: 100%;
     //   Center items with flex display
     display: flex;
@@ -70,10 +83,6 @@
       position: relative;
       height: 450px;
       width: 45%;
-
-      img {
-        width: 160px;
-      }
     }
 
     // text positioning and sizes
