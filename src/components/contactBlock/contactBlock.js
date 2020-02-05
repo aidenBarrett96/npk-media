@@ -19,23 +19,17 @@ const ContactBlock = () => {
   const springOne = useSpring({
     top: !inView ? "6%" : "12%",
     right: !inView ? "65%" : "55%",
-    ...(inView && {
-      transform: `rotate(${!reversed ? "-10" : "10"}deg)`,
-    }),
     config: {
       friction: 10,
       velocity: 42,
     },
-    onRest: () => setReversed(!reversed),
+    // onRest: () => setReversed(!reversed),
   })
 
   // Icon 2 animation
   const springTwo = useSpring({
     bottom: !inView ? "18%" : "24%",
     right: !inView ? "4%" : "10%",
-    ...(inView && {
-      transform: `rotate(${reversed ? "-10" : "10"}deg)`,
-    }),
     config: {
       friction: 10,
       velocity: 42,
@@ -46,9 +40,6 @@ const ContactBlock = () => {
   const springThree = useSpring({
     bottom: !inView ? "2%" : "5%",
     left: !inView ? "6%" : "10%",
-    ...(inView && {
-      transform: `rotate(${!reversed ? "-10" : "10"}deg)`,
-    }),
     config: {
       friction: 10,
       velocity: 42,
