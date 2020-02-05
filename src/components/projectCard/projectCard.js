@@ -6,7 +6,6 @@ import { useWindowSize } from "../windowSize/windowSize"
 // Project card
 const ProjectCard = ({ title, description, client, image, link }) => {
   // Extract client width into a local variable
-  const [width] = useWindowSize()
   const desktop = useWindowSize()
   return (
     // Card container
