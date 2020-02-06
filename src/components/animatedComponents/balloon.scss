@@ -17,7 +17,6 @@
       margin-right: -16px;
       margin-top: -8px;
       transform-origin: top center;
-      animation: swing 1.2s infinite alternate ease-in-out;
     }
 
     @keyframes swing {
@@ -35,11 +34,13 @@
     overflow-x: hidden;
     & * {
       position: absolute;
+      //   left: -200%;
+      right: 100%;
       //   right: 100%;
-      animation: cloud 10s infinite linear;
+      //   animation: cloud 10s infinite linear;
     }
     .cloud1 {
-      //   animation-delay: s;
+      animation-delay: 1s;
     }
     .cloud2 {
       animation-delay: 3s;
@@ -51,10 +52,12 @@
 
     @keyframes cloud {
       from {
-        left: -200%;
+        right: 100%;
+        transform: scale(1);
       }
       to {
-        left: 100%;
+        right: -200%;
+        transform: scale(0.7);
       }
     }
   }
