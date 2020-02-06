@@ -1,0 +1,52 @@
+.plane-container {
+  height: 320px;
+  width: 100%;
+  padding: 20% 0;
+  .plane-wrapper {
+    position: relative;
+    text-align: right;
+    padding: 0 10%;
+    flex-shrink: 0;
+
+    .banner {
+      width: 60%;
+      position: absolute;
+      right: 40%;
+      transform-origin: right center;
+    }
+
+    .plane {
+      width: 40%;
+      position: relative;
+      z-index: 1;
+      transform-origin: left center;
+    }
+
+    @keyframes flight {
+      from {
+        transform: translateY(10px);
+      }
+      to {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes plane-flow {
+      from {
+        transform: rotate(6deg);
+      }
+      to {
+        transform: rotate(-2deg);
+      }
+    }
+
+    @keyframes banner-flow {
+      from {
+        transform: rotate(3deg);
+      }
+      to {
+        transform: rotate(-3deg);
+      }
+    }
+  }
+}

@@ -1,12 +1,12 @@
 .balloon-container {
   position: relative;
-  height: 400px;
+  height: 320px;
   overflow-y: visible;
   overflow-x: hidden;
   padding: 20% 0;
   .balloon-wrapper {
     position: absolute;
-    right: 60px;
+    right: 20%;
     display: flex;
     flex-direction: column;
     width: 110px;
@@ -27,39 +27,6 @@
       }
       to {
         transform: rotate(7deg);
-      }
-    }
-  }
-
-  .cloud-wrapper {
-    width: 100vw;
-    overflow-x: hidden;
-    & * {
-      position: absolute;
-      //   left: -200%;
-      right: 100%;
-      //   right: 100%;
-      //   animation: cloud 10s infinite linear;
-    }
-    .cloud1 {
-      animation-delay: 1s;
-    }
-    .cloud2 {
-      animation-delay: 3s;
-      z-index: 2;
-    }
-    .cloud3 {
-      animation-delay: 7s;
-    }
-
-    @keyframes cloud {
-      from {
-        right: 100%;
-        transform: scale(1) translateY(40px);
-      }
-      to {
-        right: -140%;
-        transform: scale(0.7) translateY(-80px);
       }
     }
   }

@@ -1,0 +1,29 @@
+.cloud-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  & * {
+    position: absolute;
+    right: 100%;
+  }
+  .cloud1 {
+    animation-delay: 1s;
+  }
+  .cloud2 {
+    animation-delay: 3s;
+    z-index: 2;
+  }
+  .cloud3 {
+    animation-delay: 7s;
+  }
+
+  @keyframes cloud {
+    from {
+      right: 100%;
+      transform: scale(1) translateY(40px);
+    }
+    to {
+      right: -140%;
+      transform: scale(0.7) translateY(-80px);
+    }
+  }
+}

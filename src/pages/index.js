@@ -3,15 +3,12 @@ import { Link } from "gatsby"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Button from "../components/button/button"
-import NumberedCard from "../components/numberedCard/numberedCard"
-import ProjectCard from "../components/projectCard/projectCard"
-import projectImg from "../images/project_image_placeholder.png"
-import TeamCard from "../components/teamCard/teamCard"
 import SkylineBG from "../components/skylineBg/skylineBg"
 import PeakInterest from "../components/peakInterest/peakInterest"
 import ContactBlock from "../components/contactBlock/contactBlock"
 import "../components/pageStyles/index.scss"
-import BaloonAnimation from "../components/animatedComponents/baloon.js"
+import BalloonAnimation from "../components/animatedComponents/balloon.js"
+import PlaneAnimation from "../components/animatedComponents/plane.js"
 import IconBlock from "../components/iconBlock/iconBlock"
 import cutlery from "../assets/story assets/story icons/cutlery.svg"
 import dumbell from "../assets/story assets/story icons/dumbell.svg"
@@ -42,13 +39,15 @@ const IndexPage = () => {
 
         <PeakInterest text="View our story" />
 
-        <BaloonAnimation />
+        <BalloonAnimation />
 
         <div className="story-section">
           <h2>
             We help you <strong>reach potential customers.</strong>
           </h2>
         </div>
+
+        <PlaneAnimation />
 
         <div className="story-section">
           <h2>
