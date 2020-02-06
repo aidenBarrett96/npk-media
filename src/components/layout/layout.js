@@ -14,7 +14,7 @@ import "./layout.scss"
 import Footer from "../footer/footer"
 
 // Global layout component
-const Layout = ({ children, timeBG }) => {
+const Layout = ({ children, timeBG, mainClass }) => {
   // Query metadata the site title
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -31,7 +31,9 @@ const Layout = ({ children, timeBG }) => {
       {/* Header component */}
       <Header siteTitle={data.site.siteMetadata.title} whiteNav={timeBG} />
       {/* Main content */}
-      <main>{timeBG ? <TimeBG>{children}</TimeBG> : children}</main>
+      <main className={mainClass}>
+        {timeBG ? <TimeBG>{children}</TimeBG> : children}
+      </main>
       {/* Footer section */}
       <Footer />
     </>

@@ -13,16 +13,16 @@ import ContactBlock from "../components/contactBlock/contactBlock"
 import "../components/pageStyles/index.scss"
 import BaloonAnimation from "../components/animatedComponents/baloon.js"
 import IconBlock from "../components/iconBlock/iconBlock"
-import cutlery from "../assets/story icons/cutlery.svg"
-import dumbell from "../assets/story icons/dumbell.svg"
-import drink from "../assets/story icons/drink.svg"
-import droplets from "../assets/story icons/water droplets.svg"
-import bulb from "../assets/story icons/lightbulb.svg"
-import plant from "../assets/story icons/plant.svg"
+import cutlery from "../assets/story assets/story icons/cutlery.svg"
+import dumbell from "../assets/story assets/story icons/dumbell.svg"
+import drink from "../assets/story assets/story icons/drink.svg"
+import droplets from "../assets/story assets/story icons/water droplets.svg"
+import bulb from "../assets/story assets/story icons/lightbulb.svg"
+import plant from "../assets/story assets/story icons/plant.svg"
 
 const IndexPage = () => {
   return (
-    <Layout timeBG={true}>
+    <Layout timeBG={true} mainClass="index">
       <SEO title="Home" />
 
       <Link to="/components">View all components</Link>
@@ -72,7 +72,14 @@ const IndexPage = () => {
 
         <PeakInterest text="Who have we helped?" />
 
-        <div className="two-columns-large">
+        <div
+          style={{
+            borderTop: "1px solid #46444c",
+            borderBottom: "1px solid #46444c",
+            marginTop: "30px",
+          }}
+          className="two-columns-large"
+        >
           <IconBlock
             icon1={cutlery}
             icon1Alt="Cutlery icon"

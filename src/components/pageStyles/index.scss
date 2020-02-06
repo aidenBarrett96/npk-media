@@ -1,0 +1,25 @@
+.index {
+  .story {
+    .story-section {
+      text-align: center;
+      padding: 0 5px;
+      h2 {
+        max-width: 311px;
+        font-size: 36px;
+        color: #fff;
+        font-weight: lighter;
+        strong {
+          font-weight: bold;
+          &.underlined {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      //   Centering buttons
+      .button {
+        margin: 0 auto;
+      }
+    }
+  }
+}

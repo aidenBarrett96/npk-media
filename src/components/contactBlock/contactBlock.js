@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import "./contactBlock.scss"
 import Button from "../button/button"
-import telephone from "../../assets/story icons/phone npk.svg"
-import logoLineDrawing from "../../images/logo-line-drawing.svg"
-import email from "../../assets/story icons/letter.svg"
+import telephone from "../../assets/story assets/story icons/phone npk.svg"
+import logoLineDrawing from "../../assets/story assets/story icons/npk logo yellow faded.svg"
+import email from "../../assets/story assets/story icons/letter.svg"
 import { useInView } from "react-intersection-observer"
 import { useSpring, animated } from "react-spring"
 

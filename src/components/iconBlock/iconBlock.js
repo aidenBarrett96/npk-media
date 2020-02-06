@@ -16,7 +16,7 @@ const IconBlock = ({
   icon3Alt,
 }) => {
   const [ref, inView] = useInView({
-    threshold: 1,
+    threshold: 0.75,
   })
 
   // Icon 1 animation

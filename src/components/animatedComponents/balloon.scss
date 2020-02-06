@@ -1,0 +1,61 @@
+.balloon-container {
+  position: relative;
+  height: 340px;
+  overflow: hidden;
+  .balloon-wrapper {
+    position: absolute;
+    right: 60px;
+    display: flex;
+    flex-direction: column;
+    width: 110px;
+    align-items: center;
+    z-index: 1;
+    .balloon {
+    }
+    .platform {
+      width: 180px;
+      margin-right: -16px;
+      margin-top: -8px;
+      transform-origin: top center;
+      animation: swing 1.2s infinite alternate ease-in-out;
+    }
+
+    @keyframes swing {
+      from {
+        transform: rotate(-7deg);
+      }
+      to {
+        transform: rotate(7deg);
+      }
+    }
+  }
+
+  .cloud-wrapper {
+    width: 100vw;
+    overflow-x: hidden;
+    & * {
+      position: absolute;
+      //   right: 100%;
+      animation: cloud 10s infinite linear;
+    }
+    .cloud1 {
+      //   animation-delay: s;
+    }
+    .cloud2 {
+      animation-delay: 3s;
+      z-index: 2;
+    }
+    .cloud3 {
+      animation-delay: 7s;
+    }
+
+    @keyframes cloud {
+      from {
+        left: -200%;
+      }
+      to {
+        left: 100%;
+      }
+    }
+  }
+}
