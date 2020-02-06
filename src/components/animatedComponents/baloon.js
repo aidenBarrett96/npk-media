@@ -14,15 +14,15 @@ const BaloonAnimation = () => {
   })
 
   const cloud1Style = {
-    animation: inView ? "cloud 10s infinite linear" : "",
+    animation: inView ? "cloud 12s infinite linear" : "",
   }
 
   const cloud2Style = {
-    animation: inView ? "cloud 8s infinite linear 1s" : "",
+    animation: inView ? "cloud 9s infinite linear 2.4s" : "",
   }
 
   const cloud3Style = {
-    animation: inView ? "cloud 7s infinite linear " : "",
+    animation: inView ? "cloud 8s infinite linear 1s" : "",
   }
 
   const platformStyle = {

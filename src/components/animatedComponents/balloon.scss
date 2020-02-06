@@ -1,7 +1,9 @@
 .balloon-container {
   position: relative;
-  height: 340px;
-  overflow: hidden;
+  height: 400px;
+  overflow-y: visible;
+  overflow-x: hidden;
+  padding: 20% 0;
   .balloon-wrapper {
     position: absolute;
     right: 60px;
@@ -53,11 +55,11 @@
     @keyframes cloud {
       from {
         right: 100%;
-        transform: scale(1);
+        transform: scale(1) translateY(40px);
       }
       to {
-        right: -200%;
-        transform: scale(0.7);
+        right: -140%;
+        transform: scale(0.7) translateY(-80px);
       }
     }
   }
