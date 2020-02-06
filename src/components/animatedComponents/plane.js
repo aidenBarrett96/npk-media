@@ -8,7 +8,7 @@ import banner from "../../assets/story assets/banner.svg"
 const Plane = () => {
   const [ref, inView] = useInView({
     // threshold: 0.7,
-    rootMargin: "60px",
+    rootMargin: "200px",
   })
 
   const flightAnimation = {
