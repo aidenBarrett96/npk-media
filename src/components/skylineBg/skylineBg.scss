@@ -15,9 +15,9 @@
 /* Give inner of component a white background */
 .skyline-section-inner {
   background: white;
-  margin-top: -12px;
+  margin-top: -40px;
 }
 
-.skyline-section *:first-child {
+.skyline-section > *:first-child {
   margin-top: 0;
 }
