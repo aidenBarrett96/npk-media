@@ -7,7 +7,7 @@ import cloud3 from "../../assets/story assets/cloud3.svg"
 const Clouds = ({ inView, reversed }) => {
   const cloud1Style = {
     animation: inView
-      ? `cloud 12s infinite ${reversed && "reverse"} linear`
+      ? `cloud 12s infinite  ${reversed ? "reverse" : ""} linear`
       : "",
   }
 
@@ -19,7 +19,7 @@ const Clouds = ({ inView, reversed }) => {
 
   const cloud3Style = {
     animation: inView
-      ? `cloud 8s infinite ${reversed && "reverse"} linear 1s`
+      ? `cloud 8s infinite  ${reversed ? "reverse" : ""} linear 1s`
       : "",
   }
   return (
