@@ -25,8 +25,7 @@ const IconBlock = ({
     right: inView ? "65%" : "55%",
     transform: `rotate(${inView ? "-15deg" : 0})`,
     config: {
-      friction: 10,
-      velocity: 42,
+      friction: 12,
     },
   })
 
@@ -36,8 +35,7 @@ const IconBlock = ({
     right: inView ? "0%" : "8%",
     transform: `rotate(${inView ? "10deg" : 0})`,
     config: {
-      friction: 15,
-      // velocity: 42,
+      friction: 12,
     },
   })
 
@@ -47,8 +45,7 @@ const IconBlock = ({
     left: inView ? "16%" : "38%",
     transform: `rotate(${inView ? "-18deg" : 0})`,
     config: {
-      friction: 10,
-      // velocity: 42,
+      friction: 12,
     },
   })
 
