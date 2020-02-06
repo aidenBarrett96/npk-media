@@ -16,37 +16,49 @@ const IconBlock = ({
   icon3Alt,
 }) => {
   const [ref, inView] = useInView({
-    threshold: 0.8,
+    threshold: 1,
   })
 
   // Icon 1 animation
   const springOne = useSpring({
-    top: inView ? "3%" : "12%",
-    right: inView ? "65%" : "55%",
-    transform: `rotate(${inView ? "-15deg" : 0})`,
-    config: {
-      friction: 12,
+    from: {
+      opacity: 0,
+      top: "-6%",
     },
+    ...(inView && {
+      to: {
+        opacity: 1,
+        top: "6%",
+      },
+    }),
   })
 
   // Icon 2 animation
   const springTwo = useSpring({
-    bottom: inView ? "28%" : "32%",
-    right: inView ? "0%" : "8%",
-    transform: `rotate(${inView ? "10deg" : 0})`,
-    config: {
-      friction: 12,
+    from: {
+      opacity: 0,
+      bottom: "40%",
     },
+    ...(inView && {
+      to: {
+        opacity: 1,
+        bottom: "28%",
+      },
+    }),
   })
 
   // icon 3 Animation
   const springThree = useSpring({
-    bottom: inView ? "2%" : "8%",
-    left: inView ? "16%" : "38%",
-    transform: `rotate(${inView ? "-18deg" : 0})`,
-    config: {
-      friction: 12,
+    from: {
+      opacity: 0,
+      bottom: "14%",
     },
+    ...(inView && {
+      to: {
+        opacity: 1,
+        bottom: "2%",
+      },
+    }),
   })
 
   return (

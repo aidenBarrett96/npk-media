@@ -17,32 +17,32 @@ const ContactBlock = () => {
 
   // Icon 1 animation
   const springOne = useSpring({
-    top: !inView ? "6%" : "12%",
-    right: !inView ? "65%" : "55%",
+    top: inView ? "6%" : "12%",
+    right: inView ? "65%" : "55%",
+    transform: `rotate(${inView ? "-10deg" : 0})`,
     config: {
-      friction: 10,
-      velocity: 42,
+      friction: 13,
     },
     // onRest: () => setReversed(!reversed),
   })
 
   // Icon 2 animation
   const springTwo = useSpring({
-    bottom: !inView ? "18%" : "24%",
-    right: !inView ? "4%" : "10%",
+    bottom: inView ? "18%" : "24%",
+    right: inView ? "4%" : "10%",
+    transform: `rotate(${inView ? "8deg" : 0})`,
     config: {
-      friction: 10,
-      velocity: 42,
+      friction: 13,
     },
   })
 
   // icon 3 Animation
   const springThree = useSpring({
-    bottom: !inView ? "2%" : "5%",
-    left: !inView ? "6%" : "10%",
+    bottom: inView ? "2%" : "5%",
+    left: inView ? "6%" : "10%",
+    transform: `rotate(${inView ? "-5deg" : 0})`,
     config: {
-      friction: 10,
-      velocity: 42,
+      friction: 13,
     },
   })
 

@@ -1,23 +1,19 @@
 /* Overflow image to not show borders and move left 1 viewport width */
-.skyline-section .image-container {
-  // width: 102vw;
-  // margin-left: -1vw;
-  overflow: hidden;
-}
+.skyline-section {
+  .image-container {
+    overflow: hidden;
 
-/* make image span full width */
-.skyline-section .image-container img {
-  min-width: 910px;
-  width: 102vw;
-  margin-left: -8px;
-}
+    /* make image span full width */
+    img {
+      min-width: 910px;
+      width: 102vw;
+      margin-left: -8px;
+    }
+  }
 
-/* Give inner of component a white background */
-.skyline-section-inner {
-  background: white;
-  margin-top: -40px;
-}
-
-.skyline-section > *:first-child {
-  margin-top: 0;
+  /* Give inner of component a white background */
+  .skyline-section-inner {
+    background: white;
+    margin-top: -40px;
+  }
 }
