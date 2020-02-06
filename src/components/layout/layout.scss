@@ -1,23 +1,43 @@
-// @import url("//hello.myfonts.net/count/3aea74");
+@import url("//hello.myfonts.net/count/3aea74");
 
 @font-face {
   font-family: "BrandonGrotesqueWeb-Light";
-  src: url("../../assets/webfonts/3AEA74_0_0.woff") format("woff");
+  src: url("../../assets/webfonts/3AEA74_0_0.eot");
+  src: url("../../assets/webfonts/3AEA74_0_0.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../assets/webfonts/3AEA74_0_0.woff2") format("woff2"),
+    url("../../assets/webfonts/3AEA74_0_0.woff") format("woff"),
+    url("../../assets/webfonts/3AEA74_0_0.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "BrandonGrotesqueWeb-Bold";
-  src: url("../../assets/webfonts/3AEA74_1_0.woff") format("woff");
+  src: url("../../assets/webfonts/3AEA74_1_0.eot");
+  src: url("../../assets/webfonts/3AEA74_1_0.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../assets/webfonts/3AEA74_1_0.woff2") format("woff2"),
+    url("../../assets/webfonts/3AEA74_1_0.woff") format("woff"),
+    url("../../assets/webfonts/3AEA74_1_0.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "BrandonGrotesqueWeb-Black";
-  src: url("../../assets/webfonts/3AEA74_2_0.woff") format("woff");
+  src: url("../../assets/webfonts/3AEA74_2_0.eot");
+  src: url("../../assets/webfonts/3AEA74_2_0.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../assets/webfonts/3AEA74_2_0.woff2") format("woff2"),
+    url("../../assets/webfonts/3AEA74_2_0.woff") format("woff"),
+    url("../../assets/webfonts/3AEA74_2_0.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "BrandonGrotesqueWeb-Regular";
-  src: url("../../assets/webfonts/3AEA74_3_0.woff") format("woff");
+  font-family: "Brandon Grotesque";
+  src: url("../../assets/webfonts/3AEA74_3_0.eot");
+  src: url("../../assets/webfonts/3AEA74_3_0.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../assets/webfonts/3AEA74_3_0.woff2") format("woff2"),
+    url("../../assets/webfonts/3AEA74_3_0.woff") format("woff"),
+    url("../../assets/webfonts/3AEA74_3_0.ttf") format("truetype");
 }
 
 body,
