@@ -1,24 +1,44 @@
 .index {
   .story {
-    .story-section {
-      text-align: center;
-      padding: 0 5px;
-      h2 {
-        max-width: 311px;
-        font-size: 36px;
-        color: #fff;
-        font-weight: lighter;
-        strong {
-          font-weight: bold;
-          &.underlined {
-            text-decoration: underline;
-          }
+    .peak-interest {
+      h4 {
+        color: white;
+      }
+      .line {
+        background: white;
+      }
+    }
+  }
+
+  .story-section {
+    text-align: center;
+    padding: 60px 5px;
+    h2 {
+      max-width: 311px;
+      font-size: 36px;
+      color: #fff;
+      font-weight: lighter;
+      strong {
+        font-weight: bold;
+        &.underlined {
+          text-decoration: underline;
         }
       }
+    }
 
-      //   Centering buttons
-      .button {
-        margin: 0 auto;
+    //   Centering buttons
+    .button {
+      margin: 0 auto;
+    }
+  }
+
+  .skyline-section {
+    .story-section {
+      h2 {
+        font-weight: 300;
+        font-size: 30px;
+        color: #46444c;
+        margin-bottom: 40px;
       }
     }
   }

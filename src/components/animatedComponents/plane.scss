@@ -1,12 +1,16 @@
 .plane-container {
-  height: 320px;
+  height: 340px;
   width: 100%;
-  padding: 20% 0;
+  margin: 65px 0;
+  overflow-x: visible;
+  position: relative;
+  display: flex;
+  align-items: center;
   .plane-wrapper {
-    position: relative;
+    position: absolute;
     text-align: right;
     padding: 0 10%;
-    flex-shrink: 0;
+    z-index: 2;
 
     .banner {
       width: 60%;

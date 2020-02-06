@@ -22,8 +22,6 @@ const IndexPage = () => {
     <Layout timeBG={true} mainClass="index">
       <SEO title="Home" />
 
-      <Link to="/components">View all components</Link>
-
       {/* Story section */}
       <section className="story">
         <div className="story-section">
@@ -61,7 +59,7 @@ const IndexPage = () => {
         <div className="story-section">
           <h2>
             We produce content <strong>tailor made</strong> for
-            <strong>your customers.</strong>
+            <strong> your customers.</strong>
           </h2>
           <h2>
             Making your brand <strong>stand out</strong> to the{" "}
