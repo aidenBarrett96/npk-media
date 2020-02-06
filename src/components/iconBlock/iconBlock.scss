@@ -19,7 +19,6 @@
     img {
       position: absolute;
       width: 15%;
-      transition: all 0.3s ease-out;
     }
 
     // individual positions
@@ -39,7 +38,7 @@
     }
   }
 
-  &:hover .icons {
+  /*   &:hover .icons {
     img:nth-child(1) {
       top: 4%;
       left: 5%;
@@ -57,7 +56,7 @@
       left: 38%;
       transform: rotate(10deg);
     }
-  }
+  } */
 
   .body {
     width: 310px;
