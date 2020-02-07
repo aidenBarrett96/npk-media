@@ -1,5 +1,8 @@
 .index {
   .story {
+    .balloon-container {
+      margin-top: 100px;
+    }
     // Making peak interest white to show on background
     .peak-interest {
       h4 {
@@ -32,9 +35,7 @@
   .index {
     .story {
       .balloon-container {
-        position: absolute;
-        top: 78%;
-        right: 0;
+        margin-top: 0;
         width: 780px;
       }
     }
