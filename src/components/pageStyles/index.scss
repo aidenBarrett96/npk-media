@@ -1,5 +1,6 @@
 .index {
   .story {
+    // Making peak interest white to show on background
     .peak-interest {
       h4 {
         color: white;
@@ -10,26 +11,35 @@
     }
   }
 
+  //   Centering buttons
+  .button {
+    margin: 0 auto;
+  }
+}
+
+.skyline-section {
   .story-section {
-    text-align: center;
-    padding: 60px 5px;
     h2 {
-      margin: 30px auto;
-      max-width: 311px;
-      font-size: 36px;
-      color: #fff;
-      font-weight: lighter;
-      strong {
-        font-weight: bold;
-        &.underlined {
-          text-decoration: underline;
-        }
+      font-weight: 300;
+      font-size: 30px;
+      color: #46444c;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .index {
+    .story {
+      .balloon-container {
+        position: absolute;
+        top: 78%;
+        right: 0;
+        width: 780px;
       }
     }
-
-    //   Centering buttons
     .button {
-      margin: 0 auto;
+      margin: 0;
     }
   }
 
@@ -37,9 +47,11 @@
     .story-section {
       h2 {
         font-weight: 300;
-        font-size: 30px;
+        font-size: 56px;
+        line-height: 70px;
+        text-align: center;
         color: #46444c;
-        margin-bottom: 40px;
+        margin-bottom: 100px;
       }
     }
   }

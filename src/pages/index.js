@@ -16,8 +16,10 @@ import drink from "../assets/story assets/story icons/drink.svg"
 import droplets from "../assets/story assets/story icons/water droplets.svg"
 import bulb from "../assets/story assets/story icons/lightbulb.svg"
 import plant from "../assets/story assets/story icons/plant.svg"
+import { useWindowSize } from "../components/windowSize/windowSize"
 
 const IndexPage = () => {
+  const desktop = useWindowSize()
   return (
     <Layout timeBG={true} mainClass="index">
       <SEO title="Home" />
@@ -33,22 +35,37 @@ const IndexPage = () => {
             you. By us.
           </h2>
           <Button color="white">See what we can do</Button>
+          <div
+            style={{ width: "100%", position: "absolute", bottom: 0, left: 0 }}
+          >
+            <PeakInterest text="View our story" />
+          </div>
         </div>
-
-        <PeakInterest text="View our story" />
 
         <BalloonAnimation />
 
         <div className="story-section">
-          <h2>
+          <h2
+            style={{
+              textAlign: desktop ? "right" : "left",
+              ...(desktop && {
+                margin: "100px 0",
+              }),
+            }}
+          >
             We help you <strong>reach potential customers.</strong>
           </h2>
+          <PlaneAnimation />
         </div>
 
-        <PlaneAnimation />
-
         <div className="story-section">
-          <h2>
+          <h2
+            style={{
+              ...(desktop && {
+                textAlign: "center",
+              }),
+            }}
+          >
             Based in <strong>Liverpool</strong>, we help companies{" "}
             <strong>throughout the UK</strong> & <strong>worldwide.</strong>
           </h2>

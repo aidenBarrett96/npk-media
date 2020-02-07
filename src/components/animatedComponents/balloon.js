@@ -4,6 +4,7 @@ import platform from "../../assets/story assets/icon platform.svg"
 import "./balloon.scss"
 import { useInView } from "react-intersection-observer"
 import Clouds from "./clouds"
+
 const BaloonAnimation = () => {
   const [ref, inView] = useInView({
     // threshold: 0.7,

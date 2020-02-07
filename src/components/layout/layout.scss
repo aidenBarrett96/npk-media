@@ -68,3 +68,47 @@ main {
     }
   }
 }
+
+.story-section {
+  text-align: center;
+  padding: 60px 5px;
+  min-height: 80vh;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  h2 {
+    margin: 30px auto;
+    max-width: 311px;
+    font-size: 36px;
+    color: #fff;
+    font-weight: lighter;
+    strong {
+      font-weight: bold;
+      &.underlined {
+        // text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .story-section {
+    padding: 0px 150px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+    h2 {
+      font-weight: bold;
+      font-size: 65px;
+      text-align: left;
+      color: #fff;
+      max-width: 100%;
+      strong {
+        font-weight: bold;
+      }
+    }
+  }
+}

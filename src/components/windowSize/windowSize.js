@@ -15,7 +15,7 @@ export const useWindowSize = () => {
     return () => window.removeEventListener("resize", updateSize)
   }, [])
 
-  const desktop = size >= 1024
+  const desktop = size[0] >= 1024
 
   // Return the size
   return desktop

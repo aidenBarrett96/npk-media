@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import "./iconBlock.scss"
 import { useInView } from "react-intersection-observer"
 import { useSpring, animated } from "react-spring"
+import { useWindowSize } from "../windowSize/windowSize"
 
 // Icon block component
 // Accepts background colour, children, images and image alts as props
@@ -16,8 +17,14 @@ const IconBlock = ({
   icon3Alt,
 }) => {
   const [ref, inView] = useInView({
-    threshold: 0.75,
+    threshold: 0.6,
   })
+
+  const desktop = useWindowSize()
+
+  const [showAnimation, setShowAnimation] = useState(false)
+
+  const settingToggle = desktop ? showAnimation : inView
 
   // Icon 1 animation
   const springOne = useSpring({
@@ -25,7 +32,7 @@ const IconBlock = ({
       opacity: 0,
       top: "-6%",
     },
-    ...(inView && {
+    ...(settingToggle && {
       to: {
         opacity: 1,
         top: "6%",
@@ -39,7 +46,7 @@ const IconBlock = ({
       opacity: 0,
       bottom: "40%",
     },
-    ...(inView && {
+    ...(settingToggle && {
       to: {
         opacity: 1,
         bottom: "28%",
@@ -53,7 +60,7 @@ const IconBlock = ({
       opacity: 0,
       bottom: "14%",
     },
-    ...(inView && {
+    ...(settingToggle && {
       to: {
         opacity: 1,
         bottom: "2%",
@@ -63,7 +70,11 @@ const IconBlock = ({
 
   return (
     //   Icon area
-    <div ref={ref} className={!variant ? "icon-block" : "icon-block__dark"}>
+    <div
+      ref={ref}
+      className={!variant ? "icon-block" : "icon-block__dark"}
+      onMouseOver={() => desktop && setShowAnimation(true)}
+    >
       <div className="icons">
         {/* Get icons from props */}
         <animated.img style={springOne} src={icon1} alt={icon1Alt} />

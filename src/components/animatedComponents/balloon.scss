@@ -3,7 +3,12 @@
   height: 320px;
   overflow-y: visible;
   overflow-x: hidden;
-  padding: 20% 0;
+  // padding: 20% 0;
+  max-width: 780px;
+
+  width: 104%;
+  margin-left: -2%;
+
   .balloon-wrapper {
     position: absolute;
     right: 20%;
@@ -27,6 +32,20 @@
       }
       to {
         transform: rotate(7deg);
+      }
+    }
+  }
+  @media only screen and (min-width: 780px) {
+    height: 620px;
+    margin-left: auto;
+    .balloon-wrapper {
+      .balloon {
+        width: 220px;
+      }
+      .platform {
+        margin-right: -30px;
+        margin-top: -14px;
+        width: 330px;
       }
     }
   }

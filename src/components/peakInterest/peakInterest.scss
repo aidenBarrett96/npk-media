@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   margin: 60px 0;
+  width: 100%;
 
   //  Text styling
   h4 {
@@ -15,23 +16,47 @@
     margin: 0 0 5.5px;
   }
 
-  //   Interest peaking line style
-  .line {
-    background: #46444c;
-    width: 2px;
+  .line-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
     height: 20px;
+
+    //   Interest peaking line style
+    .line {
+      position: absolute;
+      background: #46444c;
+      width: 2px;
+    }
   }
 
   //   desktop styles
   @media only screen and (min-width: 1024px) {
     h4 {
       margin: 0 0 12px;
-      font-size: 14px;
+      font-size: 18px;
     }
 
-    .line {
+    .line-wrapper {
       height: 40px;
-      width: 3px;
+      .line {
+        width: 3px;
+      }
+    }
+  }
+
+  @keyframes line {
+    0% {
+      top: 0%;
+      bottom: 100%;
+    }
+    45% {
+      top: 0%;
+      bottom: 0%;
+    }
+    90% {
+      top: 100%;
+      bottom: 0%;
     }
   }
 }

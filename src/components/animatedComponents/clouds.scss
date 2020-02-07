@@ -1,30 +1,88 @@
-.cloud-wrapper {
+// Cloud styling
+.cloud-wrapper,
+.cloud-wrapper-reversed {
+  // Full width and majority of height
   width: 100%;
   height: 80%;
+  // overflow hidden to the right and left
   overflow-x: hidden;
+
+  // position all clouds absolute
   & * {
     position: absolute;
-    right: 100%;
+    top: 80px;
   }
+
+  // setting individual delays and sizes
   .cloud1 {
+    height: 200px;
     animation-delay: 1s;
   }
   .cloud2 {
+    height: 140px;
     animation-delay: 3s;
     z-index: 2;
   }
   .cloud3 {
+    height: 100px;
     animation-delay: 7s;
   }
+  @media only screen and (min-width: 780px) {
+    & * {
+      transform-origin: center center;
+    }
 
-  @keyframes cloud {
-    from {
-      right: 100%;
-      transform: scale(1) translateY(40px);
+    .cloud1 {
+      left: 30%;
+      top: 13%;
     }
-    to {
-      right: -140%;
-      transform: scale(0.7) translateY(-80px);
+    .cloud2 {
+      left: 32%;
+      top: 50%;
     }
+    .cloud3 {
+      left: 60%;
+      top: 42%;
+    }
+  }
+}
+
+// starting positions for normal animation
+.cloud-wrapper {
+  & * {
+    right: 100%;
+  }
+}
+
+// starting positions for reversed animation
+.cloud-wrapper-reversed {
+  & * {
+    left: 100%;
+  }
+}
+
+// Normal animation
+@keyframes cloud {
+  to {
+    right: -140%;
+    transform: scale(0.7) translateY(-80px);
+  }
+}
+
+/* Desktop animation (Add Later)
+@keyframes cloud {
+  50% {
+    transform: scale(0.85) translateY(-40px) rotate(2deg);
+  }
+  100% {
+    transform: scale(0.7) translateY(-80px) rotate(-2deg);
+  }
+} */
+
+// Reversed animation
+@keyframes cloud-reversed {
+  to {
+    left: -140%;
+    transform: scale(0.7) translateY(-80px);
   }
 }

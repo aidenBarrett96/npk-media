@@ -1,11 +1,13 @@
 .plane-container {
   height: 340px;
   width: 100%;
-  margin: 65px 0;
+  // margin: 65px 0;
   overflow-x: visible;
   position: relative;
   display: flex;
   align-items: center;
+  max-width: 780px;
+
   .plane-wrapper {
     position: absolute;
     text-align: right;
