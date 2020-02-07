@@ -31,12 +31,20 @@ const IndexPage = () => {
             <strong className="underlined">
               Videography, websites, social media
             </strong>{" "}
-            and <strong className="underlined">branding.</strong> All done for
-            you. By us.
+            and <strong className="underlined">branding. </strong>
+            {!desktop && <br />}
+            All done for you.<span> </span>
+            {!desktop && <br />}
+            By us.
           </h2>
           <Button color="white">See what we can do</Button>
           <div
-            style={{ width: "100%", position: "absolute", bottom: 0, left: 0 }}
+            style={{
+              width: "100%",
+              position: "absolute",
+              bottom: "20px",
+              left: 0,
+            }}
           >
             <PeakInterest text="View our story" />
           </div>

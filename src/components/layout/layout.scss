@@ -78,6 +78,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  height: calc(100vh - 80px);
   h2 {
     margin: 30px auto;
     max-width: 311px;
