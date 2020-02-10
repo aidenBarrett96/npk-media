@@ -1,0 +1,94 @@
+.service-section {
+  scroll-snap-type: y mandatory;
+
+  .icon {
+    max-height: 60px;
+  }
+
+  .two-columns__large {
+    scroll-snap-align: start;
+    margin-top: 60px;
+    h2 {
+      max-width: 310px;
+      text-align: center;
+      margin: 30px auto 90px;
+
+      font-weight: 300;
+      font-size: 40px;
+      line-height: 50px;
+      color: #46444c;
+    }
+  }
+
+  .peak-interest {
+    margin: 75px 0;
+  }
+
+  .process,
+  .projects {
+    scroll-snap-align: start;
+    > h2 {
+      margin: 0 32px 0;
+      font-weight: 300;
+      font-size: 30px;
+      color: #46444c;
+    }
+    > .inner {
+      padding: 35px;
+      display: flex;
+      overflow: scroll;
+
+      > div {
+        margin-right: 18px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      &:after {
+        content: "";
+        width: 32px;
+        height: 2px;
+        display: inline-block;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .two-columns__large {
+      padding: 60px 0;
+      h2 {
+        margin: 0;
+        max-width: 741px;
+        font-weight: 300;
+        font-size: 56px;
+        line-height: 70px;
+        text-align: left;
+      }
+    }
+
+    .process,
+    .projects {
+      > h2 {
+        font-size: 40px;
+      }
+      > .inner {
+        overflow: hidden;
+        justify-content: center;
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    .projects {
+      .inner {
+        display: block;
+
+        .card-project {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}

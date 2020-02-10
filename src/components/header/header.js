@@ -2,13 +2,13 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import logo from "../../images/logo.svg"
-import "./header.css"
+import "./header.scss"
 import MenuButton from "../menuButton/menuButton"
 import Nav from "../nav/nav"
 import { useWindowSize } from "../windowSize/windowSize"
 
 // Header Component
-const Header = ({ siteTitle, whiteNav }) => {
+const Header = ({ siteTitle, pageTitle, whiteNav }) => {
   // Sidebar open logic held within state
   const [open, setOpen] = useState(false)
   const desktop = useWindowSize()
@@ -47,6 +47,8 @@ const Header = ({ siteTitle, whiteNav }) => {
 
       {/* Nav */}
       <Nav open={open} setOpen={setOpen} />
+
+      {pageTitle && <h1>{pageTitle}</h1>}
     </header>
   )
 }

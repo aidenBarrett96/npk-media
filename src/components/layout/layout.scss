@@ -69,6 +69,15 @@ main {
   }
 }
 
+//Button with no styling
+.button__nostyle {
+  border: none;
+  background: none;
+  font-family: "Brandon Grotesque";
+  font-size: 20px;
+  color: #46444c;
+}
+
 .story-section {
   text-align: center;
   padding: 60px 5px;
@@ -112,5 +121,11 @@ main {
         font-weight: bold;
       }
     }
+  }
+
+  .two-columns__large {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
   }
 }

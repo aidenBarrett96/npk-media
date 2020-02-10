@@ -19,7 +19,7 @@ const ProjectCard = ({ title, description, client, image, link }) => {
         {/* Show client either below or above title depending on client width */}
         {!desktop && <h4>{client}</h4>}
         <h2>{title}</h2>
-        {!desktop && <h4>{client}</h4>}
+        {desktop && <h4>{client}</h4>}
         <p>{description}</p>
         {/* Add a spacer to align link to bottom on large screens */}
         {!desktop && <span style={{ flex: 1 }} />}
