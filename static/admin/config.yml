@@ -7,8 +7,8 @@ media_folder: "static/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "team_member"
-    label: "Team Member"
+  - name: "team_members"
+    label: "Team Members"
     folder: "content/team"
     create: true
     slug: "{{slug}}"
@@ -16,3 +16,11 @@ collections:
       - { label: "Name", name: "name", widget: "string", required: true }
       - { label: "Job Role", name: "role", widget: "string", required: true }
       - { label: "Profile Image", name: "profile_image", widget: image }
+  - name: "projects"
+  label: "Projects"
+  folder: "content/projects"
+  create: true
+  slug: "{{year}}--{{slug}}"
+  fields: 
+    - {label: "Project Name", name: "project_name", widget: "string", required: true}
+    - {label: "Client Name", name: "client", widget: "string", required: true}
