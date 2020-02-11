@@ -12,15 +12,27 @@ collections:
     folder: "content/team"
     create: true
     slug: "{{slug}}"
+    identifier_field: name
     fields:
       - { label: "Name", name: "name", widget: "string", required: true }
       - { label: "Job Role", name: "role", widget: "string", required: true }
       - { label: "Profile Image", name: "profile_image", widget: image }
   - name: "projects"
-  label: "Projects"
-  folder: "content/projects"
-  create: true
-  slug: "{{year}}--{{slug}}"
-  fields: 
-    - {label: "Project Name", name: "project_name", widget: "string", required: true}
-    - {label: "Client Name", name: "client", widget: "string", required: true}
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{year}}--{{slug}}"
+    identifier_field: project_name
+    fields:
+      - {
+          label: "Project Name",
+          name: "project_name",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "Client Name",
+          name: "client",
+          widget: "string",
+          required: true,
+        }
