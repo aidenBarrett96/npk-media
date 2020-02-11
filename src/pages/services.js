@@ -62,7 +62,6 @@ const ServicesPage = () => {
         {service === "Websites" && <WebsiteSection />}
         {service === "Social Media" && <SocialMediaSection />}
         {service === "Branding" && <BrandingSection />}
-        <ContactBlock />
       </section>
     </Layout>
   )

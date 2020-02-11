@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "static/uploads"
+public_folder: "uploads"
+
+collections:
+  - name: "team_member"
+    label: "Team Member"
+    folder: "content/team"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string", required: true }
+      - { label: "Profile Image", name: "image", widget: image }

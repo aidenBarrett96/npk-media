@@ -2,6 +2,7 @@ import React from "react"
 import PeakInterest from "../peakInterest/peakInterest"
 import NumberedCard from "../numberedCard/numberedCard"
 import ProjectCard from "../projectCard/projectCard"
+import ContactBlock from "../contactBlock/contactBlock"
 import camera from "../../assets/story assets/service icons/video icon.svg"
 import plus from "../../assets/story assets/story icons/plus.svg"
 import projectImg from "../../images/project_image_placeholder.png"
@@ -19,9 +20,8 @@ const Videography = () => {
           Our <strong>professional videos</strong> offer you a fresh way to{" "}
           <strong>interact with your customers.</strong>
         </h2>
+        <PeakInterest text="How will they help my company?" />
       </div>
-
-      <PeakInterest text="How will they help my company?" />
 
       <div className="two-columns__large">
         <img className="icon" src={plus} alt="Plus sign" />
@@ -31,9 +31,8 @@ const Videography = () => {
             video based channels like instagram stories.
           </h2>
         </div>
+        <PeakInterest text="Whats the process?" />
       </div>
-
-      <PeakInterest text="Whats the process?" />
 
       {/* Proccesses */}
       <div className="process">
@@ -64,9 +63,8 @@ const Videography = () => {
             </p>
           </NumberedCard>
         </div>
+        <PeakInterest text="Can I see an example?" />
       </div>
-
-      <PeakInterest text="Can I see an example?" />
 
       {/* Recent relevant jobs */}
       {/* Add query to back end in future */}
@@ -94,9 +92,9 @@ const Videography = () => {
             />
           )}
         </div>
+        <PeakInterest text="How can I get in touch?" />
       </div>
-
-      <PeakInterest text="How can I get in touch?" />
+      <ContactBlock />
     </div>
   )
 }
