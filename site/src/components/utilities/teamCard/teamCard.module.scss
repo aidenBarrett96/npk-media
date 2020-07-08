@@ -1,0 +1,29 @@
+.container {
+	.img-wrapper {
+		border: 2px solid black;
+		border-radius: 10px;
+		overflow: hidden;
+		transition: all 0.4s;
+		img {
+			object-position: center;
+			object-fit: cover;
+			width: 100%;
+			margin-bottom: -8px;
+		}
+	}
+
+	.name {
+		font-weight: bold;
+		font-size: 20px;
+		margin: 10px 0 0;
+		transition: all 0.4s;
+	}
+
+	.role {
+		font-weight: 300;
+		font-size: 20px;
+		color: #46444c;
+		margin: 0;
+		transition: all 0.4s;
+	}
+}

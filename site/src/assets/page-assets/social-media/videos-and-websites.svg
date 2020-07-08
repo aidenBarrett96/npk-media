@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="314.049" height="108.595" viewBox="0 0 314.049 108.595">
+  <g id="Group_524" data-name="Group 524" transform="translate(-47.058 -1299.642)">
+    <path id="ground" d="M-9352.049-10960.2c28.067,1.391,137.105-1.39,156.539,0s116.595,0,155.461,0" transform="translate(9400.155 12366.724)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+    <g id="laptop" transform="translate(174.603 1318.644)">
+      <g id="laptop_upper" data-name="laptop upper" transform="translate(4.333)">
+        <path id="laptop_upper_body" data-name="laptop upper body" d="M8.161-1l111.184.421A10.108,10.108,0,0,1,129.453,9.529s.887,16.5.445,33.232-.445,30.784-.445,30.784a10.108,10.108,0,0,1-10.108,10.108H8.582A10.108,10.108,0,0,1-1.525,73.544s-.995-15.762-1.1-31.871.679-32.566.679-32.566A10.108,10.108,0,0,1,8.161-1Z" transform="translate(2.635 1)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+        <path id="laptop_screen" data-name="laptop screen" d="M4.993-.613l109.877.131c3.793,0,5.872,1.833,5.872,5.5,0,0,.828,16.461.416,30.232s-.416,27.872-.416,27.872a5.767,5.767,0,0,1-5.872,5.959L3.808,68.909c-3.114,0-5.1-1.9-5.1-5.256,0,0-1.229-16.038-1.327-29.3S-1.752,4.5-1.752,4.5C-1.661,1.855-.221-.613,4.993-.613Z" transform="translate(7.008 8.139)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+        <g id="laptop_window" data-name="laptop window" transform="translate(15.702 18.169)">
+          <path id="laptop_window_outline" data-name="laptop window outline" d="M-.118-1.131s21.141-.31,41.686-.31,40.5.31,40.5.31A1.07,1.07,0,0,1,83.129-.056s.619,9.525.254,20.8-.467,24.783-.467,24.783a1.07,1.07,0,0,1-1.065,1.075s-19.791.359-40.283.413-41.686-.2-41.686-.2a1.07,1.07,0,0,1-1.065-1.075s-.32-6.027-.32-17.478.32-28.324.32-28.324A1.07,1.07,0,0,1-.118-1.131Z" transform="translate(1.502 1.441)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+          <path id="laptop_window_line" data-name="laptop window line" d="M19.884,25.852s32.2-.261,42.131,0,42.869,0,42.869,0" transform="translate(-19.884 -15.957)" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+          <ellipse id="laptop_window_button_L" data-name="laptop window button L" cx="1.495" cy="1.495" rx="1.495" ry="1.495" transform="translate(8.295 3.63) rotate(90)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+          <ellipse id="laptop_window_button_C" data-name="laptop window button C" cx="1.495" cy="1.495" rx="1.495" ry="1.495" transform="translate(15.349 3.63) rotate(90)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+          <ellipse id="laptop_window_button_R" data-name="laptop window button R" cx="1.495" cy="1.495" rx="1.495" ry="1.495" transform="translate(22.402 3.63) rotate(90)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="laptop_text" data-name="laptop text" transform="translate(25.604 43.341)">
+          <path id="laptop_text_bottom" data-name="laptop text bottom" d="M-1.179-1.42s4.936-.02,9.734-.02,9.456.02,9.456.02c.137,0,.249.032.249.071A4.5,4.5,0,0,1,18.319.019c-.085.742-.109,1.631-.109,1.631,0,.039-.111.071-.249.071,0,0-4.621.024-9.406.027s-9.734-.013-9.734-.013c-.137,0-.249-.032-.249-.071A6.913,6.913,0,0,1-1.5.514c0-.753.075-1.864.075-1.864C-1.427-1.389-1.316-1.42-1.179-1.42Z" transform="translate(1.502 7.486)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+          <path id="laptop_text_top" data-name="laptop text top" d="M-1.065-1.42s6.67-.02,13.152-.02,12.776.02,12.776.02c.185,0,.336.032.336.071a3.365,3.365,0,0,1,.08,1.369c-.115.742-.147,1.631-.147,1.631,0,.039-.15.071-.336.071,0,0-6.244.024-12.709.027S-1.065,1.735-1.065,1.735c-.185,0-.336-.032-.336-.071A5.163,5.163,0,0,1-1.5.514c0-.753.1-1.864.1-1.864C-1.4-1.389-1.251-1.42-1.065-1.42Z" transform="translate(1.502 1.441)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="laptop_image" data-name="laptop image" transform="translate(66.916 37.192)">
+          <path id="Path_1041" data-name="Path 1041" d="M-1.174-1.316s5.01-.124,9.879-.124,9.6.124,9.6.124c.139,0,.252.193.252.432,0,0,.147,3.827.06,8.357s-.111,9.956-.111,9.956c0,.239-.113.432-.252.432,0,0-4.69.144-9.546.166s-9.879-.079-9.879-.079c-.139,0-.252-.193-.252-.432,0,0-.076-2.421-.076-7.021S-1.426-.884-1.426-.884C-1.426-1.123-1.313-1.316-1.174-1.316Z" transform="translate(1.502 1.543)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+          <path id="Path_1042" data-name="Path 1042" d="M70.711,56.482,90.546,37.17" transform="translate(-70.711 -36.909)" fill="none" stroke="#000" stroke-width="2"/>
+          <path id="Path_1043" data-name="Path 1043" d="M0,19.312,19.835,0" transform="translate(19.573) rotate(90)" fill="none" stroke="#000" stroke-width="2"/>
+        </g>
+        <path id="laptop_mouse" data-name="laptop mouse" d="M5.742,18.366c-.218.194-.423.384-.612.57A12.311,12.311,0,0,1,.107,22.213S.347,12.2.107,9.658.107,0,.107,0,4.18,3.175,7.7,6.3s6.478,6.212,6.478,6.212S11.536,14.069,8.927,15.9l5.911,9.33L11.5,27.454Z" transform="translate(96.312 38.191)" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <path id="laptop_base" data-name="laptop base" d="M25.356,4.678c-10.2,0-18.555-.014-20.381-.062C-.349,4.476,0,0,0,0L49.852.124c8.5-.008,17.643-.01,25.743,0C99.026.165,141.7,0,141.7,0s.353,4.476-4.971,4.616c-2.38.062-24.544.421-53.73.421C60.856,5.037,36.043,4.795,25.356,4.678Z" transform="translate(0 82.211)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+    <g id="camera" transform="translate(92.764 1300.642)">
+      <g id="camera_tripod" data-name="camera tripod" transform="translate(0 50.876)">
+        <g id="tripod_legs" data-name="tripod legs" transform="translate(11.098 0)">
+          <path id="Path_710" data-name="Path 710" d="M3.193.052S13.871,0,24.657,0,46.338.052,46.338.052c1.756,0,3.179.163,3.179.363A1.417,1.417,0,0,1,49.971,1.7a17.977,17.977,0,0,1-.454,1.775c0,.2-1.423.363-3.179.363,0,0-11.444.052-22.231.052S3.193,3.837,3.193,3.837C1.438,3.837,1.17,3.623.8,3.375A1.733,1.733,0,0,1,.014,2.033,2.024,2.024,0,0,1,.567.387C.868.116,1.438.052,3.193.052Z" transform="translate(19.508 50.723) rotate(-90)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+          <path id="Path_708" data-name="Path 708" d="M3.635,4.73S15.38,3.542,27.241,2.393,51.08.135,51.08.135c1.931-.187,3.485-.179,3.471.019a1.126,1.126,0,0,1,.412,1.216,18.7,18.7,0,0,1-.621,1.8c-.014.2-1.59.509-3.521.7,0,0-12.589,1.27-24.45,2.419s-23,2.176-23,2.176c-1.931.187-2.21.005-2.6-.2A1.366,1.366,0,0,1,0,7.018,2.2,2.2,0,0,1,.723,5.34C1.074,5.04,1.7,4.917,3.635,4.73Z" transform="translate(34.591 55.517) rotate(-103)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+          <path id="Path_709" data-name="Path 709" d="M3.635,3.8S15.38,4.992,27.241,6.141,51.08,8.4,51.08,8.4c1.931.187,3.485.179,3.471-.019a1.126,1.126,0,0,0,.412-1.216,18.7,18.7,0,0,0-.621-1.8c-.014-.2-1.59-.509-3.521-.7,0,0-12.589-1.27-24.45-2.419s-23-2.176-23-2.176c-1.931-.187-2.21-.005-2.6.2A1.366,1.366,0,0,0,0,1.515a2.2,2.2,0,0,0,.72,1.679C1.074,3.493,1.7,3.617,3.635,3.8Z" transform="translate(0 53.598) rotate(-77)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="tripod_base" data-name="tripod base" transform="translate(0 2.429)">
+          <path id="Path_711" data-name="Path 711" d="M1.178,3.97s3.94.054,7.92.054,8-.054,8-.054c.648,0,1.173-.168,1.173-.375a3.107,3.107,0,0,0,.168-1.328c-.053-.818-.168-1.836-.168-1.836,0-.207-.525-.375-1.173-.375C17.1.054,12.876,0,8.9,0S1.178.054,1.178.054C.53.054.432.275.295.532A3.162,3.162,0,0,0,.005,1.92a4.8,4.8,0,0,0,.2,1.7C.32,3.9.53,3.97,1.178,3.97Z" transform="matrix(0.966, -0.259, 0.259, 0.966, 7.416, 4.886)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+          <path id="Path_713" data-name="Path 713" d="M.945,5.228S4.1,5.3,7.3,5.3s6.415-.071,6.415-.071c.52,0,.941-.221.941-.495a6.515,6.515,0,0,0,.134-1.75c-.043-1.077-.134-2.419-.134-2.419,0-.273-.421-.495-.941-.495,0,0-3.386-.071-6.578-.071S.945.071.945.071c-.52,0-.6.291-.709.63A6.474,6.474,0,0,0,0,2.529,10.158,10.158,0,0,0,.168,4.771C.257,5.141.425,5.228.945,5.228Z" transform="matrix(0.966, -0.259, 0.259, 0.966, 0, 6.126)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+          <path id="Path_712" data-name="Path 712" d="M1.178,3.97s3.94.054,7.92.054,8-.054,8-.054c.648,0,1.173-.168,1.173-.375a3.107,3.107,0,0,0,.168-1.328c-.053-.818-.168-1.836-.168-1.836,0-.207-.525-.375-1.173-.375C17.1.054,12.876,0,8.9,0S1.178.054,1.178.054C.53.054.432.275.295.532A3.162,3.162,0,0,0,.005,1.92a4.8,4.8,0,0,0,.2,1.7C.32,3.9.53,3.97,1.178,3.97Z" transform="translate(23.901 0)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+      </g>
+      <g id="camera_reels" data-name="camera reels" transform="translate(11.694 0)">
+        <g id="camera_reel_R" data-name="camera reel R" transform="translate(42.645) rotate(90)">
+          <path id="Path_715" data-name="Path 715" d="M9.632,0C3.208-.032.02,4.862,0,9.632a9.793,9.793,0,0,0,9.632,9.406c5.319,0,9.606-3.766,9.606-9.086S16.055.033,9.632,0Z" transform="translate(0 0)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+          <g id="Group_466" data-name="Group 466" transform="translate(3.627 2.989)">
+            <ellipse id="Ellipse_22" data-name="Ellipse 22" cx="1.495" cy="1.495" rx="1.495" ry="1.495" transform="translate(4.65)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+            <ellipse id="Ellipse_21" data-name="Ellipse 21" cx="1.495" cy="1.495" rx="1.495" ry="1.495" transform="translate(0 3.653)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+            <ellipse id="Ellipse_19" data-name="Ellipse 19" cx="1.495" cy="1.495" rx="1.495" ry="1.495" transform="translate(7.307 8.967)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+            <ellipse id="Ellipse_18" data-name="Ellipse 18" cx="1.495" cy="1.495" rx="1.495" ry="1.495" transform="translate(8.967 3.653)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+            <ellipse id="Ellipse_20" data-name="Ellipse 20" cx="1.495" cy="1.495" rx="1.495" ry="1.495" transform="translate(1.993 8.967)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+        </g>
+        <g id="camera_reel_L" data-name="camera reel L" transform="translate(0 0.1)">
+          <path id="Path_715-2" data-name="Path 715" d="M9.632,0C3.208-.032.02,4.862,0,9.632a9.793,9.793,0,0,0,9.632,9.406c5.319,0,9.606-3.766,9.606-9.086S16.055.033,9.632,0Z" transform="translate(0 0)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+          <g id="Group_467" data-name="Group 467" transform="translate(3.627 2.989)">
+            <ellipse id="Ellipse_22-2" data-name="Ellipse 22" cx="1.495" cy="1.495" rx="1.495" ry="1.495" transform="translate(4.65)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+            <ellipse id="Ellipse_21-2" data-name="Ellipse 21" cx="1.495" cy="1.495" rx="1.495" ry="1.495" transform="translate(0 3.653)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+            <ellipse id="Ellipse_19-2" data-name="Ellipse 19" cx="1.495" cy="1.495" rx="1.495" ry="1.495" transform="translate(7.307 8.967)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+            <ellipse id="Ellipse_18-2" data-name="Ellipse 18" cx="1.495" cy="1.495" rx="1.495" ry="1.495" transform="translate(8.967 3.653)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+            <ellipse id="Ellipse_20-2" data-name="Ellipse 20" cx="1.495" cy="1.495" rx="1.495" ry="1.495" transform="translate(1.993 8.967)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+        </g>
+      </g>
+      <g id="camera_body" data-name="camera body" transform="translate(3.844 19.231)">
+        <path id="camera_lens" data-name="camera lens" d="M.885-5.6l9.333-4.444a.885.885,0,0,1,.885.885l.4,15.5a.885.885,0,0,1-.885.885L.885,2.8A.885.885,0,0,1,0,1.917V-4.718A.885.885,0,0,1,.885-5.6Z" transform="translate(52.784 17.987)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+        <path id="camera_main_body" data-name="camera main body" d="M2.864-.558S13.263-1,23.768-1s21.116.442,21.116.442a3.1,3.1,0,0,1,3.1,3.1,76.5,76.5,0,0,1,.442,10.954c-.141,6.745-.442,15.143-.442,15.143a3.1,3.1,0,0,1-3.1,3.1s-11.146.442-21.651.442-20.369-.442-20.369-.442a3.1,3.1,0,0,1-3.1-3.1,101.489,101.489,0,0,0,0-12.291,133.318,133.318,0,0,1,0-13.805A3.1,3.1,0,0,1,2.864-.558Z" transform="translate(5.246 1)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+        <path id="camera_viewfinder" data-name="camera viewfinder" d="M4.8-5.026,1.237-6.046A.337.337,0,0,0,.9-5.709V-1.4a.337.337,0,0,0,.337.337L4.8-1.822a.337.337,0,0,0,.337-.337v-2.53A.337.337,0,0,0,4.8-5.026Z" transform="translate(-0.899 12.277)" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+        <ellipse id="camera_light" data-name="camera light" cx="3.425" cy="3.425" rx="3.425" ry="3.425" transform="translate(39.546 5.197)" fill="#de4a3f" stroke="#000" stroke-linejoin="round" stroke-width="2" opacity="0"/>
+      </g>
+    </g>
+  </g>
+</svg>

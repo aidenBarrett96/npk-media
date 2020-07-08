@@ -1,0 +1,549 @@
+[
+	{
+		"categories": [
+			{
+				"_id": "5eb97b769b2bbe770c5b9d21",
+				"name": "Social Media",
+				"createdAt": "2020-05-11T16:21:10.282Z",
+				"updatedAt": "2020-05-11T16:21:10.282Z",
+				"__v": 0,
+				"id": "5eb97b769b2bbe770c5b9d21"
+			},
+			{
+				"_id": "5eb97b6f9b2bbe770c5b9d20",
+				"name": "Videos",
+				"createdAt": "2020-05-11T16:21:03.850Z",
+				"updatedAt": "2020-05-11T16:21:03.850Z",
+				"__v": 0,
+				"id": "5eb97b6f9b2bbe770c5b9d20"
+			},
+			{
+				"_id": "5eb97b7e9b2bbe770c5b9d22",
+				"name": "Websites",
+				"createdAt": "2020-05-11T16:21:18.569Z",
+				"updatedAt": "2020-05-11T16:21:18.569Z",
+				"__v": 0,
+				"id": "5eb97b7e9b2bbe770c5b9d22"
+			},
+			{
+				"_id": "5eb97b959b2bbe770c5b9d23",
+				"name": "Branding",
+				"createdAt": "2020-05-11T16:21:41.493Z",
+				"updatedAt": "2020-05-11T16:21:41.493Z",
+				"__v": 0,
+				"id": "5eb97b959b2bbe770c5b9d23"
+			}
+		],
+		"_id": "5eb2cc8ff0762e7324f08b1d",
+		"name": "Phresh Re-launch",
+		"slug": "phresh",
+		"client": "Phresh",
+		"description": "We relaunched the Phresh brand in time for their updated product line at the beginning of 2020.",
+		"content": [
+			{
+				"__component": "project.content-with-images",
+				"_id": "5eb2db588d6bc702b0d2e319",
+				"title": "Branding",
+				"body": "Working with the brands guidelines, we designed a cohesive brand language identifiable across video, social media and website.",
+				"images": {
+					"featured_position": "bottom",
+					"images": [
+						{
+							"_id": "5eb2da108d6bc702b0d2e311",
+							"name": "phresh-logo-animated-bg",
+							"alternativeText": "",
+							"caption": "",
+							"hash": "phresh-logo-animated-bg_aa681f404f",
+							"ext": ".mp4",
+							"mime": "video/mp4",
+							"size": 2505.53,
+							"url": "/uploads/phresh-logo-animated-bg_aa681f404f.mp4",
+							"provider": "local",
+							"width": null,
+							"height": null,
+							"related": ["5eb2db588d6bc702b0d2e31d"],
+							"createdAt": "2020-05-06T15:38:56.735Z",
+							"updatedAt": "2020-05-06T15:44:24.607Z",
+							"__v": 0,
+							"id": "5eb2da108d6bc702b0d2e311"
+						},
+						{
+							"_id": "5eb2da0f8d6bc702b0d2e310",
+							"name": "phresh-banner",
+							"alternativeText": "",
+							"caption": "",
+							"hash": "phresh-banner_87b25eb4dd",
+							"ext": ".png",
+							"mime": "image/png",
+							"size": 130.11,
+							"width": 2470,
+							"height": 925,
+							"url": "/uploads/phresh-banner_87b25eb4dd.png",
+							"formats": {
+								"thumbnail": {
+									"hash": "thumbnail_phresh-banner_87b25eb4dd",
+									"ext": ".png",
+									"mime": "image/png",
+									"width": 245,
+									"height": 92,
+									"size": 5.42,
+									"url": "/uploads/thumbnail_phresh-banner_87b25eb4dd.png"
+								},
+								"large": {
+									"hash": "large_phresh-banner_87b25eb4dd",
+									"ext": ".png",
+									"mime": "image/png",
+									"width": 1000,
+									"height": 374,
+									"size": 41.54,
+									"url": "/uploads/large_phresh-banner_87b25eb4dd.png"
+								},
+								"medium": {
+									"hash": "medium_phresh-banner_87b25eb4dd",
+									"ext": ".png",
+									"mime": "image/png",
+									"width": 750,
+									"height": 281,
+									"size": 27.14,
+									"url": "/uploads/medium_phresh-banner_87b25eb4dd.png"
+								},
+								"small": {
+									"hash": "small_phresh-banner_87b25eb4dd",
+									"ext": ".png",
+									"mime": "image/png",
+									"width": 500,
+									"height": 187,
+									"size": 14.61,
+									"url": "/uploads/small_phresh-banner_87b25eb4dd.png"
+								}
+							},
+							"provider": "local",
+							"related": ["5eb2db588d6bc702b0d2e31d"],
+							"createdAt": "2020-05-06T15:38:55.242Z",
+							"updatedAt": "2020-05-06T15:44:24.607Z",
+							"__v": 0,
+							"id": "5eb2da0f8d6bc702b0d2e310"
+						},
+						{
+							"_id": "5eb2da198d6bc702b0d2e312",
+							"name": "phresh-background-animated",
+							"alternativeText": "",
+							"caption": "",
+							"hash": "phresh-background-animated_55e103f62d",
+							"ext": ".mp4",
+							"mime": "video/mp4",
+							"size": 14216.87,
+							"url": "/uploads/phresh-background-animated_55e103f62d.mp4",
+							"provider": "local",
+							"width": null,
+							"height": null,
+							"related": ["5eb2db588d6bc702b0d2e31d"],
+							"createdAt": "2020-05-06T15:39:05.161Z",
+							"updatedAt": "2020-05-06T15:44:24.607Z",
+							"__v": 0,
+							"id": "5eb2da198d6bc702b0d2e312"
+						}
+					],
+					"_id": "5eb2db588d6bc702b0d2e31d",
+					"createdAt": "2020-05-06T15:44:24.587Z",
+					"updatedAt": "2020-05-11T16:25:47.059Z",
+					"__v": 0,
+					"id": "5eb2db588d6bc702b0d2e31d"
+				},
+				"link": null,
+				"createdAt": "2020-05-06T15:44:24.582Z",
+				"updatedAt": "2020-05-11T16:25:47.097Z",
+				"__v": 1,
+				"id": "5eb2db588d6bc702b0d2e319"
+			},
+			{
+				"__component": "project.content-with-embed",
+				"_id": "5eb2db588d6bc702b0d2e31a",
+				"embed": "<iframe  src=\"https://www.youtube.com/embed/xUZhbI1ADjo\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+				"title": "Videos",
+				"body": "Videos recorded and edited in house, with bespoke music composed by our producer have been viewed by *2000 people.",
+				"link": {
+					"_id": "5eb2db588d6bc702b0d2e31e",
+					"text": "Watch all on Youtube",
+					"url": "https://www.youtube.com/channel/UCDTHOE83JjY3xg1tBbOPLsQ",
+					"createdAt": "2020-05-06T15:44:24.593Z",
+					"updatedAt": "2020-05-11T16:25:47.019Z",
+					"__v": 0,
+					"id": "5eb2db588d6bc702b0d2e31e"
+				},
+				"createdAt": "2020-05-06T15:44:24.582Z",
+				"updatedAt": "2020-05-11T16:25:47.056Z",
+				"__v": 1,
+				"id": "5eb2db588d6bc702b0d2e31a"
+			},
+			{
+				"__component": "project.content-with-images",
+				"_id": "5eb2db588d6bc702b0d2e31b",
+				"title": "Social Media",
+				"body": "Video, product photography and rendered content were released regularly across the brands social media platforms. This drove followers up by 20% in the first month.",
+				"images": {
+					"featured_position": "left",
+					"images": [
+						{
+							"_id": "5eb2da9f8d6bc702b0d2e314",
+							"name": "phresh-instagram-mockup",
+							"alternativeText": "",
+							"caption": "",
+							"hash": "phresh-instagram-mockup_8a0360fe52",
+							"ext": ".png",
+							"mime": "image/png",
+							"size": 1376.09,
+							"width": 871,
+							"height": 1844,
+							"url": "/uploads/phresh-instagram-mockup_8a0360fe52.png",
+							"formats": {
+								"thumbnail": {
+									"hash": "thumbnail_phresh-instagram-mockup_8a0360fe52",
+									"ext": ".png",
+									"mime": "image/png",
+									"width": 74,
+									"height": 156,
+									"size": 17.25,
+									"url": "/uploads/thumbnail_phresh-instagram-mockup_8a0360fe52.png"
+								},
+								"large": {
+									"hash": "large_phresh-instagram-mockup_8a0360fe52",
+									"ext": ".png",
+									"mime": "image/png",
+									"width": 472,
+									"height": 1000,
+									"size": 445.16,
+									"url": "/uploads/large_phresh-instagram-mockup_8a0360fe52.png"
+								},
+								"medium": {
+									"hash": "medium_phresh-instagram-mockup_8a0360fe52",
+									"ext": ".png",
+									"mime": "image/png",
+									"width": 354,
+									"height": 750,
+									"size": 258.68,
+									"url": "/uploads/medium_phresh-instagram-mockup_8a0360fe52.png"
+								},
+								"small": {
+									"hash": "small_phresh-instagram-mockup_8a0360fe52",
+									"ext": ".png",
+									"mime": "image/png",
+									"width": 236,
+									"height": 500,
+									"size": 121.12,
+									"url": "/uploads/small_phresh-instagram-mockup_8a0360fe52.png"
+								}
+							},
+							"provider": "local",
+							"related": ["5eb2db588d6bc702b0d2e320"],
+							"createdAt": "2020-05-06T15:41:19.161Z",
+							"updatedAt": "2020-05-06T15:44:24.618Z",
+							"__v": 0,
+							"id": "5eb2da9f8d6bc702b0d2e314"
+						},
+						{
+							"_id": "5eb2da9b8d6bc702b0d2e313",
+							"name": "phresh-instagram-post",
+							"alternativeText": "",
+							"caption": "",
+							"hash": "phresh-instagram-post_5177651ccc",
+							"ext": ".jpeg",
+							"mime": "image/jpeg",
+							"size": 54.08,
+							"width": 750,
+							"height": 750,
+							"url": "/uploads/phresh-instagram-post_5177651ccc.jpeg",
+							"formats": {
+								"thumbnail": {
+									"hash": "thumbnail_phresh-instagram-post_5177651ccc",
+									"ext": ".jpeg",
+									"mime": "image/jpeg",
+									"width": 156,
+									"height": 156,
+									"size": 4.02,
+									"url": "/uploads/thumbnail_phresh-instagram-post_5177651ccc.jpeg"
+								},
+								"small": {
+									"hash": "small_phresh-instagram-post_5177651ccc",
+									"ext": ".jpeg",
+									"mime": "image/jpeg",
+									"width": 500,
+									"height": 500,
+									"size": 28.14,
+									"url": "/uploads/small_phresh-instagram-post_5177651ccc.jpeg"
+								}
+							},
+							"provider": "local",
+							"related": ["5eb2db588d6bc702b0d2e320"],
+							"createdAt": "2020-05-06T15:41:15.385Z",
+							"updatedAt": "2020-05-06T15:44:24.618Z",
+							"__v": 0,
+							"id": "5eb2da9b8d6bc702b0d2e313"
+						},
+						{
+							"_id": "5eb2daa68d6bc702b0d2e315",
+							"name": "hyperfan-social-video",
+							"alternativeText": "",
+							"caption": "",
+							"hash": "hyperfan-social-video_8441aae920",
+							"ext": ".mp4",
+							"mime": "video/mp4",
+							"size": 15990.08,
+							"url": "/uploads/hyperfan-social-video_8441aae920.mp4",
+							"provider": "local",
+							"width": null,
+							"height": null,
+							"related": ["5eb2db588d6bc702b0d2e320"],
+							"createdAt": "2020-05-06T15:41:26.469Z",
+							"updatedAt": "2020-05-06T15:44:24.618Z",
+							"__v": 0,
+							"id": "5eb2daa68d6bc702b0d2e315"
+						}
+					],
+					"_id": "5eb2db588d6bc702b0d2e320",
+					"createdAt": "2020-05-06T15:44:24.597Z",
+					"updatedAt": "2020-05-11T16:25:47.054Z",
+					"__v": 0,
+					"id": "5eb2db588d6bc702b0d2e320"
+				},
+				"link": {
+					"_id": "5eb2db588d6bc702b0d2e32f",
+					"text": "View Phresh on Instagram",
+					"url": "https://www.instagram.com/phresh_uk/",
+					"createdAt": "2020-05-06T15:44:24.661Z",
+					"updatedAt": "2020-05-11T16:25:47.095Z",
+					"__v": 0,
+					"id": "5eb2db588d6bc702b0d2e32f"
+				},
+				"createdAt": "2020-05-06T15:44:24.583Z",
+				"updatedAt": "2020-05-11T16:25:47.117Z",
+				"__v": 2,
+				"id": "5eb2db588d6bc702b0d2e31b"
+			},
+			{
+				"__component": "project.content-with-images",
+				"_id": "5eb2db588d6bc702b0d2e31c",
+				"title": "Websites",
+				"body": "A bespoke, responsive site was designed to offer customers a place to view new products and help shops get in touch with relevant reps. ",
+				"images": {
+					"featured_position": "right",
+					"images": [
+						{
+							"_id": "5eb2db288d6bc702b0d2e318",
+							"name": "phresh-site-mobile",
+							"alternativeText": "",
+							"caption": "",
+							"hash": "phresh-site-mobile_f995456c3d",
+							"ext": ".png",
+							"mime": "image/png",
+							"size": 1682.97,
+							"width": 892,
+							"height": 1849,
+							"url": "/uploads/phresh-site-mobile_f995456c3d.png",
+							"formats": {
+								"thumbnail": {
+									"hash": "thumbnail_phresh-site-mobile_f995456c3d",
+									"ext": ".png",
+									"mime": "image/png",
+									"width": 75,
+									"height": 156,
+									"size": 17.58,
+									"url": "/uploads/thumbnail_phresh-site-mobile_f995456c3d.png"
+								},
+								"large": {
+									"hash": "large_phresh-site-mobile_f995456c3d",
+									"ext": ".png",
+									"mime": "image/png",
+									"width": 482,
+									"height": 1000,
+									"size": 502.07,
+									"url": "/uploads/large_phresh-site-mobile_f995456c3d.png"
+								},
+								"medium": {
+									"hash": "medium_phresh-site-mobile_f995456c3d",
+									"ext": ".png",
+									"mime": "image/png",
+									"width": 362,
+									"height": 750,
+									"size": 279.54,
+									"url": "/uploads/medium_phresh-site-mobile_f995456c3d.png"
+								},
+								"small": {
+									"hash": "small_phresh-site-mobile_f995456c3d",
+									"ext": ".png",
+									"mime": "image/png",
+									"width": 241,
+									"height": 500,
+									"size": 129.82,
+									"url": "/uploads/small_phresh-site-mobile_f995456c3d.png"
+								}
+							},
+							"provider": "local",
+							"related": ["5eb2db588d6bc702b0d2e31f"],
+							"createdAt": "2020-05-06T15:43:36.406Z",
+							"updatedAt": "2020-05-06T15:44:24.614Z",
+							"__v": 0,
+							"id": "5eb2db288d6bc702b0d2e318"
+						},
+						{
+							"_id": "5eb2db238d6bc702b0d2e316",
+							"name": "phresh-site-screen",
+							"alternativeText": "",
+							"caption": "",
+							"hash": "phresh-site-screen_04b8bbdbde",
+							"ext": ".png",
+							"mime": "image/png",
+							"size": 190.34,
+							"width": 1090,
+							"height": 1090,
+							"url": "/uploads/phresh-site-screen_04b8bbdbde.png",
+							"formats": {
+								"thumbnail": {
+									"hash": "thumbnail_phresh-site-screen_04b8bbdbde",
+									"ext": ".png",
+									"mime": "image/png",
+									"width": 156,
+									"height": 156,
+									"size": 17.51,
+									"url": "/uploads/thumbnail_phresh-site-screen_04b8bbdbde.png"
+								},
+								"large": {
+									"hash": "large_phresh-site-screen_04b8bbdbde",
+									"ext": ".png",
+									"mime": "image/png",
+									"width": 1000,
+									"height": 1000,
+									"size": 295.4,
+									"url": "/uploads/large_phresh-site-screen_04b8bbdbde.png"
+								},
+								"medium": {
+									"hash": "medium_phresh-site-screen_04b8bbdbde",
+									"ext": ".png",
+									"mime": "image/png",
+									"width": 750,
+									"height": 750,
+									"size": 192.78,
+									"url": "/uploads/medium_phresh-site-screen_04b8bbdbde.png"
+								},
+								"small": {
+									"hash": "small_phresh-site-screen_04b8bbdbde",
+									"ext": ".png",
+									"mime": "image/png",
+									"width": 500,
+									"height": 500,
+									"size": 103.83,
+									"url": "/uploads/small_phresh-site-screen_04b8bbdbde.png"
+								}
+							},
+							"provider": "local",
+							"related": ["5eb2db588d6bc702b0d2e31f"],
+							"createdAt": "2020-05-06T15:43:31.821Z",
+							"updatedAt": "2020-05-06T15:44:24.614Z",
+							"__v": 0,
+							"id": "5eb2db238d6bc702b0d2e316"
+						},
+						{
+							"_id": "5eb2db278d6bc702b0d2e317",
+							"name": "phresh-site-laptop-square",
+							"alternativeText": "",
+							"caption": "",
+							"hash": "phresh-site-laptop-square_418410c1ec",
+							"ext": ".png",
+							"mime": "image/png",
+							"size": 1192.28,
+							"width": 2269,
+							"height": 2269,
+							"url": "/uploads/phresh-site-laptop-square_418410c1ec.png",
+							"formats": {
+								"thumbnail": {
+									"hash": "thumbnail_phresh-site-laptop-square_418410c1ec",
+									"ext": ".png",
+									"mime": "image/png",
+									"width": 156,
+									"height": 156,
+									"size": 18,
+									"url": "/uploads/thumbnail_phresh-site-laptop-square_418410c1ec.png"
+								},
+								"large": {
+									"hash": "large_phresh-site-laptop-square_418410c1ec",
+									"ext": ".png",
+									"mime": "image/png",
+									"width": 1000,
+									"height": 1000,
+									"size": 358.51,
+									"url": "/uploads/large_phresh-site-laptop-square_418410c1ec.png"
+								},
+								"medium": {
+									"hash": "medium_phresh-site-laptop-square_418410c1ec",
+									"ext": ".png",
+									"mime": "image/png",
+									"width": 750,
+									"height": 750,
+									"size": 220.9,
+									"url": "/uploads/medium_phresh-site-laptop-square_418410c1ec.png"
+								},
+								"small": {
+									"hash": "small_phresh-site-laptop-square_418410c1ec",
+									"ext": ".png",
+									"mime": "image/png",
+									"width": 500,
+									"height": 500,
+									"size": 112.12,
+									"url": "/uploads/small_phresh-site-laptop-square_418410c1ec.png"
+								}
+							},
+							"provider": "local",
+							"related": ["5eb2db588d6bc702b0d2e31f"],
+							"createdAt": "2020-05-06T15:43:35.132Z",
+							"updatedAt": "2020-05-06T15:44:24.614Z",
+							"__v": 0,
+							"id": "5eb2db278d6bc702b0d2e317"
+						}
+					],
+					"_id": "5eb2db588d6bc702b0d2e31f",
+					"createdAt": "2020-05-06T15:44:24.595Z",
+					"updatedAt": "2020-05-11T16:25:47.058Z",
+					"__v": 0,
+					"id": "5eb2db588d6bc702b0d2e31f"
+				},
+				"link": {
+					"_id": "5eb2db588d6bc702b0d2e32e",
+					"text": "Visit website",
+					"url": "https://www.hyperphresh.com/",
+					"createdAt": "2020-05-06T15:44:24.658Z",
+					"updatedAt": "2020-05-11T16:25:47.103Z",
+					"__v": 0,
+					"id": "5eb2db588d6bc702b0d2e32e"
+				},
+				"createdAt": "2020-05-06T15:44:24.583Z",
+				"updatedAt": "2020-05-11T16:25:47.131Z",
+				"__v": 2,
+				"id": "5eb2db588d6bc702b0d2e31c"
+			}
+		],
+		"createdAt": "2020-05-06T14:41:19.971Z",
+		"updatedAt": "2020-05-11T16:25:47.199Z",
+		"__v": 1,
+		"hero": {
+			"_id": "5eb2d96e8d6bc702b0d2e30f",
+			"name": "phresh-filter-title-animated",
+			"alternativeText": "",
+			"caption": "",
+			"hash": "phresh-filter-title-animated_4e55c0dcc6",
+			"ext": ".mp4",
+			"mime": "video/mp4",
+			"size": 8142.11,
+			"url": "/uploads/phresh-filter-title-animated_4e55c0dcc6.mp4",
+			"provider": "local",
+			"width": null,
+			"height": null,
+			"related": ["5eb2cc8ff0762e7324f08b1d"],
+			"createdAt": "2020-05-06T15:36:14.594Z",
+			"updatedAt": "2020-05-06T15:44:24.733Z",
+			"__v": 0,
+			"id": "5eb2d96e8d6bc702b0d2e30f"
+		},
+		"categories_2": [],
+		"id": "5eb2cc8ff0762e7324f08b1d"
+	}
+]

@@ -1,0 +1,18 @@
+@import '../../styles/_variables.scss';
+
+.title {
+	text-align: center;
+}
+
+.contact-details {
+	width: 100%;
+	@media (min-width: $desktop) {
+		display: flex;
+		flex-wrap: wrap;
+
+		> div {
+			flex-basis: 50%;
+			flex-shrink: 0;
+		}
+	}
+}

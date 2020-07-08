@@ -1,0 +1,35 @@
+@import '../styles/_variables.scss';
+.story-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: $fullHeight;
+	text-align: center;
+	padding-top: 0 !important;
+
+	h1 {
+		font-size: 1.3rem;
+		font-weight: 500;
+		line-height: 1.8rem;
+		margin: 0;
+		opacity: 0;
+		animation: titleEntry 0.4s ease forwards 2s;
+
+		a {
+			font-size: 1.3rem;
+			font-weight: 500;
+			font-family: Jubilat !important;
+			text-decoration: underline;
+			color: $primary;
+		}
+	}
+
+	@keyframes titleEntry {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+}

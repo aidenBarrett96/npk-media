@@ -1,0 +1,63 @@
+@import '../../styles/variables';
+.featured-image {
+	max-width: 350px;
+	margin: 0 auto;
+	display: block;
+}
+
+.body {
+	box-sizing: border-box;
+	width: 100%;
+	.card-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		justify-content: center;
+		gap: 30px 24px;
+
+		.hide {
+			> div {
+				opacity: 0.6;
+			}
+			h3,
+			h4 {
+				opacity: 0;
+			}
+		}
+
+		.description {
+			grid-row: 2;
+			grid-column: 1/ -1;
+			height: auto;
+			display: flex;
+			align-items: center;
+			overflow: hidden;
+			opacity: 0;
+			max-height: 0;
+			visibility: hidden;
+			transition: all 0.4s ease;
+			margin: 0;
+
+			&.active {
+				opacity: 1;
+				max-height: 125px;
+				transition: all 0.8s;
+				visibility: visible;
+			}
+
+			&:nth-of-type(3),
+			&:nth-of-type(4) {
+				grid-row: 4;
+			}
+		}
+	}
+	@media only screen and (min-width: $desktop) {
+		.card-grid {
+			grid-template-columns: repeat(4, 185px);
+			gap: 20px;
+
+			.description {
+				grid-row: 2 !important;
+			}
+		}
+	}
+}

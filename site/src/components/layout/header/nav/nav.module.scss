@@ -1,0 +1,148 @@
+nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin: 80px 0;
+	background: white;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.4s ease;
+
+	&.nav-open {
+		opacity: 1;
+		visibility: visible;
+		.nav {
+			transform: translateY(0px);
+		}
+	}
+
+	.nav {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		height: calc(100vh - 80px);
+		transform: translateY(-40px);
+		transition: all 0.4s ease-out;
+		padding-left: 32px;
+
+		.nav-link {
+			list-style: none;
+			position: relative;
+			margin-bottom: 22px;
+			font-weight: bold;
+			font-size: 1.8rem;
+			line-height: 50px;
+			text-align: center;
+			transform: translateY(-40px);
+
+			a {
+				color: #000;
+				text-align: center;
+				text-decoration: none;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-family: jubilat !important;
+				font-weight: normal;
+
+				div {
+					margin-right: 15px;
+					display: flex;
+					width: 40px;
+					height: 40px;
+					align-items: center;
+					justify-content: center;
+
+					.video {
+						width: 30px;
+					}
+
+					.web {
+						width: 18px;
+					}
+
+					.social-media {
+						width: 26px;
+					}
+				}
+
+				span {
+					display: block;
+					position: absolute;
+					top: 100%;
+					left: 0;
+					right: 100%;
+					height: 1.5px;
+					// max-width: 0%;
+					background-color: #46444c;
+					border-radius: 40px;
+					transition: all 0.2s ease-out;
+				}
+
+				&:hover span {
+					right: 40%;
+				}
+
+				&.nav-link-active span {
+					display: block;
+					position: absolute;
+					right: 0;
+					background-color: #46444c;
+				}
+			}
+		}
+	}
+
+	@media only screen and (min-width: 1024px) {
+		position: static;
+		opacity: 1;
+		visibility: visible;
+		width: auto;
+		margin: 0;
+		flex: 1;
+
+		.nav {
+			flex-direction: row;
+			height: auto;
+			transform: none !important;
+			align-items: center;
+			justify-content: space-between;
+			margin: 0;
+			max-width: 650px;
+			padding-left: 0;
+			margin-left: auto;
+
+			.nav-link {
+				font-size: 0.8rem;
+				margin-bottom: 0;
+				transform: none;
+
+				a {
+					div {
+						margin-right: 10px;
+						width: auto;
+						height: auto;
+
+						.video {
+							width: 20px;
+						}
+
+						.web {
+							width: 11px;
+						}
+
+						.social-media {
+							width: 18px;
+						}
+					}
+					span {
+						top: 80%;
+						z-index: 1;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,150 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: 'static/uploads'
+public_folder: '/uploads/'
+
+collections:
+  - name: 'team_members'
+    label: 'Team Members'
+    folder: 'content/team'
+    create: true
+    slug: '{{slug}}'
+    identifier_field: name
+    fields:
+      - { label: 'Name', name: 'name', widget: 'string', required: true }
+      - { label: 'Job Role', name: 'role', widget: 'string', required: true }
+      - { label: 'Profile Image', name: 'profile_image', widget: image }
+  - name: 'pages'
+    label: 'Pages'
+    folder: 'content/pages'
+    create: true
+    slug: '{{slug}}'
+    identifier_field: page_name
+    fields:
+      - {
+          label: 'Page Name',
+          name: 'page_name',
+          widget: 'sting',
+          required: true,
+        }
+      - {
+          label: 'Featured Image',
+          name: 'featured_image',
+          widget: image,
+          required: false,
+        }
+      - {
+          label: 'Content',
+          name: 'content',
+          widget: 'markdown',
+          required: true,
+        }
+  - name: 'projects'
+    label: 'Projects'
+    folder: 'content/projects'
+    create: true
+    slug: '{{year}}--{{slug}}'
+    identifier_field: project_name
+    fields:
+      - {
+          label: 'Project Name',
+          name: 'project_name',
+          widget: 'string',
+          required: true,
+        }
+      - {
+          label: 'Client Name',
+          name: 'client',
+          widget: 'string',
+          required: true,
+        }
+      - {
+          label: 'Categories',
+          name: 'categories',
+          widget: 'list',
+          field:
+            {
+              name: 'collection',
+              label: 'Collection',
+              widget: 'relation',
+              collection: 'services',
+              searchFields: ['service'],
+              valueField: 'service',
+            },
+        }
+      - { label: 'Featured Image', name: 'featured_image', widget: image }
+      - {
+          label: 'Description',
+          name: 'description',
+          widget: 'markdown',
+          hint: 'Introductory description of project',
+        }
+      - { label: 'Intro Animation', name: 'intro-animation', widget: 'file' }
+      - {
+          label: 'blocks',
+          name: 'blocks',
+          widget: 'list',
+          fields:
+            [
+              { name: 'image', label: 'Image', widget: image, required: false },
+              { name: 'animation', title: 'Animation', widget: 'file' },
+              { name: 'testing', title: 'test', widget: 'markdown' },
+            ],
+        }
+  - name: 'contact'
+    label: 'Contact Details'
+    folder: 'content/contact'
+    create: true #change
+    slug: '{{slug}}'
+    identifier_field: instagram
+    fields:
+      - {
+          label: 'Instagram Link',
+          name: 'instagram',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          label: 'Youtube Link',
+          name: 'youtube',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          label: 'Vimeo Link',
+          name: 'vimeo',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          label: 'Facebook Link',
+          name: 'facebook',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          label: 'LinkedIn Link',
+          name: 'linkedin',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          label: 'Twitter Link',
+          name: 'twitter',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          label: 'Phone Number',
+          name: 'phone',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          label: 'Email Address',
+          name: 'email',
+          widget: 'string',
+          required: false,
+        }

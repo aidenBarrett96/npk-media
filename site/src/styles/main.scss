@@ -1,0 +1,74 @@
+// Import Brandon grotesque font family
+@import url('https://use.typekit.net/ycq6dgf.css');
+
+@import './variables.scss';
+
+// Reset style
+html,
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Jubilat;
+	font-weight: 300;
+	font-size: 20px;
+	color: #000;
+
+	@media only screen and (min-width: 1024px) {
+		font-size: 24px;
+	}
+
+	// Typography
+	.story-headline {
+		font-size: 1.3rem;
+		font-weight: 500;
+		line-height: 1.8rem;
+	}
+
+	h1 {
+		font-size: 1.5rem;
+		font-weight: 500;
+		line-height: 1.8rem;
+	}
+
+	h2 {
+		font-weight: 500;
+		font-size: 1rem;
+		line-height: 1.2rem;
+	}
+
+	p {
+		font-weight: 300;
+		color: #000;
+		// Apply brandon grotesque font to all
+		font-family: brandon-grotesque, sans-serif;
+	}
+
+	button,
+	a {
+		font-family: brandon-grotesque, sans-serif !important;
+		color: $primary;
+		transition: all 0.4s ease;
+	}
+
+	a:hover {
+		color: black !important;
+	}
+
+	.button-text__primary {
+		font-weight: bold;
+		font-size: 0.6rem;
+	}
+
+	.button-text__secondary {
+		font-weight: bold;
+		font-size: 16px;
+		color: #d43f34;
+		text-transform: uppercase;
+		text-decoration: underline;
+	}
+
+	section.hero {
+		margin-bottom: 30px;
+	}
+}
