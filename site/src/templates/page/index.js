@@ -27,11 +27,11 @@ export const data = graphql`
 					... on Strapi_ComponentProjectContentWithEmbed {
 						embed
 						body
+						title
 						link {
 							text
 							url
 						}
-						title
 					}
 					... on Strapi_ComponentProjectContentWithImages {
 						id
@@ -68,15 +68,6 @@ export const data = graphql`
 								url
 							}
 						}
-					}
-					... on Strapi_ComponentGeneralCircleLinkWithCaption {
-						__typename
-						id
-						link {
-							text
-							url
-						}
-						text
 					}
 					... on Strapi_ComponentGeneralContactSection {
 						text
