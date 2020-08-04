@@ -41,21 +41,25 @@ const QueryWrapper = ({ context }) => {
 		);
 };
 
-const LatestProjects = ({ projects }) => (
-	<div className={cStyle.container}>
-		<h2>Latest Projects</h2>
-		<div className={cStyle.inner}>
-			{projects.map((project) => (
-				<Link to={`/${project.slug}`} className={cStyle.project}>
-					<div className={cStyle.mediaWrapper}>
-						<Hero hero={project.hero} />
-					</div>
-					<span className={cStyle.title}>{project.name}</span>
-				</Link>
-			))}
+const LatestProjects = ({ projects }) => {
+	getPosition(6);
+
+	return (
+		<div className={cStyle.container}>
+			<h2>Latest Projects</h2>
+			<div className={cStyle.inner}>
+				{projects.map((project) => (
+					<Link to={`/${project.slug}`} className={cStyle.project}>
+						<div className={cStyle.mediaWrapper}>
+							<Hero hero={project.hero} />
+						</div>
+						<span className={cStyle.title}>{project.name}</span>
+					</Link>
+				))}
+			</div>
 		</div>
-	</div>
-);
+	);
+};
 
 QueryWrapper.propTypes = {
 	/**
@@ -65,3 +69,7 @@ QueryWrapper.propTypes = {
 };
 
 export default QueryWrapper;
+
+const getPosition = (index) => {
+	console.log(index / 4);
+};

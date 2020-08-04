@@ -89,8 +89,6 @@ export const data = graphql`
 export default ({ data }) => {
 	const page = data.strapi.page;
 
-	console.log('data :>> ', page);
-
 	return (
 		<Layout>
 			{/* Dynamic zone */}
