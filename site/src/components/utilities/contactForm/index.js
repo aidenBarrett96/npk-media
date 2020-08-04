@@ -108,7 +108,7 @@ const ContactForm = () => {
 								name='name'
 								value={values.name}
 								onChange={handleChange}
-								placeholder='Carole Baskin'
+								placeholder='John Smith'
 							/>
 							{showErrors &&
 								errorList.name.map((error) => (
@@ -122,7 +122,7 @@ const ContactForm = () => {
 								name='email'
 								value={values.email}
 								onChange={handleChange}
-								placeholder='thatBitch@AOL.com'
+								placeholder='johnsmith@gmail.com'
 							/>
 							{showErrors &&
 								errorList.email.map((error) => (

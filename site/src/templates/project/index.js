@@ -36,6 +36,9 @@ export const data = graphql`
 							url
 						}
 					}
+					... on Strapi_ComponentGeneralRichText {
+						body
+					}
 					... on Strapi_ComponentGeneralCircleLinkWithCaption {
 						__typename
 						id

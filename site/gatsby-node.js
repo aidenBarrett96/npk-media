@@ -23,6 +23,7 @@ exports.createPages = async ({ actions, graphql }) => {
 			}
 		}
 	`);
+
 	const projects = result.data.strapi.projects;
 
 	projects.forEach((project) => {

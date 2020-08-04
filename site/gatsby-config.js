@@ -46,7 +46,7 @@ module.exports = {
 			options: {
 				typeName: 'Strapi',
 				fieldName: 'strapi',
-				url: 'https://850d6d5e0f43.ngrok.io/graphql',
+				url: 'http://localhost:1337/graphql',
 			},
 		},
 		/* {
