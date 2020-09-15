@@ -7,10 +7,7 @@ const RichText = ({ blok }) => {
 			{render(body, {
 				nodeResolvers: {
 					[NODE_CODEBLOCK]: (children) => (
-						<>
-							<h1>CODEBLOK</h1>
-							<div dangerouslySetInnerHTML={children} />
-						</>
+						<div dangerouslySetInnerHTML={{ __html: children }} />
 					),
 				},
 			})}
