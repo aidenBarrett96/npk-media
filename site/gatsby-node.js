@@ -80,9 +80,9 @@ exports.createPages = async ({ actions, graphql }) => {
 					reject(result.errors);
 				}
 
-				const entries = result.data.allStoryblokEntry.edges;
+				const sbEntries = result.data.allStoryblokEntry.edges;
 
-				entries.forEach((entry, index) => {
+				sbEntries.forEach((entry, index) => {
 					createPage({
 						path: `/sb-${entry.node.full_slug}/`,
 						component: storyblokEntry,
