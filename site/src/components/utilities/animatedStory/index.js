@@ -3,6 +3,8 @@ import { Lottie } from '@crello/react-lottie';
 import t from 'prop-types';
 import cStyle from './animatedStory.module.scss';
 import AnimationButtons from './animationButtons';
+import Editable from '../editable';
+import SbEditable from 'storyblok-react';
 
 const AnimatedStory = ({ blok }) => {
 	const [ready, setReady] = useState(false);
@@ -90,32 +92,34 @@ const AnimatedStory = ({ blok }) => {
 	}, [progress]);
 
 	return ready ? (
-		<div
-			onMouseEnter={attemptProgress}
-			onClick={attemptProgress}
-			className={cStyle.container}>
-			<Lottie
-				config={config}
-				height='350px'
-				width='350px'
-				playingState={playing}
-				className='lottie-container'
-				lottieEventListeners={[
-					{
-						name: 'complete',
-						callback: allowProgress,
-					},
-				]}
-			/>
-			{/* Render buttons if provided in props */}
-			{buttons && (
-				<AnimationButtons
-					buttons={buttons}
-					entryStage={Number(button_entry_stage)}
-					animationProgress={progress}
+		<SbEditable content={blok}>
+			<div
+				onMouseEnter={attemptProgress}
+				onClick={attemptProgress}
+				className={cStyle.container}>
+				<Lottie
+					config={config}
+					height='350px'
+					width='350px'
+					playingState={playing}
+					className='lottie-container'
+					lottieEventListeners={[
+						{
+							name: 'complete',
+							callback: allowProgress,
+						},
+					]}
 				/>
-			)}
-		</div>
+				{/* Render buttons if provided in props */}
+				{buttons && (
+					<AnimationButtons
+						buttons={buttons}
+						entryStage={Number(button_entry_stage)}
+						animationProgress={progress}
+					/>
+				)}
+			</div>
+		</SbEditable>
 	) : null;
 };
 

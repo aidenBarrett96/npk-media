@@ -3,7 +3,7 @@ import { IStoryblokComponent } from '../../../types/storyblok';
 import Components from '..';
 
 const Page: React.FC<IStoryblokComponent> = ({ blok }) => (
-	<div style={{ textAlign: 'center' }}>
+	<div>
 		{blok.body.map((innerBlok: any) => (
 			<section>
 				{React.createElement(Components(innerBlok.component), {
