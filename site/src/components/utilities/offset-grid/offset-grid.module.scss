@@ -1,0 +1,30 @@
+.offset-grid {
+	padding: 40px 0;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 80px 16px;
+
+	.visible {
+		transform: translate(0, 0) scale(1) !important;
+		opacity: 1;
+	}
+
+	> * {
+		transition: opacity 0.4s ease, all 0.7s ease-out;
+		opacity: 0;
+		&:nth-child(1n) {
+			grid-column: 1 / 9;
+			transform: translate(-30%, 0) scale(0.65);
+		}
+		&:nth-child(2n) {
+			grid-column: 6 / 12;
+			transform: translate(10%, 0) scale(0.8);
+		}
+		&:nth-child(3n) {
+			grid-column: 2 / 8;
+		}
+		&:nth-child(4n) {
+			grid-column: 4 / 10;
+		}
+	}
+}

@@ -118,3 +118,5 @@ yarn.lock
 .cache
 .vscode
 public
+# Local Netlify folder
+.netlify

@@ -1,3 +1,4 @@
+require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` });
 module.exports = {
 	siteMetadata: {
 		title: `NPK Media`,
@@ -49,17 +50,14 @@ module.exports = {
 				url: 'http://localhost:1337/graphql',
 			},
 		},
-		/* {
-			resolve: `gatsby-source-strapi`,
+		{
+			resolve: 'gatsby-source-storyblok',
 			options: {
-				apiURL: `http://localhost:1337`,
-				queryLimit: 1000, // Default to 100
-				contentTypes: [`projects`, `user`],
-				// If using single types place them in this array.
-				// singleTypes: [`home-page`, `contact`],
+				accessToken: process.env.GATSBY_STORYBLOK_TOKEN,
+				homeSlug: 'home',
+				version: 'draft',
 			},
-		}, */
-
+		},
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.dev/offline
 		// `gatsby-plugin-offline`,

@@ -17,6 +17,13 @@ export const data = graphql`
 						url
 						large
 					}
+					... on Strapi_ComponentGeneralCircleLinkWithCaption {
+						text
+						link {
+							text
+							url
+						}
+					}
 					... on Strapi_ComponentGeneralTestimonial {
 						testimonial
 						author

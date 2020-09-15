@@ -14,8 +14,6 @@ const ContactPage = () => (
 		<section className={pStyle.contactDetails}>
 			<div>
 				<h2>Contact</h2>
-				<a href='mailto:stephen@npkmedia.co.uk'>stephen@npkmedia.co.uk</a>
-				<br />
 				<a href='tel:01513192439'>(+44) 0151 319 2439</a>
 			</div>
 
