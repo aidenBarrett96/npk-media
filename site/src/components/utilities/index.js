@@ -10,7 +10,7 @@ const ComponentList = {
 	link_section: CircleLinkWithCaption,
 };
 
-const Components = (type: string) => {
+const Components = (type) => {
 	if (typeof ComponentList[type] === 'undefined') {
 		return ComponentNotFound;
 	}

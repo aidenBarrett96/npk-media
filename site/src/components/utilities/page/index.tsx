@@ -4,12 +4,14 @@ import Components from '..';
 
 const Page: React.FC<IStoryblokComponent> = ({ blok }) => (
 	<div style={{ textAlign: 'center' }}>
-		{blok.body.map((innerBlok: any) =>
-			React.createElement(Components(innerBlok.component), {
-				key: innerBlok.uid,
-				blok: innerBlok,
-			})
-		)}
+		{blok.body.map((innerBlok: any) => (
+			<section>
+				{React.createElement(Components(innerBlok.component), {
+					key: innerBlok.uid,
+					blok: innerBlok,
+				})}
+			</section>
+		))}
 	</div>
 );
 
