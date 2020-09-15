@@ -35,9 +35,11 @@ const animationButtons = {
 };
 
 //Home page
-export const IndexPage = () => (
+export const IndexPage = () => <div>Hello world!</div>;
+
+/* (
 	<Layout>
-		{/* Main story section */}
+		{/* Main story section 
 		<section className={pStyle.storySection}>
 			<h1>
 				We elevate your brand with our expertise in{' '}
@@ -51,14 +53,13 @@ export const IndexPage = () => (
 			/>
 		</section>
 
-		{/* Latest projects section */}
+		{/* Latest projects section 
 		<section>
 			<LatestProjects />
 		</section>
 
-		{/* Contact us section */}
+		{/* Contact us section 
 		<section>
-			{/* <ContactSection text='Know what you want?' /> */}
 			<CircleLinkWithCaption
 				text='Know what you want?'
 				link={{
@@ -70,5 +71,5 @@ export const IndexPage = () => (
 		</section>
 	</Layout>
 );
-
+ */
 export default IndexPage;

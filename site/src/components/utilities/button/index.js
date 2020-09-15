@@ -5,28 +5,30 @@ import cStyle from './button.module.scss';
 import { Link } from 'gatsby';
 import t from 'prop-types';
 
-const Button = ({ text, link, onClick, large, style }) => (
-	<>
-		{onClick && (
-			<button
-				className={large ? cStyle.buttonLarge : cStyle.buttonSmall}
-				onClick={onClick}
-				style={style}>
-				<span>{text}</span>
-				<img src={large ? outerLarge : outerSmall} alt='button outline' />
-			</button>
-		)}
-		{link && (
-			<Link
-				to={link}
-				className={large ? cStyle.buttonLarge : cStyle.buttonSmall}
-				style={style}>
-				<span className='button-text__primary'>{text}</span>
-				<img src={large ? outerLarge : outerSmall} alt='button outline' />
-			</Link>
-		)}
-	</>
-);
+const Button = ({ text, link, onClick, large, style }) => {
+	return (
+		<>
+			{onClick && (
+				<button
+					className={large ? cStyle.buttonLarge : cStyle.buttonSmall}
+					onClick={onClick}
+					style={style}>
+					<span>{text}</span>
+					<img src={large ? outerLarge : outerSmall} alt='button outline' />
+				</button>
+			)}
+			{link && (
+				<Link
+					to={link}
+					className={large ? cStyle.buttonLarge : cStyle.buttonSmall}
+					style={style}>
+					<span className='button-text__primary'>{text}</span>
+					<img src={large ? outerLarge : outerSmall} alt='button outline' />
+				</Link>
+			)}
+		</>
+	);
+};
 
 Button.propTypes = {
 	/**

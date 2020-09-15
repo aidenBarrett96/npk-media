@@ -43,14 +43,6 @@ module.exports = {
 			},
 		},
 		{
-			resolve: 'gatsby-source-graphql',
-			options: {
-				typeName: 'Strapi',
-				fieldName: 'strapi',
-				url: 'http://localhost:1337/graphql',
-			},
-		},
-		{
 			resolve: 'gatsby-source-storyblok',
 			options: {
 				accessToken: process.env.GATSBY_STORYBLOK_TOKEN,

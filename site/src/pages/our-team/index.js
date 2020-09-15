@@ -5,7 +5,7 @@ import pStyle from './our-team.module.scss';
 import teamCartoon from '../../assets/page-assets/our-team/our-team-featured-image.svg';
 import ContactSection from '../../components/utilities/contactSection';
 
-export const data = graphql`
+/* export const data = graphql`
 	{
 		strapi {
 			teamMembers {
@@ -19,9 +19,11 @@ export const data = graphql`
 			}
 		}
 	}
-`;
+`; */
 
-const TeamPage = ({ data }) => {
+const TeamPage = () => null;
+
+/* {
 	const [focusedMember, setFocusedMember] = useState('');
 
 	const team = data.strapi.teamMembers;
@@ -75,4 +77,4 @@ const TeamPage = ({ data }) => {
 	);
 };
 
-export default TeamPage;
+ */ export default TeamPage;

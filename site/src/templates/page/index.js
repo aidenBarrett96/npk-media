@@ -4,7 +4,7 @@ import Layout from '../../components/layout';
 import pStyle from './page.module.scss';
 import DynamicZone from '../../components/globals/conversions/dynamicZone';
 
-// Querying the product information from Sanity using GrapQL
+/* // Querying the product information from Sanity using GrapQL
 export const data = graphql`
 	query($id: ID!) {
 		strapi {
@@ -92,14 +92,16 @@ export const data = graphql`
 		}
 	}
 `;
-
-export default ({ data }) => {
+ */
+export default () => null;
+/* {
 	const page = data.strapi.page;
 
 	return (
 		<Layout>
-			{/* Dynamic zone */}
+			{/* Dynamic zone 
 			<DynamicZone content={page.body} />
 		</Layout>
 	);
 };
+ */

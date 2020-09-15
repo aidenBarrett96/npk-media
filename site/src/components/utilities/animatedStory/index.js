@@ -3,14 +3,17 @@ import { Lottie } from '@crello/react-lottie';
 import t from 'prop-types';
 import cStyle from './animatedStory.module.scss';
 import AnimationButtons from './animationButtons';
-import Button from '../button';
 
-const AnimatedStory = ({ animations, buttons, autoplay }) => {
+const AnimatedStory = ({ blok }) => {
+	const [ready, setReady] = useState(false);
+
+	let { animations, buttons, autoplay, button_entry_stage } = blok;
 	if (animations[0].data) {
-		animations = animations.map(({ data }) => data);
+		animations = animations.map(({ data }) =>
+			JSON.parse(data.content[0].content[0].text)
+		);
+		!ready && setReady(true);
 	}
-
-	console.log('animations :>> ', animations);
 
 	// Hold the current progress within the state of the component
 	const [progress, setProgress] = useState(0);
@@ -26,6 +29,7 @@ const AnimatedStory = ({ animations, buttons, autoplay }) => {
 
 	// Hold wether the animation can progress within the state of component
 	const [readyToProgress, setReadyToProgress] = useState(false);
+
 	// Mirror the state in a reference to be able to access from a built component
 	const rtpRef = useRef();
 	rtpRef.current = readyToProgress;
@@ -85,7 +89,7 @@ const AnimatedStory = ({ animations, buttons, autoplay }) => {
 		setReadyToProgress(false);
 	}, [progress]);
 
-	return (
+	return ready ? (
 		<div
 			onMouseEnter={attemptProgress}
 			onClick={attemptProgress}
@@ -105,10 +109,14 @@ const AnimatedStory = ({ animations, buttons, autoplay }) => {
 			/>
 			{/* Render buttons if provided in props */}
 			{buttons && (
-				<AnimationButtons buttons={buttons} animationProgress={progress} />
+				<AnimationButtons
+					buttons={buttons}
+					entryStage={Number(button_entry_stage)}
+					animationProgress={progress}
+				/>
 			)}
 		</div>
-	);
+	) : null;
 };
 
 AnimatedStory.propTypes = {

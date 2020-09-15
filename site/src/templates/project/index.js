@@ -6,7 +6,7 @@ import DynamicZone from '../../components/globals/conversions/dynamicZone';
 import Hero from '../../components/utilities/hero';
 
 // Querying the product information from Sanity using GrapQL
-export const data = graphql`
+/* export const data = graphql`
 	query($id: ID!) {
 		strapi {
 			project(id: $id) {
@@ -71,8 +71,9 @@ export const data = graphql`
 		}
 	}
 `;
-
-export default ({ data }) => {
+ */
+export default () => null;
+/* {
 	const project = data.strapi.project;
 	return (
 		<Layout>
@@ -86,8 +87,9 @@ export default ({ data }) => {
 					<p>categories placeholder</p>
 				</div>
 			</section>
-			{/* Dynamic zone */}
+			{/* Dynamic zone 
 			<DynamicZone content={project.content} />
 		</Layout>
 	);
 };
+ */

@@ -9,9 +9,10 @@ import { Link } from 'gatsby';
 import OffsetGrid from '../offset-grid';
 import { useInView } from 'react-intersection-observer';
 
-const QueryWrapper = ({ context }) => {
+const QueryWrapper = ({ context }) => null;
+/* {
 	// Query for projects
-	const data = useStaticQuery(graphql`
+	/* const data = useStaticQuery(graphql`
 		{
 			strapi {
 				projects {
@@ -29,7 +30,7 @@ const QueryWrapper = ({ context }) => {
 				}
 			}
 		}
-	`);
+	`); 
 
 	if (!context)
 		return <LatestProjects projects={data.strapi.projects.slice(0, 2)} />;
@@ -43,7 +44,7 @@ const QueryWrapper = ({ context }) => {
 			/>
 		);
 };
-
+ */
 const LatestProjects = ({ projects }) => {
 	return (
 		<div className={cStyle.container}>
