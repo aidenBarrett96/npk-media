@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'storyblok-rich-text-react-renderer';
+import { render, NODE_CODEBLOCK } from 'storyblok-rich-text-react-renderer';
 const RichText = ({ blok }) => {
 	const { body } = blok;
 	return (
