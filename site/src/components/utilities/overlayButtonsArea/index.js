@@ -7,16 +7,19 @@ const OverlayButtonsArea = ({ buttons, children }) => {
 	return (
 		<div className={cStyle.container}>
 			<div className={cStyle.body}>{children}</div>
-			<div className={cStyle.buttonArea}>
-				{buttons.map((button) => (
-					<Button
-						text={button.text}
-						link={button.link && button.link}
-						onClick={button.onClick && button.onClick}
-						large={button.large}
-					/>
-				))}
-			</div>
+			{buttons ? (
+				<div className={cStyle.buttonArea}>
+					{buttons.map((button) => (
+						<Button
+							text={button.text}
+							link={button.url && button.url.cached_url}
+							large={button.large}
+						/>
+					))}
+				</div>
+			) : (
+				<p>Please add in some buttons</p>
+			)}
 		</div>
 	);
 };

@@ -5,11 +5,12 @@ import cStyle from './animatedStory.module.scss';
 import AnimationButtons from './animationButtons';
 import Editable from '../editable';
 import SbEditable from 'storyblok-react';
+import { render } from 'storyblok-rich-text-react-renderer';
 
 const AnimatedStory = ({ blok }) => {
 	const [ready, setReady] = useState(false);
 
-	let { animations, buttons, autoplay, button_entry_stage } = blok;
+	let { animations, buttons, autoplay, button_entry_stage, text } = blok;
 	if (animations[0].data) {
 		animations = animations.map(({ data }) =>
 			JSON.parse(data.content[0].content[0].text)
@@ -97,6 +98,16 @@ const AnimatedStory = ({ blok }) => {
 				onMouseEnter={attemptProgress}
 				onClick={attemptProgress}
 				className={cStyle.container}>
+				{text && (
+					<div
+						style={{
+							transition: 'all 0.4s ease',
+							textAlign: 'center',
+							opacity: progress >= button_entry_stage ? 1 : 0,
+						}}>
+						{render(text)}
+					</div>
+				)}
 				<Lottie
 					config={config}
 					height='350px'

@@ -1,18 +1,29 @@
 import React from 'react';
 import cStyle from './teamCard.module.scss';
 import t from 'prop-types';
+import SbEditable from 'storyblok-react';
 // import Img from 'gatsby-image'
 
-const TeamCard = ({ name, role, image }) => (
-	<div className={cStyle.container}>
-		{/* TODO Gatsby image:: <Img fluid="" */}
-		<div className={cStyle.imgWrapper}>
-			<img src={image} alt={name + "'s profile image"} />
-		</div>
-		<h3 className={cStyle.name}>{name}</h3>
-		<h4 className={cStyle.role}>{role}</h4>
-	</div>
-);
+const TeamCard = ({ blok }) => {
+	console.log('blok :>> ', blok);
+	const { name, role, image } = blok;
+
+	return (
+		<SbEditable content={blok}>
+			<div className={cStyle.container}>
+				{/* TODO Gatsby image:: <Img fluid="" */}
+				<div className={cStyle.imgWrapper}>
+					<img
+						src={image.filename}
+						alt={image.alt ? image.alt : name + "'s profile image"}
+					/>
+				</div>
+				<h3 className={cStyle.name}>{name}</h3>
+				<h4 className={cStyle.role}>{role}</h4>
+			</div>
+		</SbEditable>
+	);
+};
 
 TeamCard.propTypes = {
 	/**

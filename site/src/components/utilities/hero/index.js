@@ -1,4 +1,5 @@
 import React from 'react';
+import SbEditable from 'storyblok-react';
 
 const Hero = ({ hero }) => (
 	<>
@@ -14,3 +15,15 @@ const Hero = ({ hero }) => (
 );
 
 export default Hero;
+
+export const FeaturedImage = ({ blok }) => {
+	return (
+		<SbEditable content={blok}>
+			<img
+				src={`${blok.image.filename}`}
+				alt={blok.image.alt}
+				style={{ width: '100%' }}
+			/>
+		</SbEditable>
+	);
+};
