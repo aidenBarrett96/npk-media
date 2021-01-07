@@ -22,10 +22,11 @@ export async function getStaticPaths() {
     version: 'draft',
     filter_query: {
       component: {
-        eq: 'page'
+        in: 'page'
       }
     }
   })
+
 
 
   const {data: {stories}} = res
@@ -35,6 +36,8 @@ export async function getStaticPaths() {
       slug
     }
   }))
+
+  console.log('paths', paths)
 
   return {
     paths,
