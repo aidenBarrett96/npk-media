@@ -4,15 +4,19 @@ import StoryblokService from '../utils/storyblok-service'
 
 const HomePage = ({res}) => {
 
-  const [content, setContent] = useState([])
+  const [content, setContent] = useState()
 
   useEffect(() => {
     async function getContent() {
       const res = await StoryblokService.get('cdn/stories/home', {})
-      setContent([res])
+      setContent(res.data.story.content)
     }
     getContent()
   }, [])
+
+
+  // other version
+  // static async getInitialProps
 
   return (
     <Layout>
