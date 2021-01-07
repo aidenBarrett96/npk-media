@@ -1,40 +1,35 @@
 import { useEffect, useState } from "react"
 import Layout from "../components/layout/Layout"
-import StoryblokService from '../utils/storyblok-service'
+import {storyblok} from '../utils/storyblok/storyblok'
+import {storyblokStory} from '../types/storyblok'
 
-const HomePage = ({ data }) => {
+const HomePage = ({ data: story }) => {
+// Set the type for the story and extract nessesary data
+  const {...rest}: storyblokStory = story
 
-  const [story, setStory] = useState(data)
+  // Log out the results
 
-  console.log(story)
-
-
+  console.log(rest)
   return (
     <Layout>
       <div> 
         Homepage
         <br/>
-        
       </div>
     </Layout>
   )
 }
 export default HomePage
 
-
-
 // Query to get data from cms
-export async function getStaticProps({ query }) {
-
-  StoryblokService.setQuery(query)
-
-  const res = await StoryblokService.get('cdn/stories/home', {})
+export const getStaticProps = async () => {
+  // Query for data
+  const res = await storyblok.get('cdn/stories/home', {version: 'draft'})
 
   return {
     props: {
-      data: res
+      data: res.data.story
     }
   }
-  
 }
 
