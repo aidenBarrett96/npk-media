@@ -10,7 +10,7 @@ const BlogPage = ({ data: story }) => {
       <div>
         blog page
         <hr/>
-
+        {/* all relevant data loaded with getStaticProps to build out the page soon */}
         <BlogLinks data={story}/>
 
         <hr/>

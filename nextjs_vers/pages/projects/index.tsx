@@ -9,6 +9,7 @@ const Projects = ({ data: story }) => {
     <Layout>
       <h1>page content</h1>
       <ProjectLinks data={story}/>
+      {/* all relevant data loaded with getStaticProps to build out the page soon */}
     </Layout>
   )
 }

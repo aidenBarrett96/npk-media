@@ -12,6 +12,7 @@ const BlogRoute = ({ data: story }) => {
         <p>A single blog post</p>
         <h1>{rest.content.title}</h1>
         <p>{rest.content.intro}</p>
+        {/* all relevant data loaded with getStaticProps to build out the page soon */}
       </div>
     </Layout>
   )

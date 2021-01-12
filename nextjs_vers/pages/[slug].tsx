@@ -8,6 +8,7 @@ const DynamicPage = ({ data: story }) => {
   return (
     <Layout>
       <p>Dynamic page content</p>
+      {/* all relevant data loaded with getStaticProps to build out the page soon */}
     </Layout>
   )
 }
@@ -29,14 +30,12 @@ export async function getStaticPaths() {
 
 
   const {data: {stories}} = res
-  console.log({stories})
   const paths = stories.map(({slug}) => ({
     params: {
       slug
     }
   }))
 
-  console.log('paths', paths)
 
   return {
     paths,
