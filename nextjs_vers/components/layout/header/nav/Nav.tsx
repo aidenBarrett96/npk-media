@@ -1,7 +1,9 @@
 // import custom link component to nav instead of default next/link
-import Link from './Link'
+import Link from './link'
 import style from './nav.module.scss'
 import {pageLinks} from './pageLinks'
+import Image from 'next/image'
+
 
 const Nav = ({ open }) => {
   return (
@@ -26,7 +28,7 @@ const NavMap = () => {
           <Link href={item.path}>
             <a>
               {item.imgSrc
-                ? (<img src={item.imgSrc} className={style[item.imgCName]}/>)
+                ? (<Image src={item.imgSrc} className={style[item.imgCName]} width="40" height="40"/>)
                 : (null) 
               }
               {item.title}

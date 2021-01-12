@@ -4,6 +4,7 @@
   src: url("../assets/webfonts/3AEA74_1_0.woff");
   font-display:swap;
 }
+@import './variables.scss';
 
 html,
 body {
@@ -27,4 +28,32 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+button,
+a {
+  font-family: brandon-grotesque, sans-serif !important;
+  color: $primary;
+  transition: all 0.4s ease;
+}
+
+a:hover {
+  color: black !important;
+}
+
+.button-text__primary {
+  font-weight: bold;
+  font-size: 0.6rem;
+}
+
+.button-text__secondary {
+  font-weight: bold;
+  font-size: 16px;
+  color: #d43f34;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+section.hero {
+  margin-bottom: 30px;
 }

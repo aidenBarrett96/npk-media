@@ -1,14 +1,22 @@
 import { storyblok } from '../utils/storyblok/storyblok'
-import Layout from '../components/layout/Layout'
+import Layout from '../components/layout/layout'
+import AnimatedStory from '../components/utilities/animatedStory'
 
-const DynamicPage = ({ data: story }) => {
+
+
+const DynamicPage = ({ data: story, animations }) => {
   if(!story) return null
   const { ...rest } = story || {}
 
+
+  {console.log(story)}
   return (
     <Layout>
-      <p>Dynamic page content</p>
-      {/* all relevant data loaded with getStaticProps to build out the page soon */}
+      <main>
+        {/* <AnimatedStory
+          animations={story.content.body.animations}
+        /> */}
+      </main>
     </Layout>
   )
 }
@@ -26,8 +34,6 @@ export async function getStaticPaths() {
       }
     }
   })
-
-
 
   const {data: {stories}} = res
   const paths = stories.map(({slug}) => ({
@@ -47,10 +53,21 @@ export async function getStaticPaths() {
 // page contents
 export async function getStaticProps({ params }) {
   const res = await storyblok.get(`cdn/stories/${params.slug}`, {version: 'draft'})
+  const animations = await storyblok.get(`cdn/stories/${params.slug}`, 
+  {
+    version: 'draft',
+    filter_query:{ 
+      component: { 
+        in: 'animations' 
+       } 
+     }
+  })
+
 
   return {
     props: {
-      data: res?.data?.story
+      data: res?.data?.story,
+      animations: animations?.data?.story.content.body
     }
   }
 

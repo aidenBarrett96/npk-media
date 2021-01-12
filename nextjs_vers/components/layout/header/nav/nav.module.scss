@@ -36,7 +36,16 @@
       &:last-child {
         color: #DE4A3F;
       }
-
+      a {
+        color: #000;
+				text-align: center;
+				text-decoration: none;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-family: jubilat !important;
+				font-weight: normal;
+      }
       .activeNavLink {
         span {
           display: block;

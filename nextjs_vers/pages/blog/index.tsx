@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Layout from "../../components/layout/Layout"
+import Layout from "../../components/layout/layout"
 import { storyblok } from "../../utils/storyblok/storyblok"
 
 const BlogPage = ({ data: story }) => {

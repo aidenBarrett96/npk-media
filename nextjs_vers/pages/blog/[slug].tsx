@@ -1,4 +1,4 @@
-import Layout from "../../components/layout/Layout"
+import Layout from "../../components/layout/layout"
 import { storyblok } from "../../utils/storyblok/storyblok"
 
 const BlogRoute = ({ data: story }) => {
