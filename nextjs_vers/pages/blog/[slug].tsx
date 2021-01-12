@@ -1,34 +1,37 @@
 import Layout from "../../components/layout/Layout"
 import { storyblok } from "../../utils/storyblok/storyblok"
 
-const ProjectsPages = ({ data: story }) => {
+const BlogRoute = ({ data: story }) => {
   if(!story) return null
   const {...rest} = story
 
+  
   return (
     <Layout>
-      <h1>A single dynamic project page</h1>
-      <h2>{rest.name}</h2>
+      <div>
+        <p>A single blog post</p>
+        <h1>{rest.content.title}</h1>
+        <p>{rest.content.intro}</p>
+      </div>
     </Layout>
   )
 }
-export default ProjectsPages
+
+export default BlogRoute
 
 
-
-// query cms for all stories in 
 export async function getStaticPaths() {
-  const res = await storyblok.get('cdn/stories?starts_with=projects/', { 
+  const res = await storyblok.get(`cdn/stories`, {
     version: 'draft',
-    filter_query:{ 
-     component: { 
-       eq: 'page' 
-      } 
+    filter_query:{
+      component: {
+        eq: 'post'
+      }
     }
   })
 
-
   const {data: {stories}} = res
+
   const paths = stories.map(({slug}) => (
     {
       params: {
@@ -36,20 +39,20 @@ export async function getStaticPaths() {
       }
     }
   ))
-    // console.log(paths)
-    console.log({stories})
+
   return {
     paths,
     fallback: false
   }
 }
 
-// get project data from cms by slug
 export async function getStaticProps({ params }) {
-  const res = await storyblok.get(`cdn/stories/projects/${params.slug}`, {version: 'draft'})
+  const res = await storyblok.get(`cdn/stories/blog/${params.slug}`, {version: 'draft'})
+
   return {
     props: {
       data: res?.data?.story
     }
   }
+
 }
