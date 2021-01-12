@@ -4,11 +4,12 @@ import { storyblok } from "../../utils/storyblok/storyblok"
 const ProjectsPages = ({ data: story }) => {
   if(!story) return null
   const {...rest} = story
-  
+
   return (
     <Layout>
       <h1>A single dynamic project page</h1>
       <h2>{rest.name}</h2>
+      {/* all relevant data loaded with getStaticProps to build out the page soon */}
     </Layout>
   )
 }
@@ -18,7 +19,7 @@ export default ProjectsPages
 
 // query cms for all stories in 
 export async function getStaticPaths() {
-  const res = await storyblok.get('cdn/stories', { 
+  const res = await storyblok.get('cdn/stories?starts_with=projects/', { 
     version: 'draft',
     filter_query:{ 
      component: { 

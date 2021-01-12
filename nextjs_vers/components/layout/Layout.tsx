@@ -1,7 +1,6 @@
 import Head from 'next/head'
-import Footer from './footer/Footer'
-import Navbar from './navbar/Navbar'
 import StoryblokService from '../../utils/storyblok-service'
+import Header from './header/Header'
 
 
 const Layout = ({ children }) => {
@@ -11,11 +10,11 @@ const Layout = ({ children }) => {
         <title>NPK Media</title>
       </Head>
 
-      <Navbar/>
+      <Header/>
         <main>
           {children}
         </main>
-      <Footer/>
+
       {StoryblokService.bridge()}
     </>
   )
