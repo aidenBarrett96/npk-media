@@ -4,19 +4,11 @@ import { storyblok } from "../../utils/storyblok/storyblok"
 
 const Projects = ({ data: story }) => {
   if(!story) return null
-  const {...rest} = story
-
-
+  
   return (
     <Layout>
       <h1>page content</h1>
-      {rest.data.stories.map((project) => (
-        <div key={project.name}>
-          <Link href={`projects/${project.slug}`}>
-            <a>{project.name}</a>
-          </Link>
-        </div>
-      ))}
+      <ProjectLinks data={story}/>
     </Layout>
   )
 }
@@ -24,6 +16,7 @@ const Projects = ({ data: story }) => {
 export default Projects
 
 
+// get all projects data from cms
 export async function getStaticProps() {
   const allProjects = await storyblok.get('cdn/stories?starts_with=projects/', {version: 'draft'})
 
@@ -32,4 +25,21 @@ export async function getStaticProps() {
       data: allProjects
     }
   }
+}
+
+// component to map out data
+const ProjectLinks = ({data: story}) => {
+  const {...rest} = story
+
+  return (
+    <>
+      {rest.data.stories.map((project) => (
+        <div key={project.name}>
+          <Link href={`/projects/${project.slug}`}>
+            <a>{project.name}</a>
+          </Link>
+        </div>
+      ))}
+    </>
+  )
 }

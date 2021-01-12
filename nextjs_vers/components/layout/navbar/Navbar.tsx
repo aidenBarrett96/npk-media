@@ -14,6 +14,12 @@ const Navbar = () => {
           Projects
         </a>
       </Link>
+      <br/>
+      <Link href="/blog">
+        <a>
+          Blog
+        </a>
+      </Link>
 
       <hr/>
       <div>

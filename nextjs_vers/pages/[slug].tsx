@@ -8,7 +8,6 @@ const DynamicPage = ({ data: story }) => {
   return (
     <Layout>
       <p>Dynamic page content</p>
-      {console.log(rest)}
     </Layout>
   )
 }

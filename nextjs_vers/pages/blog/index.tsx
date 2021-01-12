@@ -4,20 +4,14 @@ import { storyblok } from "../../utils/storyblok/storyblok"
 
 const BlogPage = ({ data: story }) => {
   if(!story) return null
-  const {...rest} = story
 
-  // console.log(rest.data)
   return (
     <Layout>
       <div>
         blog page
         <hr/>
 
-        {rest.data.stories.map((link) => (
-          <div key={link.name}>
-            <Link href={`/blog/${link.slug}`}><a>{link.name}</a></Link>
-          </div>
-        ))}
+        <BlogLinks data={story}/>
 
         <hr/>
       </div>
@@ -28,7 +22,7 @@ const BlogPage = ({ data: story }) => {
 export default BlogPage
 
 
-// get all blogs
+// get all blogs data 
 export async function getStaticProps() {
   const allBlogs = await storyblok.get('cdn/stories/?starts_with=blog/', { version: 'draft' })
 
@@ -41,13 +35,18 @@ export async function getStaticProps() {
 
 
 // component to map out the blog urls
-
 const BlogLinks = ({data: story}) => {
   const {...rest} = story
+
   return (
-    <div>
-      <p>test map</p>
-      {console.log(rest)}
-    </div>
+    <>
+        {rest.data.stories.map((link) => (
+          <div key={link.name}>
+            <Link href={`/blog/${link.slug}`}>
+              <a>{link.name}</a>
+            </Link>
+          </div>
+        ))}
+    </>
   ) 
 }
