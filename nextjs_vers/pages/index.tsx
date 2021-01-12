@@ -9,7 +9,7 @@ const HomePage = ({ data: story }) => {
 
   // Log out the results
 
-  console.log(rest)
+  // console.log(rest)
   return (
     <Layout>
       <div> 
