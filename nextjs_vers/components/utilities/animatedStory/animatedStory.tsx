@@ -5,39 +5,43 @@ import cStyle from './animatedStory.module.scss';
 import AnimationButtons from './animationButtons';
 import Button from '../button';
 
-const AnimatedStory = ({ animations, buttons, autoplay }) => {
+const getAnimationData = (animation: any) => JSON.parse(animation?.content[0]?.content[0]?.text)
+
+const AnimatedStory = (props) => {
+	let { animations, buttons, autoplay } = props
+
+
 	if (animations[0].data) {
 		animations = animations.map(({ data }) => data);
 	}
 
-	console.log('animations :>> ', animations);
 
 	// Hold the current progress within the state of the component
 	const [progress, setProgress] = useState(0);
 	// Mirror the state in a reference to be able to access from a built component
-	const progressRef = useRef();
+	const progressRef = useRef(null);
 	progressRef.current = progress;
 
 	// Hold the current playing state within the state of component
 	const [playing, setPlaying] = useState('stopped');
 	// Mirror the state in a reference to be able to access from a built component
-	const playingRef = useRef();
+	const playingRef = useRef(null);
 	playingRef.current = playing;
 
 	// Hold wether the animation can progress within the state of component
 	const [readyToProgress, setReadyToProgress] = useState(false);
 	// Mirror the state in a reference to be able to access from a built component
-	const rtpRef = useRef();
+	const rtpRef = useRef(null);
 	rtpRef.current = readyToProgress;
 
 	// Hold wether the animation is in the looping stage within the component state
 	const [looping, setLooping] = useState(false);
-	const loopRef = useRef();
+	const loopRef = useRef(null);
 	loopRef.current = looping;
 
 	const maxProgress = animations.length - 1;
 
-	const currentAnimation = animations[progress];
+	const currentAnimation = getAnimationData(animations[progress]);
 
 	// Lottie configuration
 	const config = {

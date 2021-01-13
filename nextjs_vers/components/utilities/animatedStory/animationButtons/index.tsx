@@ -5,6 +5,7 @@ import Button from '../../button';
 
 
 const AnimationButtons = ({ buttons, animationProgress }) => {
+	console.log('buttons', buttons)
 	// entrance animation using react spring, shows the buttons if the animation stage is greater than or equal to the provided button entry stage
 	const spring = useSpring({
 		opacity: buttons.entryStage > animationProgress ? 0 : 1,
@@ -12,11 +13,11 @@ const AnimationButtons = ({ buttons, animationProgress }) => {
 	});
 	return (
 		<div className={cStyle.container}>
-			{buttons.data.map((button) => (
+			{buttons.map((button) => (
 				<animated.span style={spring}>
 					<Button
 						text={button.text}
-						link={button.link && button.link}
+						link={button.url && button.url.cached_url}
 						onClick={button.onClick && button.onClick}
 						large={button.large}
 					/>

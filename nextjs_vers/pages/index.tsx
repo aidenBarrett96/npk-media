@@ -4,7 +4,7 @@ import {storyblok} from '../utils/storyblok/storyblok'
 import {storyblokStory} from '../types/storyblok'
 import style from './homepage.module.scss'
 import Link from "next/link"
-import AnimatedStory from "../components/utilities/animatedStory"
+import AnimatedStory from "../components/utilities/animatedStory/animatedStory"
 import animOne from '../assets/page-assets/home/animations/1-bridge-home-split.json'
 import animTwo from '../assets/page-assets/home/animations/2-bridge-home-split.json'
 import animThree from '../assets/page-assets/home/animations/3-loop-home.json'
@@ -33,7 +33,8 @@ const animationButtons = {
   ]
 }
 
-
+const testanim = animations
+console.log(testanim)
 
 const HomePage = ({ data: story }) => {
 // Set the type for the story and extract nessesary data
@@ -47,11 +48,11 @@ const HomePage = ({ data: story }) => {
           We elevate your brand with our expertise in&nbsp;
           <Link href="/videos"><a>video</a></Link>, <Link href="/websites"><a>websites</a></Link> and <Link href="/social-media"><a>social media</a></Link>
         </h2>
-        <AnimatedStory 
+        {/* <AnimatedStory 
           animations={animations}
           buttons={animationButtons}
           autoplay={true}
-        />
+        /> */}
       </section>
        
       <section>
@@ -59,18 +60,18 @@ const HomePage = ({ data: story }) => {
       </section>
 
       <section>
-        <h3>review section</h3>
+        <h3>review section (need to make)</h3>
       </section>
 
       <section>
-      <CircleLinkWithCaption
-				text='Know what you want?'
-				link={{
-					url: '/contact',
-					text: 'Get in touch',
-					large: true,
-				}}
-			/>
+        <CircleLinkWithCaption
+          text='Know what you want?'
+          link={{
+            url: '/contact',
+            text: 'Get in touch',
+            large: true,
+          }}
+        />
       </section>
     </Layout>
   )

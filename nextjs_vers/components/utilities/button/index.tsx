@@ -6,7 +6,12 @@ import Link from 'next/link';
 import t from 'prop-types';
 import { button } from '../../../types/components';
 
-const Button: FC<button> = ({ text, link, onClick, large, style }) => (
+const Button: FC<button> = (props) => {
+	const { text, link, onClick, large, style } = props
+
+	console.log('props', props)
+	
+	return (
 	<>
 		{onClick && (
 			<button
@@ -26,7 +31,7 @@ const Button: FC<button> = ({ text, link, onClick, large, style }) => (
 			</Link>
 		)}
 	</>
-);
+)};
 
 Button.propTypes = {
 	/**

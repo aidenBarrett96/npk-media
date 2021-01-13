@@ -35,6 +35,7 @@ export interface storyblokComponent {
   _uid: string
   _editable: string
   component: string
+  [x: string]: any 
 }
 
 export interface storyblokColor {
