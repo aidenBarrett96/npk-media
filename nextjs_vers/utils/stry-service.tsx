@@ -1,3 +1,5 @@
+// in the process of rewriting the storyblok-service with hooks
+
 import { useState } from 'react'
 import StoryblokClient from 'storyblok-js-client'
 

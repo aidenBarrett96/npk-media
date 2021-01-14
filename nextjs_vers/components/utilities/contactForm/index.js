@@ -1,19 +1,33 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import cStyle from './contactForm.module.scss';
 import Button from '../button';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 import { useWindowSize } from '../../globals/windowSize';
 import { useValidation } from './validation';
 
-const initialValues = {
-	name: '',
-	email: '',
-	message: '',
-};
 
 const ContactForm = () => {
+
+	const formRef = useRef();
+
+
 	// hold the input values within the component state
-	const [values, setValues] = useState(initialValues);
+	const [values, setValues] = useState({
+		name: '',
+		email: '',
+		message: '',
+	});
+
+	// Form submit in api route will either give status 200 or 400
+	// If error status, show on frontend that it has failed
+	// otherwise change to the 'success' slide
+	const [status, setStatus] = useState({
+		submitting: false,
+    info: { 
+			sgError: false, 
+			msg: null 
+		}
+  })
 
 	const { errorList, totalErrors } = useValidation(values);
 
@@ -22,7 +36,7 @@ const ContactForm = () => {
 	// Hold the current slide within the component state
 	const [slide, setSlide] = useState(1);
 
-	// Handler for inputing the
+	// Handler for inputing the form fields to state
 	const handleChange = (event) => {
 		const { value, name } = event.target;
 		setValues({ ...values, [name]: value });
@@ -38,29 +52,58 @@ const ContactForm = () => {
 			: cStyle.slide;
 	};
 
-	const formRef = useRef();
+	
 
-	// Form proccesser / submitter
+	// Form proccesser
 	const processForm = (form) => {
 		if (totalErrors) {
 			setShowErrors(true);
 		} else {
-			if (typeof FormData !== 'undefined') {
-				const data = new FormData(form);
-				data.append('form-name', 'contact');
-				fetch('/', {
-					method: 'POST',
-					body: data,
-				})
-					.then(() => {
-						nextSlide();
-					})
-					.catch((error) => {
-						alert(error);
-					});
-			}
+			handleSubmit()
 		}
 	};
+
+	// Send form data as json to the api endpoint
+	const handleSubmit = async () => {
+		setStatus({
+			submitting: true,
+			info: {
+				sgError: false,
+				msg: null
+			}
+		})
+    const res = await fetch('/api/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(values)
+		})
+		const errMsg = await res.text();
+		handleResponse(res.status, errMsg)
+	}
+
+	// API response. If good, go to next slide, otherwise show error message
+	const handleResponse = (status, msg) => {
+		if (status === 200) {
+			setStatus({
+				submitting: false,
+				info: {
+					sgError: false,
+					msg: null,
+				}
+			})
+			nextSlide()
+
+		} else {
+			setStatus({
+				submitting: false,
+				info: { sgError: true, msg: msg}
+			})
+					
+		}
+	}
+
 
 	const { desktop } = useWindowSize();
 
@@ -90,7 +133,13 @@ const ContactForm = () => {
 			<div className={classes(2)}>
 				<div className={cStyle.inner}>
 					<h2>Enquiry</h2>
-					<form name='contact' ref={formRef} method='POST' data-netlify='true'>
+						{status.submitting && (
+							<div className={cStyle.submitting}>Submitting...</div>
+						)}
+						{status.info.sgError && (
+							<div className={cStyle.errorMsg}>Error: {status.info.msg}</div>
+						)}
+					<form name='contact' ref={formRef}>
 						<input type='hidden' name='form-name' value='contact' />
 						<label>
 							<h3>Tell us what you're looking for:</h3>
@@ -144,7 +193,7 @@ const ContactForm = () => {
 						We will get back to you within 24 hours. In the meantime, get to
 						know us better:
 					</p>
-					<Link to='/our-team'>Meet the team</Link>
+					<Link href='/our-team'><a>Meet the team</a></Link>
 				</div>
 			</div>
 		</div>

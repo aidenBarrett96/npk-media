@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { ComponentArray } from "../../components/components"
 import Layout from "../../components/layout/layout"
 import { storyblok } from "../../utils/storyblok/storyblok"
 
@@ -7,9 +8,11 @@ const Projects = ({ data: story }) => {
   
   return (
     <Layout>
-      <h1>page content</h1>
-      <ProjectLinks data={story}/>
-      {/* all relevant data loaded with getStaticProps to build out the page soon */}
+      <section>
+        <h1>page content</h1>
+        <ProjectLinks data={story}/>
+        {/* need to change this to use projectCard component instead */}
+      </section>   
     </Layout>
   )
 }
@@ -28,7 +31,7 @@ export async function getStaticProps() {
   }
 }
 
-// component to map out data
+// component to map out project links
 const ProjectLinks = ({data: story}) => {
   const {...rest} = story
 
@@ -44,3 +47,5 @@ const ProjectLinks = ({data: story}) => {
     </>
   )
 }
+
+
