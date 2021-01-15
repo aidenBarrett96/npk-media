@@ -1,18 +1,23 @@
 import { storyblok } from '../utils/storyblok/storyblok'
-import Layout from '../components/layout/Layout'
+import Layout from '../components/layout/layout'
+import { ComponentArray } from '../components/components'
+
 
 const DynamicPage = ({ data: story }) => {
   if(!story) return null
   const { ...rest } = story || {}
 
+  console.log('all slug data.', story)
+
+
   return (
     <Layout>
-      <p>Dynamic page content</p>
-      {/* all relevant data loaded with getStaticProps to build out the page soon */}
+      <section className="{style.storySection}">
+        <ComponentArray components={story.content.body} />
+      </section>
     </Layout>
   )
 }
-
 export default DynamicPage
 
 
@@ -27,31 +32,43 @@ export async function getStaticPaths() {
     }
   })
 
-
-
   const {data: {stories}} = res
   const paths = stories.map(({slug}) => ({
     params: {
       slug
     }
   }))
-
-
+  
   return {
     paths,
-    fallback: false 
+    fallback: false
+  //   filter_query:{ 
+  //     component: { 
+  //       in_array: 'animations' 
+  //      } 
+  //    }
+  // })
   }
 }
 
 
-// page contents
+// // page contents
 export async function getStaticProps({ params }) {
   const res = await storyblok.get(`cdn/stories/${params.slug}`, {version: 'draft'})
+  // const animations = await storyblok.get(`cdn/stories/${params.slug}`, 
+  // {
+  //   version: 'draft',
+  //   filter_query:{ 
+  //     component: { 
+  //       in: 'animations' 
+  //      } 
+  //    }
+  // })
 
   return {
     props: {
-      data: res?.data?.story
+      data: res?.data?.story,
+      // animations: animations?.data?.story.content.body
     }
   }
-
 }

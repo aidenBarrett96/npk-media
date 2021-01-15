@@ -1,19 +1,21 @@
-import Layout from "../../components/layout/Layout"
+import SbEditable from "storyblok-react"
+import Layout from "../../components/layout/layout"
 import { storyblok } from "../../utils/storyblok/storyblok"
 
-const BlogRoute = ({ data: story }) => {
+const BlogRoute = ({ data: story, blok }) => {
   if(!story) return null
   const {...rest} = story
 
   
   return (
     <Layout>
-      <div>
-        <p>A single blog post</p>
-        <h1>{rest.content.title}</h1>
-        <p>{rest.content.intro}</p>
-        {/* all relevant data loaded with getStaticProps to build out the page soon */}
-      </div>
+      {/* <SbEditable content={blok}> */}
+        <div>
+          <p>A single blog post</p>
+          <h1>{rest.content.title}</h1>
+          <p>{rest.content.intro}</p>
+        </div>
+      {/* </SbEditable> */}
     </Layout>
   )
 }

@@ -1,0 +1,45 @@
+.buttonLarge,
+.buttonSmall {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+
+	span {
+		position: absolute;
+		box-sizing: border-box;
+		width: 100%;
+		left: 0;
+		padding: 0 6px;
+		text-align: center;
+		text-transform: uppercase;
+		line-height: 0.7rem;
+		font-size: 12px;
+		font-weight: 900;
+		color: #d43f34;
+		z-index: 1;
+	}
+
+	img {
+		transition: all 0.4s ease;
+	}
+
+	&:hover {
+		img {
+			transform: scale(1.1);
+		}
+	}
+}
+
+.buttonSmall {
+	height: 70px;
+	width: 70px;
+}
+
+.buttonLarge {
+	height: 90px;
+	width: 90px;
+}

@@ -1,0 +1,13 @@
+.container {
+	width: 100%;
+	max-width: 350px;
+	margin: 0 auto;
+
+	> div {
+		width: 100% !important;
+		height: auto !important;
+		svg {
+			width: 100%;
+		}
+	}
+}

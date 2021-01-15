@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import StoryblokService from '../../utils/storyblok-service'
-import Header from './header/Header'
-
+import CircleLinkWithCaption from '../utilities/circleLinkWithCaption'
+import Header from './header/header'
+import style from './layout.module.scss'
 
 const Layout = ({ children }) => {
   return (
@@ -11,10 +12,9 @@ const Layout = ({ children }) => {
       </Head>
 
       <Header/>
-        <main>
+        <main className={style.main}>
           {children}
         </main>
-
       {StoryblokService.bridge()}
     </>
   )
