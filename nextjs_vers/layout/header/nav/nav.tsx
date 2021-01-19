@@ -3,16 +3,28 @@ import Link from './link'
 import style from './nav.module.scss'
 import {pageLinks} from './pageLinks'
 import Image from 'next/image'
-
+import {useGetViewportWidth} from '../../../hooks/viewporta'
 
 const Nav = ({ open }) => {
+
+  const {width} = useGetViewportWidth();
+
   return (
     <div className={`${style.navWrap} ${open? style.navOpen : style.navClosed}`}>
       <nav>
         <ul className={style.nav}>
           <NavMap/>
         </ul>
-      </nav>
+          {width < 960 
+          ? (
+              <div className={style.mobileParts}>
+                <Link href="/privacy-policy"><a>Privacy Policy</a></Link>
+                <p>© NPK MEDIA</p>
+              </div>
+            )
+          : null
+          }
+      </nav>        
     </div>
   )
 }
@@ -26,7 +38,7 @@ const NavMap = () => {
       {pageLinks.map((item, index) => (
         <li className={style.navLink} key={index}>
           <Link href={item.path}>
-            <a>
+            <a onClick={() => !open}>
               {item.imgSrc
                 ? (<Image src={item.imgSrc} className={style[item.imgCName]} width="40" height="40"/>)
                 : (null) 

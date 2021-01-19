@@ -1,5 +1,5 @@
 import { ComponentArray } from "../../components/components"
-import Layout from "../../components/layout/layout"
+import Layout from "../../layout/layout"
 import { storyblok } from "../../utils/storyblok/storyblok"
 import ContentWithImages from '../../components/utilities/contentWithImages'
 

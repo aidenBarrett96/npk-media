@@ -2,12 +2,12 @@ import React from 'react';
 import Button from '../button';
 import style from './circleLinkWithCaption.module.scss';
 
-const CircleLinkWithCaption = (props) => {
+const CircleLinkWithCaption = ({title, button_text, link}) => {
 
 	return (
 		<div className={style.container}>
-			<h2>{props.title}</h2>
-			<Button text={props.button_text} link={props.link.cached_url} large={props.link.large} />
+			<h2>{title}</h2>
+			<Button text={button_text} link="/contact" large={link.large} />
 		</div>
 	);
 };

@@ -8,6 +8,7 @@ import CircleLinkWithCaption from './utilities/circleLinkWithCaption'
 import OtherServices from './utilities/otherServices'
 import TeamCard from './utilities/teamCard'
 import FeaturedImage from './utilities/featuredImage/featuredImage'
+import Testimonial from './utilities/testimonial'
 
 const componentList = {
     'animated_story': AnimatedStory,
@@ -17,6 +18,7 @@ const componentList = {
     'other_services': OtherServices,
     'team_members': TeamCard,
     'featured_image': FeaturedImage,
+    'testimonial': Testimonial
 }
 
 const getComponent = (componentName: string) => {

@@ -1,18 +1,18 @@
 import { storyblok } from '../utils/storyblok/storyblok'
-import Layout from '../components/layout/layout'
+import Layout from '../layout/layout'
 import { ComponentArray } from '../components/components'
-
+import style from './dynamic.module.scss'
 
 const DynamicPage = ({ data: story }) => {
   if(!story) return null
   const { ...rest } = story || {}
 
-  console.log('all slug data.', story)
+  console.log('all slug data. abcc', story)
 
 
   return (
     <Layout>
-      <section className="{style.storySection}">
+      <section className={style.storySection}>
         <ComponentArray components={story.content.body} />
       </section>
     </Layout>

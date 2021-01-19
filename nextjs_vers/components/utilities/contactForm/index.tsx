@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import cStyle from './contactForm.module.scss';
 import Button from '../button';
 import Link from 'next/link';
-import { useWindowSize } from '../../globals/windowSize';
+import { useGetViewportWidth } from '../../../hooks/viewporta';
 import { useValidation } from './validation';
 
 
@@ -105,14 +105,14 @@ const ContactForm = () => {
 	}
 
 
-	const { desktop } = useWindowSize();
+	const { isDesktop } = useGetViewportWidth();
 
 	const containerStyle = {
 		height:
 			slide === 1
 				? '300px'
 				: slide === 2
-				? desktop
+				? isDesktop
 					? '700px'
 					: '650px'
 				: '260px',

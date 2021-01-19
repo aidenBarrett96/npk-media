@@ -1,6 +1,6 @@
-import socialMediaIcon from '../../../../assets/header/social-media-icon.svg';
-import videosIcon from '../../../../assets/header/videos-icon.svg';
-import websitesIcon from '../../../../assets/header/websites-icon.svg';
+import socialMediaIcon from '../../../assets/header/social-media-icon.svg';
+import videosIcon from '../../../assets/header/videos-icon.svg';
+import websitesIcon from '../../../assets/header/websites-icon.svg';
 
 // navbar links - mapped through in Nav.tsx
 export const pageLinks = [
@@ -32,13 +32,6 @@ export const pageLinks = [
     imgAlt: 'Websites icon',
     imgCName: 'websitesIcon',
   },
-  // {
-  //   title: 'Projects',
-  //   path: '/projects',
-  //   imgSrc: null,
-  //   imgAlt: null,
-  //   imgCName: null,
-  // },
   {
     title: 'Our Team',
     path: '/our-team',

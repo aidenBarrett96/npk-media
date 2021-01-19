@@ -3,13 +3,18 @@ import outerSmall from '../../../assets/buttons/button-70px.svg';
 import outerLarge from '../../../assets/buttons/button-90px.svg';
 import cStyle from './button.module.scss';
 import Link from 'next/link';
-import t from 'prop-types';
-import { button } from '../../../types/components';
 
-const Button: FC<button> = (props) => {
-	const { text, link, onClick, large, style } = props
+interface button {
+  text?: any;
+  link?: any;
+  onClick?: any;
+	large: any;
+	style?: any
+} 
 
-	console.log('props', props)
+const Button: FC<button> = ({ text, link, onClick, large, style }) => {
+	// const { text, link, onClick, large, style } = props
+
 	
 	return (
 	<>
@@ -32,24 +37,5 @@ const Button: FC<button> = (props) => {
 		)}
 	</>
 )};
-
-Button.propTypes = {
-	/**
-	 * The text thats shown inside the button
-	 */
-	text: t.string.isRequired,
-	/**
-	 * A link to a page
-	 */
-	link: t.string,
-	/**
-	 * The callback for a click event
-	 */
-	onClick: t.func,
-	/**
-	 * Whether or not to use the large wrapper
-	 */
-	large: t.bool.isRequired,
-};
 
 export default Button;

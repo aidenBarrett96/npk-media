@@ -1,0 +1,58 @@
+// Blog index page
+.hero {
+  background: #EFEFEF;
+  min-height: 328px;
+  padding: 16px;
+  display: flex;
+  align-items: flex-end;
+
+  .latestBlog {
+    background: #fff;
+    padding: 24px;
+    height: fit-content;
+    width: 100%;
+    
+
+    h1 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 16px;
+      color: #D43F34
+    }
+  }
+}
+
+
+.blogs {
+ 
+  p {
+    font-size: 16px;
+  }
+  .tags {
+    color: #D43F34
+  }
+  h3 {
+    font-size: 24px;
+    color: black
+  }
+
+}
+
+
+
+// single blog post
+.singleBlog {
+  .tags {
+    font-size:16px;
+    color: #D43F34;
+  }
+  .blogHero {
+    background:#EFEFEF;
+
+    img {
+      width:100%;
+    }
+
+  }
+}

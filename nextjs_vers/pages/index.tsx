@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react"
-import Layout from "../components/layout/layout"
+import Layout from "../layout/layout"
 import {storyblok} from '../utils/storyblok/storyblok'
 import {storyblokStory} from '../types/storyblok'
 import style from './homepage.module.scss'
 import Link from "next/link"
 import CircleLinkWithCaption from '../components/utilities/circleLinkWithCaption'
 import { ComponentArray } from "../components/components"
+import Testimonial from "../components/utilities/testimonial"
 
 
 const HomePage = ({ data: story }) => {
 // Set the type for the story and extract nessesary data
   const {...rest}: storyblokStory = story
-
+console.log('homeepageee...', rest)
   return (
     <Layout>
       <section className={style.storySection}>
@@ -24,10 +25,6 @@ const HomePage = ({ data: story }) => {
         
       <section>
         <ComponentArray components={story.data.story.content.body} />
-      </section>
-
-      <section>
-        <h3>review section (need to make in cms)</h3>
       </section>
 
     </Layout>

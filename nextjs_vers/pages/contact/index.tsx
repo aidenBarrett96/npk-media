@@ -1,5 +1,5 @@
 import { ComponentArray } from "../../components/components"
-import Layout from "../../components/layout/layout"
+import Layout from "../../layout/layout"
 import { storyblokStory } from "../../types/storyblok"
 import { storyblok } from "../../utils/storyblok/storyblok"
 import ContactForm from '../../components/utilities/contactForm'

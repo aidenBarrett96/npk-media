@@ -1,21 +1,19 @@
 import SbEditable from "storyblok-react"
-import Layout from "../../components/layout/layout"
+import Layout from "../../layout/layout"
+import CircleLinkWithCaption from "../../components/utilities/circleLinkWithCaption"
 import { storyblok } from "../../utils/storyblok/storyblok"
+import SingleBlog from "../../components/utilities/blog/singleBlog"
 
 const BlogRoute = ({ data: story, blok }) => {
   if(!story) return null
   const {...rest} = story
 
-  
+
+
   return (
     <Layout>
-      {/* <SbEditable content={blok}> */}
-        <div>
-          <p>A single blog post</p>
-          <h1>{rest.content.title}</h1>
-          <p>{rest.content.intro}</p>
-        </div>
-      {/* </SbEditable> */}
+      <SingleBlog rest={rest}/>
+        {/* <CircleLinkWithCaption props={story.content.link_section}/> */}
     </Layout>
   )
 }

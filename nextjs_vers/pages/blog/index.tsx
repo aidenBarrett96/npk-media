@@ -1,20 +1,16 @@
 import Link from "next/link"
-import Layout from "../../components/layout/layout"
+import BlogIndex from "../../components/utilities/blog/blogIndex"
+import Layout from "../../layout/layout"
+import { storyblokStory } from "../../types/storyblok"
 import { storyblok } from "../../utils/storyblok/storyblok"
 
 const BlogPage = ({ data: story }) => {
-  if(!story) return null
+  const {...rest}: storyblokStory = story
 
+  console.log(rest)
   return (
     <Layout>
-      <div>
-        blog page
-        <hr/>
-        {/* all relevant data loaded with getStaticProps to build out the page soon */}
-        <BlogLinks data={story}/>
-
-        <hr/>
-      </div>
+      <BlogIndex content={story}/>
     </Layout>
   )
 }
@@ -31,22 +27,4 @@ export async function getStaticProps() {
       data: allBlogs
     }
   }
-}
-
-
-// component to map out the blog urls
-const BlogLinks = ({data: story}) => {
-  const {...rest} = story
-
-  return (
-    <>
-        {rest.data.stories.map((link) => (
-          <div key={link.name}>
-            <Link href={`/blog/${link.slug}`}>
-              <a>{link.name}</a>
-            </Link>
-          </div>
-        ))}
-    </>
-  ) 
 }

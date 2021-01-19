@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import cStyle from './threeMediaLayout.module.scss';
-import { useWindowSize } from '../../globals/windowSize';
+import { useGetViewportWidth } from '../../../hooks/viewporta';
 
 const ThreeMediaLayout = ({ featuredPosition, media }) => {
-	const size = useWindowSize();
+	const {width} = useGetViewportWidth();
 	const [rowHeight, setRowHeight] = useState(null);
 
 	const ref = useRef();
@@ -18,7 +18,7 @@ const ThreeMediaLayout = ({ featuredPosition, media }) => {
 
 	useEffect(() => {
 		setRowHeight((ref.current.offsetWidth - 20) / 2);
-	}, [size]);
+	}, [width]);
 	return (
 		<div
 			className={`${cStyle.container} ${cStyle[featuredPosition]}`}
