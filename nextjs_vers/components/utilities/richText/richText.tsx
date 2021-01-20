@@ -6,7 +6,7 @@ const RichText = (props) => {
   const rich_text = props?.body
 
   return (
-    <section>
+    <section className={style.richTextBody}>
       {render(rich_text, {
         markResolvers: {
           [MARK_LINK]: (children: React.ReactNode, { href, linktype }: any) => 

@@ -7,12 +7,10 @@ const DynamicPage = ({ data: story }) => {
   if(!story) return null
   const { ...rest } = story || {}
 
-  console.log('heree', story)
-
 
   return (
     <Layout>
-      <section className={style.storySection}>
+      <section className={style.dynamicContent}>
         <ComponentArray components={story.content.body} />
       </section>
     </Layout>

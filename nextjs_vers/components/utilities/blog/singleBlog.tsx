@@ -1,6 +1,8 @@
 import ContactSection from '../contactSection'
 import RichText from '../richText/richText'
 import style from './blog.module.scss'
+import {render} from 'storyblok-rich-text-react-renderer'
+
 
 const SingleBlog = ({rest, blogsArr}) => {
   console.log(rest.content.long_text.content)
@@ -15,7 +17,7 @@ const SingleBlog = ({rest, blogsArr}) => {
       <section>
         <h1>{rest.content.title}</h1>
         <p className={style.tags}>{rest.content.tags}</p>
-        <RichText props={rest.content.long_text.content} />
+        {render(rest.content.long_text)}
       </section>
       <div>
         To next blog 

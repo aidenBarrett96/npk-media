@@ -13,15 +13,14 @@ const HomePage = ({ data: story }) => {
 
   console.log(story)
 
-  
+
   return (
     <Layout>
-      <section className={style.storySection}>
-        <h1>All in one media agency.</h1>
-        <h2>
+      <section className={style.hero}>
+        <h1>All in one media agency.<br/><br/>
           We elevate your brand with our expertise in&nbsp;
           <Link href="/videos"><a>video</a></Link>, <Link href="/websites"><a>websites</a></Link> and <Link href="/social-media"><a>social media</a></Link>
-        </h2>
+        </h1>
       </section>
         
       <section>

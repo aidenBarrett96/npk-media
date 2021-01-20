@@ -23,6 +23,7 @@
 		transform: translateY(-40px);
 		transition: all 0.4s ease-out;
     padding-left: 32px;
+    position: relative;
     
     .navLink {
       list-style: none;
@@ -75,6 +76,15 @@
 			.socialMediaIcon {
 				width: 26px;
 			}
+    }
+    .mobileParts {
+      display:flex;
+      width: 100%;
+
+      a, p {
+        width: 50%;
+        margin:0;
+      }
     }
   }
 
