@@ -49,3 +49,8 @@ const TeamCard: FC<TeamProp> = ( props) => {
 
 
 export default TeamCard;
+
+
+/* Where used: 
+1. 
+*/

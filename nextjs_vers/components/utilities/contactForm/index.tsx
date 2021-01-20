@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import cStyle from './contactForm.module.scss';
 import Button from '../button';
 import Link from 'next/link';
-import { useGetViewportWidth } from '../../../hooks/viewporta';
+import { useGetViewportWidth } from '../../../hooks/viewport';
 import { useValidation } from './validation';
 
 
@@ -201,3 +201,9 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
+
+
+/* Where used: 
+1. contact page
+*/

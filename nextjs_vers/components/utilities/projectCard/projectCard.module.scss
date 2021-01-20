@@ -1,0 +1,17 @@
+.container {
+  display:flex;
+  justify-content:center;
+
+  &:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+
+
+  .media {
+    width:80%;
+  }
+
+  .btn {
+    width:20%;
+  }
+}

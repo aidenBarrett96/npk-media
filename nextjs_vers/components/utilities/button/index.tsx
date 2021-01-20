@@ -13,7 +13,6 @@ interface button {
 } 
 
 const Button: FC<button> = ({ text, link, onClick, large, style }) => {
-	// const { text, link, onClick, large, style } = props
 
 	
 	return (
@@ -39,3 +38,8 @@ const Button: FC<button> = ({ text, link, onClick, large, style }) => {
 )};
 
 export default Button;
+
+
+/* Where used: 
+
+*/

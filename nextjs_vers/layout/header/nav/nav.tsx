@@ -3,7 +3,7 @@ import Link from './link'
 import style from './nav.module.scss'
 import {pageLinks} from './pageLinks'
 import Image from 'next/image'
-import {useGetViewportWidth} from '../../../hooks/viewporta'
+import {useGetViewportWidth} from '../../../hooks/viewport'
 
 const Nav = ({ open }) => {
 
@@ -14,7 +14,6 @@ const Nav = ({ open }) => {
       <nav>
         <ul className={style.nav}>
           <NavMap/>
-        </ul>
           {width < 960 
           ? (
               <div className={style.mobileParts}>
@@ -24,6 +23,8 @@ const Nav = ({ open }) => {
             )
           : null
           }
+        </ul>
+          
       </nav>        
     </div>
   )

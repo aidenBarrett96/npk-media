@@ -27,3 +27,8 @@ const RichText = (props) => {
   )
 }
 export default RichText
+
+
+/* Where used: 
+1. 
+*/

@@ -1,43 +1,51 @@
-import { ComponentArray } from "../../components/components"
 import Layout from "../../layout/layout"
 import { storyblok } from "../../utils/storyblok/storyblok"
-import ContentWithImages from '../../components/utilities/contentWithImages'
+import style from './project.module.scss'
+import CircleLinkWithCaption from "../../components/utilities/circleLinkWithCaption"
+import Testimonial from "../../components/utilities/testimonial"
+
 
 const ProjectsPages = ({ data: story }) => {
   if(!story) return null
   const {...rest} = story
 
-  console.log(story)
+  // extract the data for 2 components so it's tidier
+  const nextProject = rest.content.internal_link && rest.content.internal_link[0] || null
+  const testimonial = rest.content.testimonial && rest.content.testimonial[0] || null
 
 
   return (
     <Layout>
-      <section>
-        <img src={rest.content.featured_media.filename} alt={rest.content.featured_media.alt} />
-        <h1>{rest.content.project_title}</h1>
-        <p>{rest.type_of_work || '*project tags here* need adding on cms'}</p>
-        {/* <ContentWithImages props={story}/> */}
-      </section>
+      <div className={style.hero}>
+        <img src={story.content.featured_media.filename} alt={story.content.featured_media.alt}/>
+        <h1>{story.content.project_title}</h1>
+        <p>project tags. need to setup in cms</p>
+      </div>
+
+      <div className={style.intro}>
+        <h2>The Problem</h2>
+        <p>{story.content.problem}</p>
+        <h2>The Solution</h2>
+        <p>{story.content.solution}</p>
+      </div>
+
+
+      {/* <ContentWithImages/> */}
+
+      <Testimonial 
+        company={testimonial.company}
+        name={testimonial.name}
+        quote={testimonial.quote}
+        role={testimonial.role}
+      />
       
-      <section>
-        <h2>The problem</h2>
-        <p>{rest.content.problem}</p>
-        <h2>The solution</h2>
-        <p>{rest.content.solution}</p>
-      </section>
+      <CircleLinkWithCaption
+        link={nextProject.link}
+        button_text={nextProject.button_text}
+        title={nextProject.title}
+      />
 
-      <section>
-        Other content (reviews and 2 image sections), needs components
-      </section>
 
-      <section>
-        {rest.content.internal_link.map((link) => (
-          <div>
-            <h3>{link.title}</h3>
-            
-          </div>
-        ))}
-      </section>
     </Layout>
   )
 }
@@ -65,8 +73,7 @@ export async function getStaticPaths() {
       }
     }
   ))
-    // console.log(paths)
-    console.log({stories})
+
   return {
     paths,
     fallback: false

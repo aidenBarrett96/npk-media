@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Lottie } from '@crello/react-lottie';
 import t from 'prop-types';
-import cStyle from './animatedStory.module.scss';
+import style from './animatedStory.module.scss';
 import AnimationButtons from './animationButtons';
 import Button from '../button';
 
@@ -93,7 +93,7 @@ const AnimatedStory = (props) => {
 		<div
 			onMouseEnter={attemptProgress}
 			onClick={attemptProgress}
-			className={cStyle.container}>
+			className={style.container}>
 			<Lottie
 				config={config}
 				height='350px'

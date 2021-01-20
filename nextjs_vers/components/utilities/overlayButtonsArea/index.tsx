@@ -1,7 +1,6 @@
 import React from 'react';
 import cStyle from './overlayButtonsArea.module.scss';
 import Button from '../button';
-import t from 'prop-types';
 
 const OverlayButtonsArea = ({ buttons, children }) => {
 
@@ -24,15 +23,8 @@ const OverlayButtonsArea = ({ buttons, children }) => {
 	);
 };
 
-OverlayButtonsArea.propTypes = {
-	/**
-	 * An array of the buttons to be inserted below the body
-	 */
-	buttons: t.arrayOf(t.object).isRequired,
-	/**
-	 * The body to be under the buttons
-	 */
-	children: t.node.isRequired,
-};
-
 export default OverlayButtonsArea;
+
+/* Where used: 
+1. 
+*/

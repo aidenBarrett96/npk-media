@@ -1,16 +1,15 @@
 import style from './featuredImage.module.scss'
 import Image from 'next/image'
+import {FC} from 'react'
 
 interface FeaturedImg {
-  props: any,
   image: any
 }
 
-const FeaturedImage = (props: FeaturedImg) => {
-  const {filename, alt} = props?.image
-  console.log('img filename here:', props)
+const FeaturedImage: FC<FeaturedImg> = ({image}) => {
+  const {filename, alt} = image
   
-return (
+  return (
     <div>
       <img 
         src={filename} 
@@ -21,3 +20,10 @@ return (
 }
 
 export default FeaturedImage
+
+
+
+
+/* Where used:
+1. Our team page
+*/

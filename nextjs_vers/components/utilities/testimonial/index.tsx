@@ -1,7 +1,6 @@
 import style from './testimonial.module.scss'
 
-const Testimonial = (props) => {
-  const {company, name, quote, role} = props
+const Testimonial = ({company, name, quote, role}) => {
 
   return (
     <div>
@@ -13,3 +12,7 @@ const Testimonial = (props) => {
   )
 }
 export default Testimonial
+
+/* Where used: 
+1. 
+*/

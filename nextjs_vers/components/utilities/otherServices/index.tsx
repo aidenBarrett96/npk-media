@@ -1,11 +1,9 @@
 import React from 'react';
 import cStyle from './otherServices.module.scss';
-import t from 'prop-types';
 import OverlayButtonsArea from '../overlayButtonsArea';
 
 
-const OtherServices = (props) => {
-	const {buttons, graphic} = props
+const OtherServices = ({buttons, graphic}) => {
 
 	return (
 		<OverlayButtonsArea buttons={buttons}>
@@ -17,11 +15,10 @@ const OtherServices = (props) => {
 	)
 };
 
-OtherServices.propTypes = {
-	/**
-	 * The service page that is currenly loaded
-	 */
-	current: t.oneOf(['social media', 'videos', 'websites']),
-};
-
 export default OtherServices;
+
+
+
+/* Where used: 
+1. videos, websites and social media - in components.tsx
+*/

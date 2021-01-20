@@ -1,13 +1,13 @@
 import { storyblok } from '../utils/storyblok/storyblok'
 import Layout from '../layout/layout'
 import { ComponentArray } from '../components/components'
-import style from './dynamic.module.scss'
+import style from './slug.module.scss'
 
 const DynamicPage = ({ data: story }) => {
   if(!story) return null
   const { ...rest } = story || {}
 
-  console.log('all slug data. abcc', story)
+  console.log('heree', story)
 
 
   return (

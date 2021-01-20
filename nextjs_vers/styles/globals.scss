@@ -29,7 +29,9 @@ a {
 * {
   box-sizing: border-box;
 }
-
+img {
+  max-width:100%;
+}
 button,
 a {
   font-family: brandon-grotesque, sans-serif !important;
@@ -57,3 +59,4 @@ a:hover {
 section.hero {
   margin-bottom: 30px;
 }
+

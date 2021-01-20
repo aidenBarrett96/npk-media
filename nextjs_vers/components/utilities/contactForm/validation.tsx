@@ -19,3 +19,8 @@ export const useValidation = (values) => {
 
 	return returnable;
 };
+
+
+/* Where used: 
+1. contact page component
+*/

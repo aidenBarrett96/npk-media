@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import CircleLinkWithCaption from '../circleLinkWithCaption'
+import ContactSection from '../contactSection'
 import style from './blog.module.scss'
 
 
@@ -44,12 +44,16 @@ const BlogIndex = ({content}) => {
         
       ))}
     </section>
-      <CircleLinkWithCaption
-        title="Want to work with us?"
-        button_text="Get in touch"
-        link="large"        
+    <ContactSection 
+        text="Want to work with us?"
       />
     </>
   ) 
 }
 export default BlogIndex
+
+
+
+/* Where used:
+1. blog/index
+*/

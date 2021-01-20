@@ -1,13 +1,8 @@
-import { ComponentArray } from "../../components/components"
 import Layout from "../../layout/layout"
-import { storyblokStory } from "../../types/storyblok"
-import { storyblok } from "../../utils/storyblok/storyblok"
 import ContactForm from '../../components/utilities/contactForm'
 
 
 const ContactPage = () => {
-  // const {...rest}: storyblokStory = story
-
 
   return (
     <Layout>
@@ -53,14 +48,3 @@ const ContactPage = () => {
 }
 
 export default ContactPage 
-
-
-// export async function getStaticProps() {
-//   const res = await storyblok.get('cdn/stories/contact', {version: 'draft',})
-
-//   return {
-//     props: {
-//       data: res
-//     }
-//   }
-// }
