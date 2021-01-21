@@ -1,6 +1,13 @@
 import Link from 'next/link'
+import { useEffect, useRef, useState } from 'react'
 import ContactSection from '../contactSection'
 import style from './blog.module.scss'
+import PageNumbers from './pageNumbers/index'
+
+
+/**************************************************************
+****** Set back to 10 blogs per page before site is live ******
+**************************************************************/
 
 
 const BlogIndex = ({content}) => {
@@ -10,6 +17,31 @@ const BlogIndex = ({content}) => {
   const latestBlog = data.stories[0]
   const allOtherBlogs = data.stories.slice(1)
 
+  // Pagination
+    // State for pagination. Default page 1 with 10 blogs per page 
+    const [currentPage, setCurrentPage] = useState(1)
+    const [blogsPerPage] = useState(1)
+
+    // Set the current page blog posts
+    const lastBlogIndex = currentPage * blogsPerPage
+    const firstBlogIndex = lastBlogIndex - blogsPerPage
+    const currentBlogs = allOtherBlogs.slice(firstBlogIndex, lastBlogIndex)
+
+
+    // Change page function and scroll to top
+    const changePage = (pageNumber) => {
+      setCurrentPage(pageNumber)
+    }
+
+    // Set reference point of where to scroll up to on page change
+    const el = useRef(null)
+    // Scroll to ref point el on page button click
+    const scrollTop = () => {
+      el.current.scrollIntoView({
+        behavior: "smooth"
+      })
+    }
+    
   return (
     <>
     <Link href={`/blog/${latestBlog.slug}`}>
@@ -24,25 +56,33 @@ const BlogIndex = ({content}) => {
     </Link>
    
 
-    <section className={style.blogs}>
+    <section className={style.allBlogs} id="mainBlogContent" ref={el}>
       <h2>Latest Articles</h2>
-      {allOtherBlogs.map((article) => (
-        <div key={article.name}>
-          <p className={style.tags}>{article.content.tags}</p>
-          <Link href={`/blog/${article.slug}`}>
-            <a><h3>{article.name}</h3></a>
+      {currentBlogs.map((blog) => (
+        <div key={blog.name} className={style.blog}>
+          <p className={style.tags}>{blog.content.tags}</p>
+          <Link href={`/blog/${blog.slug}`}>
+            <a><h3>{blog.name}</h3></a>
           </Link>
           <p>
-            Written by {article.content.author || 'someone at NPK Media'} on {/* */} 
+            Written by {blog.content.author || 'someone at NPK Media'} on {/* */} 
             {
-              new Date(article.published_at)
+              new Date(blog.created_at)
               .toDateString()
             }
           </p>
           <hr/>
         </div>
-        
       ))}
+
+      <PageNumbers 
+        blogsPerPage={blogsPerPage}
+        allOtherBlogs={allOtherBlogs.length}
+        changePage={changePage}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        scrollTop={scrollTop}
+      />
     </section>
     <ContactSection 
         text="Want to work with us?"

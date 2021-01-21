@@ -10,7 +10,7 @@ const FeaturedImage: FC<FeaturedImg> = ({image}) => {
   const {filename, alt} = image
   
   return (
-    <div>
+    <div className={style.imageWrap}>
       <img 
         src={filename} 
         alt={alt} 

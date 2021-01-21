@@ -1,0 +1,62 @@
+.pagination {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+
+  ul {
+    list-style: none;
+    margin: 0 auto;
+    padding:0;
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;   
+    width: 100%;
+    justify-content: center;    
+  }
+  span {
+    color: #d43f34;
+  }
+  button {
+    list-style: none;
+    font-size: 15px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    color: #D43F34;
+    padding: 22px;
+    &.active {
+      color: black;
+      text-decoration: underline;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .ellipses {
+    color: black;
+    padding: 22px 0;
+    &:hover {
+      cursor: default
+    }
+  }
+  .pageBtn {
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    background: #fff;
+    min-width: 90px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .previousBtn {
+    padding-left: 0;
+    // margin-right: 24px;
+  }
+  .nextBtn {
+    padding-right: 0;
+    // margin-left: 24px!important;
+    text-align: right;
+  }
+}
+

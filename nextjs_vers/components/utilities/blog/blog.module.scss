@@ -24,8 +24,9 @@
 }
 
 
-.blogs {
- 
+.allBlogs {
+  padding: 20vh 0;
+  
   p {
     font-size: 16px;
   }
@@ -35,6 +36,10 @@
   h3 {
     font-size: 24px;
     color: black
+  }
+
+  .blog {
+    padding: 50px 0;
   }
 
 }

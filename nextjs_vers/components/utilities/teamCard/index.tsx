@@ -23,7 +23,7 @@ const TeamCard: FC<TeamProp> = ( props) => {
 	return (
 		<div className={style.team}>
 			{team.map((member) => (
-				<div className={style.container}>
+				<div className={style.member}>
 					<img src={member.image.filename} alt={`Profile image of ${member.name}`} />
 					<p>{member.name}</p>
 					<p>{member.role}</p>

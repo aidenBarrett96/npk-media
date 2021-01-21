@@ -4,7 +4,7 @@ const Testimonial = ({company, name, quote, role}) => {
 
   return (
     <div className={style.reviewWrap}>
-      <h3>{quote}</h3>
+      <h3>"{quote}"</h3>
       <img src={company.filename} alt={company.alt}/>
       <h4>{name}</h4>
       <p>{role}</p>
