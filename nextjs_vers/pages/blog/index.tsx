@@ -7,7 +7,6 @@ import { storyblok } from "../../utils/storyblok/storyblok"
 const BlogPage = ({ data: story }) => {
   const {...rest}: storyblokStory = story
 
-  console.log(rest)
   return (
     <Layout>
       <BlogIndex content={story}/>

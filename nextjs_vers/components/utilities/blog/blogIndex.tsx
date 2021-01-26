@@ -71,7 +71,6 @@ const BlogIndex = ({content}) => {
               .toDateString()
             }
           </p>
-          <hr/>
         </div>
       ))}
 

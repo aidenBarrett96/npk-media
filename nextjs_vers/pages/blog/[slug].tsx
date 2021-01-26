@@ -2,9 +2,11 @@ import Layout from "../../layout/layout"
 import { storyblok } from "../../utils/storyblok/storyblok"
 import SingleBlog from "../../components/utilities/blog/singleBlog"
 
-const BlogRoute = ({ data: story, blogsArr }) => {
+const BlogRoute = ({ data: story, blogsArr, allBlogs }) => {
   if(!story) return null
   const {...rest} = story
+
+  console.log('all blogs in a blog', blogsArr)
 
   return (
     <Layout>

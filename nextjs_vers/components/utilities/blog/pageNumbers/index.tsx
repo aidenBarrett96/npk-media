@@ -1,4 +1,3 @@
-import { lastIndexOf } from '*.jpg'
 import { useEffect, useRef, useState } from 'react'
 import { useGetViewportWidth } from '../../../../hooks/viewport'
 import style from './page-numbers.module.scss'

@@ -1,0 +1,23 @@
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+
+
+  .item {
+    width: 50%;
+    padding-bottom: 16px; 
+
+    &:nth-child(odd) {
+      padding-right: 8px;
+    }
+    &:nth-child(even) {
+      padding-left: 8px;
+    }
+
+    &:last-child:nth-child(odd) {
+      width: 100%;
+      padding: 0 !important;
+    }
+
+  }
+}

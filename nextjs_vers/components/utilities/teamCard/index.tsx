@@ -24,10 +24,12 @@ const TeamCard: FC<TeamProp> = ( props) => {
 		<div className={style.team}>
 			{team.map((member) => (
 				<div className={style.member}>
-					<img src={member.image.filename} alt={`Profile image of ${member.name}`} />
-					<p>{member.name}</p>
-					<p>{member.role}</p>
+					<img src={`${member.image.filename}` || "/placeholder.png"} alt={`Profile image of ${member.name}`} />
 					<button onClick={() => memberClickHandler(member)}>+</button>
+					<div className={style.nameRole}>
+						<p>{member.name}</p>
+						<p>{member.role}</p>
+					</div>
 				</div>
 			))}
 
@@ -35,10 +37,11 @@ const TeamCard: FC<TeamProp> = ( props) => {
 				isActive 
 				? (
 						<div className={style.popup}>
-							<img src="" alt={`Profile image of ${focusedMember.name}`}/>
-							<p>{focusedMember.name}</p>
-							<p>Need to swap name for description. Needs adding in cms </p>
-							<button onClick={() => setIsActive(false)}>X</button>
+							<div className={style.popupInner}>
+								<img src="/placeholder.png" alt={`Profile image of ${focusedMember.name}`}/>
+								<p>Need to add description in cms </p>
+								<button onClick={() => setIsActive(false)}>+</button>
+							</div>
 						</div>
 					)
 				: null
