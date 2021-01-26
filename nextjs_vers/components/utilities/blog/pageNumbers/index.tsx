@@ -1,4 +1,6 @@
+import { lastIndexOf } from '*.jpg'
 import { useEffect, useRef, useState } from 'react'
+import { useGetViewportWidth } from '../../../../hooks/viewport'
 import style from './page-numbers.module.scss'
 
 const PageNumbers = ({
@@ -35,70 +37,80 @@ const PageNumbers = ({
   }
 
 
-// Reduce the page numbers shown if more than 3 pages in array of pageNums
+// Set new page number array (newPageNums) - max 5 in array for desktop, 3 for mobile.
+// On page change, shift the new array forward/backwards.
+ 
   // Store the last position value in the array of page numbers
   const lastBlog = pageNums.length;
 
   // Set a new page numbers array in state.
-  const [newPageNums, setnewPageNums] = useState(pageNums) 
-
-
-  // Change page numbers in array. First 3, middle section and last 2 of the array need seperate rules
-  useEffect(() => {
-    if (pageNums.length > 3) {
-
-      if (currentPage === 1) {
-        const truncated = pageNums.slice(currentPage - 1, currentPage + 2)
-        setnewPageNums(truncated)
-      }
-
-      if (currentPage === 2) {
-        const truncated = pageNums.slice(currentPage - 2, currentPage + 1)
-        setnewPageNums(truncated)
-      }
-      
-      if (currentPage === 3) {
-        const truncated = pageNums.slice(currentPage - 3, currentPage)
-        setnewPageNums(truncated)
-      }
-
-      if (currentPage < lastBlog && currentPage > 3) {
-        const truncated = pageNums.slice(currentPage - 2, currentPage + 1)
-        setnewPageNums(truncated)
-      }
-
-      if (currentPage === lastBlog - 1) {
-        const truncated = pageNums.slice(currentPage - 2, currentPage + 1)
-        setnewPageNums(truncated)
-      }
-
-      if (currentPage === lastBlog) {
-        const truncated = pageNums.slice(currentPage - 3, lastBlog)
-        setnewPageNums(truncated)
-      }
-  }
-  }, [currentPage])
+  const [newPageNums, setNewPageNums] = useState(pageNums) 
+  const pageBreakPoint = useGetViewportWidth();
   
-  console.log('current page & buttons:', currentPage, newPageNums)
 
+  // Change from showing 3 page buttons on mobile or 5 on desktop
+  useEffect(() => {
+    if (pageBreakPoint.width && pageBreakPoint.width < 960) {
+      setNewPageNums(pageNums.slice(0, 3))
+    } else if (pageBreakPoint.width && pageBreakPoint.width > 960) {
+      setNewPageNums(pageNums.slice(0, 5))
+    } 
+  }, [pageBreakPoint.width])
+  
+
+  useEffect(() => {
+    // Shift through page numbers on mobile. Always only shows 3 numbers in the array
+    if (pageBreakPoint.width && pageBreakPoint.width < 960 && pageNums.length > 3) {
+      if (currentPage === 1) {
+          const truncated = pageNums.slice(currentPage - 1, currentPage + 2)
+          setNewPageNums(truncated)
+      } else if (currentPage === 3) {
+          const truncated = pageNums.slice(currentPage - 3, currentPage)
+          setNewPageNums(truncated)
+      } else if (currentPage < lastBlog && currentPage > 3) {
+          const truncated = pageNums.slice(currentPage - 2, currentPage + 1)
+          setNewPageNums(truncated)
+      } else if (currentPage === lastBlog - 1) {
+          const truncated = pageNums.slice(currentPage - 2, currentPage + 1)
+          setNewPageNums(truncated)
+      } else if (currentPage === lastBlog) {
+          const truncated = pageNums.slice(currentPage - 3, lastBlog)
+          setNewPageNums(truncated)
+      }
+    }
+
+    // Shift through page numbers on desktop. Always only shows 5 numbers in the array
+    else if(pageBreakPoint.width && pageBreakPoint.width > 960 && pageNums.length > 5) {
+      if (currentPage === 1) {
+          const truncated = pageNums.slice(currentPage - 1, currentPage + 4)
+          setNewPageNums(truncated)
+      } else if (currentPage === 5) {
+          const truncated = pageNums.slice(currentPage - 5, currentPage)
+          setNewPageNums(truncated)
+      } else if (currentPage < lastBlog && currentPage > 5 && currentPage != lastBlog - 1) {
+          const truncated = pageNums.slice(currentPage - 3, currentPage + 2)
+          setNewPageNums(truncated)
+      } else if (currentPage === lastBlog - 1) {
+          const truncated = pageNums.slice(currentPage - 4, currentPage + 1)
+          setNewPageNums(truncated)
+      } else if (currentPage === lastBlog) {
+          const truncated = pageNums.slice(currentPage - 5, lastBlog)
+          setNewPageNums(truncated)
+      }
+    }
+  }, [currentPage])
 
 
   return (
     <nav role="navigation" aria-label="Blog pagination" className={style.pagination}>
       <button 
         onClick={() => previousPage()}
-        className={`${style.pageBtn} ${style.previousBtn}`}
+        className={style.pageBtn}
       >
         PREVIOUS
       </button>
-      <div>
-        {totalPages > 3 && newPageNums[0] > 1
-          ? <button disabled className={style.ellipses}>&#8230;</button>
-          : null
-        }
-      </div>
 
-      <div>
+      <div className={style.btnsWrap}>
         <ul>
           {newPageNums.map(page => (
             <button 
@@ -111,10 +123,8 @@ const PageNumbers = ({
             </button>
           ))} 
         </ul>
-      </div>   
 
-      <div>
-        {totalPages > 3 && newPageNums[1] < lastBlog -1
+        {pageNums.length !> newPageNums.length && currentPage != lastBlog
           ? <button disabled className={style.ellipses}>&#8230;</button>
           : null
         }
@@ -122,7 +132,7 @@ const PageNumbers = ({
           
       <button 
         onClick={() => nextPage()}
-        className={`${style.pageBtn} ${style.nextBtn}`}
+        className={style.pageBtn}
       >
         NEXT
       </button>
@@ -131,3 +141,5 @@ const PageNumbers = ({
 }
 
 export default PageNumbers
+
+// totalPages > 3 && newPageNums[1] < lastBlog -1
