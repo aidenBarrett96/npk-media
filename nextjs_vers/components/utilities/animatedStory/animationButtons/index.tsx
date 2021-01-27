@@ -14,7 +14,7 @@ const AnimationButtons = ({ buttons, animationProgress }) => {
 	return (
 		<div className={cStyle.container}>
 			{buttons.map((button) => (
-				<animated.span style={spring}>
+				<animated.span style={spring} key={button.text}>
 					<Button
 						text={button.text}
 						link={button.url && button.url.cached_url}

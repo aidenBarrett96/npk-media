@@ -142,12 +142,12 @@ const ContactForm = () => {
 					<form name='contact' ref={formRef}>
 						<input type='hidden' name='form-name' value='contact' />
 						<label>
-							<h3>Tell us what you're looking for:</h3>
+							<p style={{textAlign: 'left'}}>Tell us what you're looking for:</p>
 							<textarea
 								name='message'
 								value={values.message}
 								onChange={handleChange}
-								placeholder='e.g: A social media campaign that puts my product in front of 10,000 potential customers'
+								placeholder='Type here...'
 							/>
 						</label>
 

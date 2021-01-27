@@ -12,25 +12,26 @@ const ProjectCard = ({project}) => {
 
 		<div className={style.media}>
 			<div className={style.mediaInner}>
-				{media.filename.ext !== '.mp4' 
+				{media.filename.endsWith('mp4') 
 				? (
-					<img
-						src={media.filename}
-						alt={media.alt}
-						// className={index === 0 ? style.featured : style.image}
-					/>
-					) 
-				: (
 						<video
-							width='320'
-							height='240'
-							controls
-							// className={index === 0 ? style.featured : style.video}
+							loop
+							muted
+							onCanPlay={(e) => {
+								e.currentTarget.play();
+							}}
 							>
 							<source src={media.filename} type='video/mp4' />
 							Your browser does not support the video tag.
 						</video>
-					)}
+					) 
+				: (
+						<img
+							src={media.filename}
+							alt={media.alt}
+						// className={index === 0 ? style.featured : style.image}
+						/>
+				)}
 			</div>
 		</div>
 

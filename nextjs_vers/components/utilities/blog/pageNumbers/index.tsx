@@ -13,6 +13,8 @@ const PageNumbers = ({
 // will put scrollTop function back in (scrolls to top of page when a next/previous or number button is clicked)
   
 
+  
+
   // Calculate total pages
   const totalPages = Math.ceil(allOtherBlogs / blogsPerPage)
 
@@ -100,6 +102,8 @@ const PageNumbers = ({
   }, [currentPage])
 
 
+  console.log('theres ', pageNums.length, ' pages with ', blogsPerPage, 'per page (- featured)')
+
   return (
     <nav role="navigation" aria-label="Blog pagination" className={style.pagination}>
       <button 
@@ -123,7 +127,7 @@ const PageNumbers = ({
           ))} 
         </ul>
 
-        {pageNums.length !> newPageNums.length && currentPage != lastBlog
+        {pageNums.length !> newPageNums.length && !newPageNums.includes(lastBlog)
           ? <button disabled className={style.ellipses}>&#8230;</button>
           : null
         }

@@ -2,15 +2,14 @@ import React from 'react';
 import style from './latestProjects.module.scss';
 import ProjectCard from '../projectCard'
 
-const LatestProjects = (props) => {
-	const projects = props.projects
+const LatestProjects = ({projects}) => {
 
 	return (
 		<div className={style.container}>
-			<h2>{props.title}</h2>
+			<h2>{projects.title}</h2>
 			<div className={style.inner}>
 				{projects.map((project) => (
-					<ProjectCard project={project}/>					
+					<ProjectCard project={project} key={project.title}/>					
 				))}
 			</div>
 		</div>

@@ -1,6 +1,10 @@
 .wrap {
-
+  padding: 0 0 40px 0;
   .item {
     padding-bottom: 16px;
+
+    video {
+      width:100%;
+    }
   }
 }

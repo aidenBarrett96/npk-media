@@ -1,7 +1,7 @@
 .team {
 	display: flex;
 	flex-wrap: wrap;
-	padding: 30px 0 120px;
+	padding: 30px 0 0;
 
 	.member {
 		width: 50%;
@@ -22,7 +22,7 @@
 		}
 
 		button {
-			margin-top:8px;
+			margin:8px 0 0 8px;
 			grid-area: 3 / 4 / 4 / 6;
 			width: 44px;
 			height: 44px;
@@ -58,19 +58,20 @@
 	background:rgba(255, 255, 255, 0.90);
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	text-align: center;
+	z-index: 4;
+	animation: popupIn 0.8s;
 
 	.popupInner {
 		max-width: 280px;
-		margin: auto;
+		margin: 240px auto;
 
 		img {
 			margin: 24px auto;
-			min-height: 144px;
-			max-height: 144px;
-			max-width: 144px;
-			min-width: 144px;
+			// min-height: 144px;
+			height: 144px;
+			width: 144px;
+			// min-width: 144px;
 			border-radius: 50%;
 			background: #ccc;
 		}
@@ -97,4 +98,16 @@
 	}
 
 
+}
+
+
+
+
+@keyframes popupIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }

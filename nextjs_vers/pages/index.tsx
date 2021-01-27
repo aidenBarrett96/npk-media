@@ -10,10 +10,6 @@ const HomePage = ({ data: story }) => {
 // Set the type for the story and extract nessesary data
   const {...rest}: storyblokStory = story
 
-
-  console.log(story)
-
-
   return (
     <Layout>
       <section className={style.hero}>
@@ -22,11 +18,9 @@ const HomePage = ({ data: story }) => {
           <Link href="/videos"><a>video</a></Link>, <Link href="/websites"><a>websites</a></Link> and <Link href="/social-media"><a>social media</a></Link>
         </h1>
       </section>
-        
       <section>
         <ComponentArray components={story.data.story.content.body} />
       </section>
-
     </Layout>
   )
 }

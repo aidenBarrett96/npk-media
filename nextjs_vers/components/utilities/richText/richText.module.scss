@@ -1,3 +1,10 @@
 .richTextBody {
-  padding-top: 40px;
+  padding-top: 8px;
+
+  h1, h2, h3, h4, h5 {
+    padding: 32px 0 16px
+  }
+  p {
+    padding-bottom: 28px;
+  }
 }

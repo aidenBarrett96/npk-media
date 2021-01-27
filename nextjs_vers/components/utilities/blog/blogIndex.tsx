@@ -13,6 +13,8 @@ import PageNumbers from './pageNumbers/index'
 const BlogIndex = ({content}) => {
   const {data} = content
   
+  console.log(data)
+
   // split array of blogs - latest one for the header and the rest to loop through in the body
   const latestBlog = data.stories[0]
   const allOtherBlogs = data.stories.slice(1)
@@ -44,16 +46,19 @@ const BlogIndex = ({content}) => {
     
   return (
     <>
-    <Link href={`/blog/${latestBlog.slug}`}>
-      <a>
-        <section className={style.hero}>
-          <div className={style.latestBlog}>
-            <p>{latestBlog.content.tags}</p>
-            <h1>{latestBlog.name}</h1> 
-          </div>
-        </section>
-      </a>
-    </Link>
+    <section className={style.blogMain}>
+      <Link href={`/blog/${latestBlog.slug}`}>
+        <a>
+          <section className={style.hero}>
+            <div className={style.latestBlog}>
+              <p>{latestBlog.content.tags}</p>
+              <h1>{latestBlog.name}</h1> 
+            </div>
+          </section>
+        </a>
+      </Link>
+    </section>
+
    
 
     <section className={style.allBlogs} id="mainBlogContent" ref={el}>

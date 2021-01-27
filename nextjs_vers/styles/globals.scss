@@ -30,11 +30,9 @@ a {
   font-size: inherit;
   font-family: inherit;
 }
-img {
-  max-width:100%;
+img, video {
+  max-width: 100%;
 }
-
-
 
 h1 {
   font-size: 30px
@@ -42,8 +40,6 @@ h1 {
 h2, h3, h4 {
   font-size: 20px;
 }
-
-
 
 
 
@@ -81,4 +77,27 @@ a:hover {
 section.hero {
   margin-bottom: 30px;
 }
+
+
+
+// 404 page
+.notFoundWrap {
+  padding: 114px 0 113px;
+
+  .notFoundInner {
+    text-align: center;
+    padding-top: 80px;
+
+    p {
+      padding: 16px 0 24px;
+    }
+    a {
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+}
+
+
 

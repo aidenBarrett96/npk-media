@@ -1,23 +1,28 @@
 // for blogIndex.tsx
-.hero {
-  background: #EFEFEF;
-  min-height: 328px;
-  padding: 16px;
-  display: flex;
-  align-items: flex-end;
 
-  .latestBlog {
-    background: #fff;
-    padding: 24px;
-    height: fit-content;
-    width: 100%;
-    
-    h1 {
-      font-size: 24px;
-    }
-    p {
-      font-size: 16px;
-      color: #D43F34
+.blogMain {
+  padding-top: 16px; 
+  
+  .hero {
+    background: #EFEFEF;
+    min-height: 328px;
+    padding: 16px;
+    display: flex;
+    align-items: flex-end;
+
+    .latestBlog {
+      background: #fff;
+      padding: 24px;
+      height: fit-content;
+      width: 100%;
+      
+      h1 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 16px;
+        color: #D43F34
+      }
     }
   }
 }
@@ -47,6 +52,7 @@
 
 // for singleBlox.tsx
 .singleBlog {
+  padding-top: 16px; 
 
   .blogHero {
     background:#EFEFEF;
@@ -58,7 +64,7 @@
     }
   }
   .intro {
-    margin: 40px 0 32px;
+    margin: 40px 0 8px;
 
     .tags {
       font-size:16px;
@@ -68,6 +74,15 @@
 
   .blogContent {
 
+    h1, h2, h3, h4, h5 {
+      padding: 32px 0 16px
+    }
+    p {
+      padding-bottom: 28px;
+    }
+    img, video, svg {
+      padding: 16px 0;
+    }
   }
 
   .next {

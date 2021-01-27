@@ -6,7 +6,7 @@ const BlogRoute = ({ data: story, blogsArr, allBlogs }) => {
   if(!story) return null
   const {...rest} = story
 
-  console.log('all blogs in a blog', blogsArr)
+  // console.log('all blogs in a blog', rest)
 
   return (
     <Layout>

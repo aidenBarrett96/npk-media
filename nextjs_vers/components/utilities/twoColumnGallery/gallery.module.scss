@@ -1,7 +1,7 @@
 .wrap {
   display: flex;
   flex-wrap: wrap;
-
+  padding-top: 40px;
 
   .item {
     width: 50%;
@@ -19,5 +19,8 @@
       padding: 0 !important;
     }
 
+    video {
+      width: 100%;
+    }
   }
 }

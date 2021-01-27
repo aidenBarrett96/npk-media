@@ -41,8 +41,8 @@ const NavMap = () => {
           <Link href={item.path}>
             <a onClick={() => !open}>
               {item.imgSrc
-                ? (<Image src={item.imgSrc} className={style[item.imgCName]} width="40" height="40"/>)
-                : (null) 
+                ? (<div className={style.navIcon}><Image src={item.imgSrc} className={`${style[item.imgCName]}`} width="40" height="40"/></div>)
+                : null
               }
               {item.title}
               <span/>

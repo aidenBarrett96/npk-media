@@ -1,11 +1,11 @@
 .container {
 	max-width: 350px;
-	margin: 100px auto;
+	margin: auto;
+
 	.buttonArea {
 		display: flex;
 		justify-content: space-evenly;
 		padding: 0 5%;
 		box-sizing: border-box;
-		margin-top: -20px;
 	}
 }

@@ -19,9 +19,6 @@ const ProjectsPages = ({ data: story }) => {
   const twoColGal = rest.content.content_section.find(nameIs => nameIs.component === '2_column_gallery');
 
 
-  console.log('stuff;;;;', fullGal)
-
-
   return (
     <Layout>
       <div className={style.hero}>
@@ -48,7 +45,6 @@ const ProjectsPages = ({ data: story }) => {
       <FullWidthGallery 
         media={fullGal.media}
       />
-      {/* <ContentWithImages/> */}
 
       <Testimonial 
         align={{textAlign: "left"}}
