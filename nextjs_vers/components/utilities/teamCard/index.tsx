@@ -10,7 +10,6 @@ interface TeamProp {
 const TeamCard: FC<TeamProp> = ( props) => {
 	const team = props?.members
 
-	const [closeAnimation, setCloseAnimation] = useState('')
 	const [isActive, setIsActive] = useState(false)
 	const [focusedMember, setFocusedMember] = useState({});
 

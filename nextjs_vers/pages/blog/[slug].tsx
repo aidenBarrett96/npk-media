@@ -1,6 +1,6 @@
 import Layout from "../../layout/layout"
 import { storyblok } from "../../utils/storyblok/storyblok"
-import SingleBlog from "../../components/utilities/blog/singleBlog"
+import SingleBlog from "../../components/utilities/blog/singleBlog/singleBlog"
 
 const BlogRoute = ({ data: story, blogsArr, allBlogs }) => {
   if(!story) return null

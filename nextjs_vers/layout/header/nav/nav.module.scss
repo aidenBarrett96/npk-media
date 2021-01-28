@@ -64,7 +64,6 @@
 
       img {
         margin-right:15px;
-        // display: flex;
         width: 40px!important;
         height: 40px;
         align-items: center; 
@@ -104,7 +103,8 @@
 		visibility: visible;
 		width: auto;
 		margin: 0;
-		flex: 1;
+    flex: 1;
+
 
 		.nav {
 			flex-direction: row;
@@ -122,6 +122,7 @@
         margin-bottom: 0;
         margin-right: 15px;
         transform: none;
+        
 
         &:last-child {
           margin-right:0;
@@ -132,6 +133,12 @@
           height: 20px;
           align-items: center; 
           justify-content: left;
+        }
+        .navIcon {
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          margin-right: 10px;
         }
 				.videoIcon {
 					width: 20px;

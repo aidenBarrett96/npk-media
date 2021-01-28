@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import ContactSection from '../contactSection'
-import style from './blog.module.scss'
+import style from './blogIndex.module.scss'
 import PageNumbers from './pageNumbers/index'
 
 
@@ -63,30 +63,34 @@ const BlogIndex = ({content}) => {
 
     <section className={style.allBlogs} id="mainBlogContent" ref={el}>
       <h2>Latest Articles</h2>
-      {currentBlogs.map((blog) => (
-        <div key={blog.name} className={style.blog}>
-          <p className={style.tags}>{blog.content.tags}</p>
-          <Link href={`/blog/${blog.slug}`}>
-            <a><h3>{blog.name}</h3></a>
-          </Link>
-          <p>
-            Written by {blog.content.author || 'someone at NPK Media'} on {/* */} 
-            {
-              new Date(blog.created_at)
-              .toDateString()
-            }
-          </p>
-        </div>
-      ))}
+      <div className={style.blogsGrid}>
+        {currentBlogs.map((blog) => (
+          <div key={blog.name} className={style.blog}>
+            <p className={style.tags}>{blog.content.tags}</p>
+            <Link href={`/blog/${blog.slug}`}>
+              <a><h3>{blog.name}</h3></a>
+            </Link>
+            <p>
+              Written by {blog.content.author || 'someone at NPK Media'} on {/* */} 
+              {
+                new Date(blog.created_at)
+                .toDateString()
+              }
+            </p>
+          </div>
+        ))}
 
-      <PageNumbers 
-        blogsPerPage={blogsPerPage}
-        allOtherBlogs={allOtherBlogs.length}
-        changePage={changePage}
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        scrollTop={scrollTop}
-      />
+        <div className={style.pageBtns}>
+          <PageNumbers 
+            blogsPerPage={blogsPerPage}
+            allOtherBlogs={allOtherBlogs.length}
+            changePage={changePage}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+            scrollTop={scrollTop}
+          />
+        </div>
+      </div>
     </section>
     <ContactSection 
         text="Want to work with us?"

@@ -1,7 +1,7 @@
-import ContactSection from '../contactSection'
-import style from './blog.module.scss'
+import ContactSection from '../../contactSection'
+import style from './single.module.scss'
 import {render} from 'storyblok-rich-text-react-renderer'
-import Button from '../button'
+import Button from '../../button'
 
 
 const SingleBlog = ({rest, blogsArr}) => {

@@ -49,6 +49,10 @@ const PageNumbers = ({
   const pageBreakPoint = useGetViewportWidth();
   
 
+
+/* **********************************************************************
+Need to create another for 2 per page + elipses for tiny phones
+*************************************************************************/
   // Change from showing 3 page buttons on mobile or 5 on desktop
   useEffect(() => {
     if (pageBreakPoint.width && pageBreakPoint.width < 960) {

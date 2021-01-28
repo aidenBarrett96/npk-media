@@ -96,6 +96,9 @@
 	@media only screen and (min-width: $desktop) {
 		.slide {
 			padding: 0 32px;
+			p {
+				padding: 24px 0 !important;
+			}
 		}
 	}
 }

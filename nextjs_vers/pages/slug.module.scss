@@ -1,4 +1,8 @@
 .dynamicContent {
   position: relative;
-  padding-top: 30px
+  padding-top: 30px;
+
+  @media screen and (min-width: 960px) {
+    padding-top: 80px;
+  }
 }
