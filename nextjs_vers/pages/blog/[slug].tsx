@@ -1,6 +1,8 @@
 import Layout from "../../layout/layout"
 import { storyblok } from "../../utils/storyblok/storyblok"
 import SingleBlog from "../../components/utilities/blog/singleBlog/singleBlog"
+import style from './blog.module.scss'
+
 
 const BlogRoute = ({ data: story, blogsArr, allBlogs }) => {
   if(!story) return null
@@ -10,7 +12,9 @@ const BlogRoute = ({ data: story, blogsArr, allBlogs }) => {
 
   return (
     <Layout>
-      <SingleBlog rest={rest} blogsArr={blogsArr}/>
+      <div className={style.pageWrap}>
+        <SingleBlog rest={rest} blogsArr={blogsArr}/>
+      </div>
     </Layout>
   )
 }

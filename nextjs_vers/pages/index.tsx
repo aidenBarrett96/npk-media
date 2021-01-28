@@ -12,15 +12,17 @@ const HomePage = ({ data: story }) => {
 
   return (
     <Layout>
-      <section className={style.hero}>
-        <h1>All in one media agency.<br/><br/>
-          We elevate your brand with our expertise in&nbsp;
-          <Link href="/videos"><a>video</a></Link>, <Link href="/websites"><a>websites</a></Link> and <Link href="/social-media"><a>social media</a></Link>
-        </h1>
-      </section>
-      <section>
-        <ComponentArray components={story.data.story.content.body} />
-      </section>
+      <div className={style.pageWrap}>
+        <section className={style.hero}>
+          <h1>All in one media agency.<br/><br/>
+            We elevate your brand with our expertise in&nbsp;
+            <Link href="/videos"><a>video</a></Link>, <Link href="/websites"><a>websites</a></Link> and <Link href="/social-media"><a>social media</a></Link>
+          </h1>
+        </section>
+        <section>
+          <ComponentArray components={story.data.story.content.body} />
+        </section>
+      </div>
     </Layout>
   )
 }

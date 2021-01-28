@@ -2,3 +2,10 @@
   text-align: center;
   padding-top: 80px;
 }
+
+@media screen and (min-width:960px) {
+  .pageWrap {
+    max-width: 800px;
+    margin: auto;
+  }
+}

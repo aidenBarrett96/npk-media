@@ -4,7 +4,7 @@ import BlogIndex from "../../components/utilities/blog/blogIndex"
 import Layout from "../../layout/layout"
 import { storyblokStory } from "../../types/storyblok"
 import { storyblok } from "../../utils/storyblok/storyblok"
-
+import style from './blog.module.scss'
 
 // export async function getServerSideProps() {
 //     const testRoute = await storyblok.get(`cdn/stories/?starts_with=blog/`, { version: 'draft' })
@@ -28,11 +28,12 @@ const BlogPage = ({ data: story}) => {
 
   return (
     <Layout>      
-      {/* <div style={{marginTop: '150px'}}>
-        <button>Test</button>
-      </div> */}
-      <BlogIndex content={rest}/>
-
+      <div className={style.pageWrap}>
+        {/* <div style={{marginTop: '150px'}}>
+          <button>Test</button>
+        </div> */}
+        <BlogIndex content={rest}/>
+      </div>
     </Layout>
   )
 }

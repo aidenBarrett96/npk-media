@@ -2,6 +2,7 @@ import ContactSection from '../../contactSection'
 import style from './single.module.scss'
 import {render} from 'storyblok-rich-text-react-renderer'
 import Button from '../../button'
+import NextProjectOrArticle from '../../nextProjectOrArticle'
 
 
 const SingleBlog = ({rest, blogsArr}) => {
@@ -29,28 +30,23 @@ const SingleBlog = ({rest, blogsArr}) => {
         {render(rest.content.long_text)}
       </section>
 
-      <div className={style.next}>
-        <h2>Next Article</h2>
+      <div>
         {nextBlogPost 
           ? (
-            <div className={style.nextLink}>
-              <img src={nextBlogPost.content.image.filename} alt={nextBlogPost.content.image.alt} className={style.nextImage}/>
-              <Button 
-                large
-                text={nextBlogPost.content.title}
-                link={`/blog/${nextBlogPost.slug}`}
-              />
-            </div>
+            <NextProjectOrArticle 
+              link={`/blog/${nextBlogPost.slug}`}
+              button_text={nextBlogPost.content.title}
+              title="Next Article"
+              image={nextBlogPost.content.image}
+            />
           )
           : (
-            <div className={style.nextLink}>
-              <img src={firstBlogInArray.content.image.filename} alt={firstBlogInArray.content.image.alt} className={style.nextImage}/>
-              <Button 
-                large
-                text={firstBlogInArray.content.title}
-                link={`/blog/${firstBlogInArray.slug}`}
-              />
-            </div>
+            <NextProjectOrArticle 
+              link={`/blog/${firstBlogInArray.slug}`}
+              button_text={firstBlogInArray.content.title}
+              title="Next Article"
+              image={firstBlogInArray.content.image}
+            />
           )
         }
       </div>

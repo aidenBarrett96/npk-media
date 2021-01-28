@@ -10,9 +10,11 @@ const DynamicPage = ({ data: story }) => {
 
   return (
     <Layout>
-      <section className={style.dynamicContent}>
-        <ComponentArray components={story.content.body} />
-      </section>
+      <div className={style.pageWrap}>
+        <section className={style.dynamicContent}>
+          <ComponentArray components={story.content.body} />
+        </section>
+      </div>
     </Layout>
   )
 }

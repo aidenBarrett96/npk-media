@@ -26,7 +26,8 @@
       background: none;
       border: none;
       color: #D43F34;
-      padding: 22px;
+      padding: 12px;
+      // margin: 0 12px;
       &.active {
         color: black;
       }
@@ -36,7 +37,8 @@
     }
     .ellipses {
       color: black;
-      padding: 22px 0;
+      padding: 0 0;
+      margin: 0;
       &:hover {
         cursor: default
       }
@@ -53,6 +55,12 @@
     &:hover {
       cursor: pointer;
     }
+  }
+  .btnPrevious {
+    margin-right: 12px;
+  }
+  .btnNext {
+    margin-left: 24px;
   }
 }
 

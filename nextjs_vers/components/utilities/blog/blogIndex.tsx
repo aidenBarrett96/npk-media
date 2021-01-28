@@ -22,7 +22,7 @@ const BlogIndex = ({content}) => {
   // Pagination
     // State for pagination. Default page 1 with 10 blogs per page 
     const [currentPage, setCurrentPage] = useState(1)
-    const [blogsPerPage] = useState(1)
+    const [blogsPerPage] = useState(3)
 
     // Set the current page blog posts
     const lastBlogIndex = currentPage * blogsPerPage

@@ -6,6 +6,7 @@ import Testimonial from "../../components/utilities/testimonial"
 import ContactSection from "../../components/utilities/contactSection"
 import FullWidthGallery from "../../components/utilities/fullWidthGallery"
 import TwoColumnGallery from "../../components/utilities/twoColumnGallery"
+import NextProjectOrArticle from "../../components/utilities/nextProjectOrArticle"
 
 
 const ProjectsPages = ({ data: story }) => {
@@ -21,58 +22,58 @@ const ProjectsPages = ({ data: story }) => {
 
   return (
     <Layout>
-      <div className={style.hero}>
-        <img src={story.content.featured_media.filename} alt={story.content.featured_media.alt}/>
+      <div className={style.pageWrap}>
+        <div className={style.hero}>
+          <img src={story.content.featured_media.filename} alt={story.content.featured_media.alt}/>
+        </div>
+        <h1 className={style.title}>{story.content.project_title}</h1>
+        <div className={style.content}>
+          <section className={style.intro}>
+            
+            <p className={style.tagsMobile}>project tags. need to setup in cms</p>
+      
+            <h2>The Problem</h2>
+            <p>{story.content.problem}</p>
 
-      </div>
+            <h2>The Solution</h2>
+            <p>{story.content.solution}</p>
+          </section>
+          <p className={style.tagsDesktop}>project tags. need to setup in cms</p>
+        </div>
 
-      <section className={style.intro}>
-        <h1>{story.content.project_title}</h1>
-        <p>project tags. need to setup in cms</p>
-      </section>
 
-
-      <section className={style.problem}>        
-        <h2>The Problem</h2>
-        <p>{story.content.problem}</p>
-      </section>
-
-      <section className={style.solution}>
-        <h2>The Solution</h2>
-        <p>{story.content.solution}</p>
-      </section>
-
-      <FullWidthGallery 
-        media={fullGal.media}
-      />
-
-      <Testimonial 
-        align={{textAlign: "left"}}
-        company={testimonial.company}
-        name={testimonial.name}
-        quote={testimonial.quote}
-        role={testimonial.role}
-      />
-
-      <TwoColumnGallery 
-        media={twoColGal.media}
-      />
-
-      <CircleLinkWithCaption
-        link={nextProject.link}
-        button_text={nextProject.button_text}
-        title="Next Project"
-        image={nextProject.Image}
-      />
-
-      <section className={style.contact}>
-        <ContactSection
-          text="Want to work with us?"
+        <FullWidthGallery 
+          media={fullGal.media}
         />
-      </section>
 
+        <div className={style.xNarrowWidthDesktop}>
+          <Testimonial 
+            align={{textAlign: "left"}}
+            company={testimonial.company}
+            name={testimonial.name}
+            quote={testimonial.quote}
+            role={testimonial.role}
+          />
+        </div>
+        <div className={style.narrowWidthDesktop}>
+          <TwoColumnGallery 
+            media={twoColGal.media}
+          />
+        </div>
 
-
+        <NextProjectOrArticle
+          link={nextProject.link}
+          button_text={nextProject.button_text}
+          title="Next Project"
+          image={nextProject.Image}
+        />
+        {console.log('project btn image. ', nextProject.Image)}
+        <section className={style.contact}>
+          <ContactSection
+            text="Want to work with us?"
+          />
+        </section>
+      </div>
     </Layout>
   )
 }

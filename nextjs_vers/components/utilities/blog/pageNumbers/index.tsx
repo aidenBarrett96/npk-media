@@ -112,7 +112,7 @@ Need to create another for 2 per page + elipses for tiny phones
     <nav role="navigation" aria-label="Blog pagination" className={style.pagination}>
       <button 
         onClick={() => previousPage()}
-        className={style.pageBtn}
+        className={`${style.pageBtn} ${style.btnPrevious}`}
       >
         PREVIOUS
       </button>
@@ -139,7 +139,7 @@ Need to create another for 2 per page + elipses for tiny phones
           
       <button 
         onClick={() => nextPage()}
-        className={style.pageBtn}
+        className={`${style.pageBtn} ${style.btnNext}`}
       >
         NEXT
       </button>
