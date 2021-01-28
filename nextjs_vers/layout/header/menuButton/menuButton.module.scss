@@ -1,3 +1,5 @@
+@import '../../../styles/variables';
+
 /* Dont show menu button on large screen */
 .wrapper {
 	display: flex;
@@ -18,7 +20,7 @@
 		height: 80px !important;
 	}
 
-	@media only screen and (min-width: 1024px) {
+	@media only screen and (min-width: $desktop) {
 		display: none;
 	}
 }

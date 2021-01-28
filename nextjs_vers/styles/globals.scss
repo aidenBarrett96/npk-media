@@ -15,9 +15,6 @@ body {
 	font-weight: 300;
 	font-size: 20px;
 	color: #000;
-	@media only screen and (min-width: 1024px) {
-		font-size: 24px;
-	}
 }
 
 * {
@@ -40,17 +37,6 @@ h1 {
 h2, h3, h4 {
   font-size: 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
 button, a {
   // font-family: brandon-grotesque, sans-serif !important;
   color: $primary;
@@ -78,6 +64,33 @@ section.hero {
   margin-bottom: 30px;
 }
 
+@media only screen and (min-width: 1024px) {
+  html, body {
+    font-size: 24px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // 404 page
@@ -96,7 +109,21 @@ section.hero {
       transform: translateX(-50%);
     }
   }
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
+  @media screen and (min-width: 960px) {
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
+    margin: auto;
+    img, div {
+      width: 50%;
+    }
+  }
 }
 
 

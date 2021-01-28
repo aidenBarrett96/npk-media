@@ -1,3 +1,5 @@
+@import '../../../../styles/variables';
+
 .singleBlog {
   padding-top: 16px; 
 
@@ -58,7 +60,7 @@
   //   }
   // }
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: $desktop) {
     padding-top: 32px;
 
     .blogHero {

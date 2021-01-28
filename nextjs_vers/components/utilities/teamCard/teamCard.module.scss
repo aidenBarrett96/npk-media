@@ -1,3 +1,11 @@
+/*********************************************************************
+
+going to redoo this scss file while doing the animation on the team page.
+
+*********************************************************************/
+
+@import '../../../styles/variables';
+
 .team {
 	display: flex;
 	flex-wrap: wrap;
@@ -46,11 +54,21 @@
 		}
 	}
 
-	@media screen and (min-width: 960px) {
+	@media screen and (min-width: $desktop) {
 		padding: 80px 0 0;
 	}
 
 }
+
+
+
+// activated classes
+.activated {
+	display:none!important;
+}
+
+
+
 
 // Member popup
 .popup {
@@ -100,12 +118,6 @@
 			}
 		}
 	}
-
-
-	@media screen and (min-width: 960px) {
-
-	}
-
 }
 
 

@@ -1,5 +1,4 @@
 import Button from "../components/utilities/button"
-import CircleLinkWithCaption from "../components/utilities/circleLinkWithCaption"
 import Layout from "../layout/layout"
 
 
@@ -7,19 +6,18 @@ import Layout from "../layout/layout"
 const Custom404 = () => {
   return (
     <Layout>
-      <div className="pageWrap">
-        <div className="notFoundWrap">
-          <img src="/placeholder.png" />
-
-          <div className="notFoundInner">
-            <h1>Cut</h1>
-            <p>Sorry, we can't find that page.</p>
-            <Button 
-              text="GO HOME"
-              link="/"
-              large
-            />
-          </div>
+      <div className="notFoundWrap">
+        <div className="notFoundImg">
+          <img src="/404.svg" />
+        </div>
+        <div className="notFoundInner">
+          <h1>Cut</h1>
+          <p>Sorry, we can't find that page.</p>
+          <Button 
+            text="GO HOME"
+            link="/"
+            large
+          />
         </div>
       </div>
     </Layout>

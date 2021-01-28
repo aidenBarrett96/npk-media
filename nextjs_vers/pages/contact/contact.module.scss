@@ -1,3 +1,5 @@
+@import '../../styles/variables';
+
 .main {
   
   section {
@@ -39,7 +41,7 @@
 
 }  
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: $desktop) {
   .pageWrap {
     max-width: 800px;
     margin: auto;

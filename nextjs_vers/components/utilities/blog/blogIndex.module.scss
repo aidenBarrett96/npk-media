@@ -1,4 +1,4 @@
-// for blogIndex.tsx
+@import '../../../styles/variables';
 
 .blogMain {
   padding-top: 16px; 
@@ -53,7 +53,7 @@
 }
 
 
-  @media screen and (min-width:960px) {
+  @media screen and (min-width: $desktop) {
     .blogMain {
       padding-top: 32px; 
     }
@@ -62,7 +62,7 @@
       display: flex;
       max-width: 800px;
       margin: auto;
-      
+
       .blog {
         padding-bottom: 80px;
       }

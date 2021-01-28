@@ -18,13 +18,17 @@ const TeamCard: FC<TeamProp> = ( props) => {
 		setFocusedMember(alreadyActive ? {} : member);
 		setIsActive(true)
 	};
-
+{console.log(team)}
 
 	return (
 		<div className={style.team}>
 			{team.map((member) => (
 				<div className={style.member}>
-					<img src={`${member.image.filename}` || "/placeholder.png"} alt={`Profile image of ${member.name}`} />
+					<img 
+						src={`${member.image.filename}` || "/placeholder.png"} 
+						alt={`Profile image of ${member.name}`} 
+						className={isActive && focusedMember === member ? style.activated : ''}
+					/>
 					<button onClick={() => memberClickHandler(member)}>+</button>
 					<div className={style.nameRole}>
 						<p>{member.name}</p>

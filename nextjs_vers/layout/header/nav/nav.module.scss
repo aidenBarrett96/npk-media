@@ -1,3 +1,5 @@
+@import '../../../styles/variables';
+
 .navWrap {
   position: absolute;
   top: 0;
@@ -97,7 +99,7 @@
     }
   }
 
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: $desktop) {
 		position: static;
 		opacity: 1;
 		visibility: visible;

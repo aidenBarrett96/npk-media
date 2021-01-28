@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import animationData from '../../../assets/header/animations/typemark-hover-black-to-red.json';
+import animationData from '../../../public/mainLogoHover.json';
 import { Lottie } from '@crello/react-lottie';
 import style from './logo.module.scss';
 
