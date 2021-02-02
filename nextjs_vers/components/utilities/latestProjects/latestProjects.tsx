@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {FC} from 'react';
 import style from './latestProjects.module.scss';
-import ProjectCard from '../projectCard'
+import ProjectCard from '../projectCard/projectCard'
 
-const LatestProjects = ({projects}) => {
 
+interface LatestProjectsProps {
+
+}
+
+const LatestProjects:FC<LatestProjectsProps> = ({projects}) => {
 	return (
 		<div className={style.container}>
 			<h2>{projects.title}</h2>

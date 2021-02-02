@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import cStyle from './animationButtons.module.scss';
 import { useSpring, animated } from 'react-spring';
-import Button from '../../button';
+import Button from '../../button/button';
 
 
 const AnimationButtons = ({ buttons, animationProgress }) => {

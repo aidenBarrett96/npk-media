@@ -9,12 +9,10 @@ const Layout = ({ children }) => {
       <Head>
         <title>NPK Media</title>
       </Head>
-
       <Header/>
         <main className={style.main}>
           {children}
         </main>
-
       <GdprBanner/>
     </>
   )

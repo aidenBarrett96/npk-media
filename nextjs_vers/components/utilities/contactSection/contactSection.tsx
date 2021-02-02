@@ -1,8 +1,13 @@
-import React from 'react';
+import React, {FC} from 'react';
 import style from './contactSection.module.scss';
-import Button from '../button';
+import Button from '../button/button';
 
-const ContactSection = ({ text }) => (
+interface ContactSectionProps {
+
+}
+
+
+const ContactSection:FC<ContactSectionProps> = ({ text }) => (
 	<div className={style.container}>
 		{text && <h2>{text}</h2>}
 		<Button large link='/contact' text='Get in touch' />

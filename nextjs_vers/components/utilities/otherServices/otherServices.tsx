@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {FC} from 'react';
 import cStyle from './otherServices.module.scss';
-import OverlayButtonsArea from '../overlayButtonsArea';
+import OverlayButtonsArea from '../overlayButtonsArea/overlayButtonsArea';
 
+interface OtherServicesProps {
 
-const OtherServices = ({buttons, graphic}) => {
+}
 
+const OtherServices:FC<OtherServicesProps> = ({buttons, graphic}) => {
 	return (
 		<OverlayButtonsArea buttons={buttons}>
 			<div className={cStyle.container}>

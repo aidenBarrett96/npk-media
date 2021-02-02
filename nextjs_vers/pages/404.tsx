@@ -1,4 +1,4 @@
-import Button from "../components/utilities/button"
+import Button from "../components/utilities/button/button"
 import Layout from "../layout/layout"
 
 

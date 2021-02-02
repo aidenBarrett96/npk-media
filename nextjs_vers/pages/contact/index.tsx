@@ -1,8 +1,8 @@
 import Layout from "../../layout/layout"
-import ContactForm from '../../components/utilities/contactForm'
+import ContactForm from '../../components/utilities/contactForm/contactForm'
 import style from './contact.module.scss'
 import Lottie from 'react-lottie'
-import {useEffect, useRef, useState} from 'react'
+import {useState} from 'react'
 import {useGetViewportWidth} from '../../hooks/viewport'
 import Image from 'next/image'
 
@@ -19,7 +19,7 @@ const ContactPage = () => {
     instagram: {
       loop: false,
       autoplay: false,
-      animationData: require('../../public/InstagramHover.json'),
+      animationData: require('../../assets/header/animations/InstagramHover.json'),
       rendererSettings: {
         preserveAspectRatio: "xMidYMid slice"
       }
@@ -27,7 +27,7 @@ const ContactPage = () => {
     facebook: {
       loop: false,
       autoplay: false,
-      animationData: require('../../public/FacebookHover.json'),
+      animationData: require('../../assets/header/animations/FacebookHover.json'),
       rendererSettings: {
         preserveAspectRatio: "xMidYMid slice"
       }
@@ -35,7 +35,7 @@ const ContactPage = () => {
     vimeo: {
       loop: false,
       autoplay: false,
-      animationData: require('../../public/VimeoHover.json'),
+      animationData: require('../../assets/header/animations/VimeoHover.json'),
       rendererSettings: {
         preserveAspectRatio: "xMidYMid slice"
       }

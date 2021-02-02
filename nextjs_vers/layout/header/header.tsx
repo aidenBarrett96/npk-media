@@ -1,8 +1,8 @@
 import { useState } from "react"
 import Nav from "./nav/nav"
-import Logo from './logo/index'
+import Logo from './logo/logo'
 import Link from "next/link"
-import MenuButton from './menuButton'
+import MenuButton from './menuButton/menuButton'
 import style from './header.module.scss'
 
 

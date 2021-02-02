@@ -1,18 +1,23 @@
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { useLocalStorage } from '../../hooks/localStorage'
 import style from './banner.module.scss'
-
+import {useGetScrollPosition} from '../../hooks/useGetScrollPosition'
 
 const GdprBanner = () => {
   const [cookiesEnabled, setCookiesEnabled] = useLocalStorage('cookiesEnabled')
-  
+  const scrollPos = useGetScrollPosition()
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setCookiesEnabled(true)
-  //   },3000)
-  // })
+
+  useEffect(() => {
+    if(scrollPos < 300) {
+      return
+    } 
+    setTimeout(() => {
+      setCookiesEnabled(true)
+    }, 3000)
+  }, [scrollPos])
+
 
   if (cookiesEnabled) return null;
 

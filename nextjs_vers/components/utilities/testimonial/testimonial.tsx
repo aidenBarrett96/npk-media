@@ -1,6 +1,10 @@
 import style from './testimonial.module.scss'
+import {FC} from 'react'
 
-const Testimonial = ({company, name, quote, role, align}) => {
+interface TestimonialProps {
+
+}
+const Testimonial:FC<TestimonialProps> = ({company, name, quote, role, align}) => {
 
   return (
     <div className={style.reviewWrap} style={align}>

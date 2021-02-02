@@ -1,9 +1,13 @@
-import React from 'react';
-import Button from '../button';
+import React, {FC} from 'react';
+import Button from '../button/button';
 import style from './style.module.scss';
 
-const NextProjectOrArticle = ({title, button_text, link, image}) => {
 
+interface NextProjectProps {
+
+}
+
+const NextProjectOrArticle:FC<NextProjectProps> = ({title, button_text, link, image}) => {
 	return (
 		<div className={style.container}>
 			<h2>{title}</h2>

@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {FC} from 'react';
 import style from './overlayButtonsArea.module.scss';
-import Button from '../button';
+import Button from '../button/button';
 
-const OverlayButtonsArea = ({ buttons, children }) => {
+interface OverlayButtonsAreaProps {
 
+}
+
+
+const OverlayButtonsArea:FC<OverlayButtonsAreaProps> = ({ buttons, children }) => {
 	return (
 		<div className={style.container}>
 			<div className={style.body}>{children}</div>

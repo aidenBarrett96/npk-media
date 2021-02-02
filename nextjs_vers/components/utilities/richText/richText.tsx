@@ -1,8 +1,13 @@
 import { render, MARK_LINK } from 'storyblok-rich-text-react-renderer'
 import style from './richText.module.scss'
 import Link from 'next/link'
+import {FC} from 'react'
 
-const RichText = (props) => {
+interface RichTextProps {
+
+}
+
+const RichText:FC<RichTextProps> = (props) => {
   const rich_text = props?.body
 
   return (

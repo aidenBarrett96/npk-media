@@ -1,12 +1,12 @@
 import Layout from "../../layout/layout"
 import { storyblok } from "../../utils/storyblok/storyblok"
 import style from './project.module.scss'
-import CircleLinkWithCaption from "../../components/utilities/circleLinkWithCaption"
-import Testimonial from "../../components/utilities/testimonial"
-import ContactSection from "../../components/utilities/contactSection"
-import FullWidthGallery from "../../components/utilities/fullWidthGallery"
-import TwoColumnGallery from "../../components/utilities/twoColumnGallery"
-import NextProjectOrArticle from "../../components/utilities/nextProjectOrArticle"
+import CircleLinkWithCaption from "../../components/utilities/circleLinkWithCaption/circleLinkWithCaption"
+import Testimonial from "../../components/utilities/testimonial/testimonial"
+import ContactSection from "../../components/utilities/contactSection/contactSection"
+import FullWidthGallery from "../../components/utilities/fullWidthGallery/fullWidthGallery"
+import TwoColumnGallery from "../../components/utilities/twoColumnGallery/twoColumnGallery"
+import NextProjectOrArticle from "../../components/utilities/nextProjectOrArticle/nextProjectOrArticle"
 
 
 const ProjectsPages = ({ data: story }) => {

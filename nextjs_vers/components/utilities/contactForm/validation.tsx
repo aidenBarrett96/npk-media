@@ -1,6 +1,12 @@
 import { isEmpty, isEmail } from 'validator';
+import {FC} from 'react'
 
-export const useValidation = (values) => {
+interface ValidationProps {
+
+}
+
+
+export const useValidation:FC<ValidationProps> = (values) => {
 	// set initial error list to empty
 	let errorList = {
 		name: [],

@@ -1,8 +1,13 @@
-import React from 'react';
-import Button from '../button';
+import React, {FC} from 'react';
+import Button from '../button/button';
 import style from './circleLinkWithCaption.module.scss';
 
-const CircleLinkWithCaption = ({title, button_text, link, image}) => {
+
+interface CircleLinkProps {
+
+}
+
+const CircleLinkWithCaption:FC<CircleLinkProps> = ({title, button_text, link, image}) => {
 
 	return (
 		<div className={style.container}>

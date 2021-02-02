@@ -1,12 +1,16 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { FC, useState, useRef, useEffect } from 'react';
 import cStyle from './contactForm.module.scss';
-import Button from '../button';
+import Button from '../button/button';
 import Link from 'next/link';
 import { useGetViewportWidth } from '../../../hooks/viewport';
 import { useValidation } from './validation';
 
 
-const ContactForm = () => {
+interface ContactFormProps {
+
+}
+
+const ContactForm:FC<ContactFormProps> = () => {
 
 	const formRef = useRef();
 

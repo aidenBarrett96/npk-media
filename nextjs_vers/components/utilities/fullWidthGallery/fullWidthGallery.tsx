@@ -1,14 +1,15 @@
-import style from './gallery.module.scss'
+import style from './fullwidth.module.scss'
+import {FC} from 'react'
 
+interface FullWidthGalleryProps {
 
-// need to tweak it to render mp4s etc.
+}
 
+const FullWidthGallery:FC<FullWidthGalleryProps> = ({media}) => {
 
-const TwoColumnGallery = ({media}) => {
   return (
     <>
       <div className={style.wrap}>
-        
         {media.map(single => (
           <div className={style.item} key={single.filename}>
             {
@@ -33,6 +34,24 @@ const TwoColumnGallery = ({media}) => {
         ))}
       </div>
     </>
+
   )
 }
-export default TwoColumnGallery
+export default FullWidthGallery
+
+
+/*
+{node.ext !== '.mp4' ? (
+  <img src={`${node.url}`} alt={node.alternativeText} />
+) : (
+  <video
+    loop
+    muted
+    onCanPlay={(event) => {
+      event.currentTarget.play();
+    }}>
+    <source src={`${node.url}`} type='video/mp4' />
+    Your browser does not support the video tag.
+  </video>
+)}
+*/

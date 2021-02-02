@@ -1,8 +1,14 @@
-import { useEffect, useRef, useState } from 'react'
+import { FC, useEffect, useRef, useState } from 'react'
 import { useGetViewportWidth } from '../../../../hooks/viewport'
 import style from './page-numbers.module.scss'
 
-const PageNumbers = ({
+
+
+interface PageNumbersProps {
+
+}
+
+const PageNumbers:FC<PageNumbersProps> = ({
   currentPage,
   setCurrentPage, 
   allOtherBlogs, 
@@ -46,26 +52,26 @@ const PageNumbers = ({
 
   // Set a new page numbers array in state.
   const [newPageNums, setNewPageNums] = useState(pageNums) 
-  const pageBreakPoint = useGetViewportWidth();
-  
+  const {width} = useGetViewportWidth();
 
 
-/* **********************************************************************
-Need to create another for 2 per page + elipses for tiny phones
-*************************************************************************/
   // Change from showing 3 page buttons on mobile or 5 on desktop
   useEffect(() => {
-    if (pageBreakPoint.width && pageBreakPoint.width < 960) {
+    if(!width) return;
+
+    if (width < 960) {
       setNewPageNums(pageNums.slice(0, 3))
-    } else if (pageBreakPoint.width && pageBreakPoint.width > 960) {
+    } else if (width > 960) {
       setNewPageNums(pageNums.slice(0, 5))
     } 
-  }, [pageBreakPoint.width])
+  }, [width])
   
 
   useEffect(() => {
+    if(!width) return;
+
     // Shift through page numbers on mobile. Always only shows 3 numbers in the array
-    if (pageBreakPoint.width && pageBreakPoint.width < 960 && pageNums.length > 3) {
+    if (width < 960 && pageNums.length > 3) {
       if (currentPage === 1) {
           const truncated = pageNums.slice(currentPage - 1, currentPage + 2)
           setNewPageNums(truncated)
@@ -85,7 +91,7 @@ Need to create another for 2 per page + elipses for tiny phones
     }
 
     // Shift through page numbers on desktop. Always only shows 5 numbers in the array
-    else if(pageBreakPoint.width && pageBreakPoint.width > 960 && pageNums.length > 5) {
+    else if(width > 960 && pageNums.length > 5) {
       if (currentPage === 1) {
           const truncated = pageNums.slice(currentPage - 1, currentPage + 4)
           setNewPageNums(truncated)

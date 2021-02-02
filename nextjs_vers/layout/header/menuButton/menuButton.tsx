@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { Dispatch, FC, SetStateAction } from 'react';
 import compStyle from './menuButton.module.scss';
 import { Lottie } from '@crello/react-lottie';
-import animationData from '../../assets/header/animations/menu-closed-icon.json';
+import animationData from '../../../assets/header/animations/menu-closed-icon.json';
+
+interface MenuButtonProps {
+	open: boolean,
+	setOpen: Dispatch<SetStateAction<boolean>>
+}
+
 
 // Menu button for header
-const MenuButton = ({ open, setOpen }) => {
+const MenuButton: FC<MenuButtonProps> = ({ open, setOpen }) => {
 	const animConfig = {
 		animationData: animationData,
 		loop: false,

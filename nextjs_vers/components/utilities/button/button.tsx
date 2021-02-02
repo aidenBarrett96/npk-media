@@ -4,15 +4,15 @@ import outerLarge from '../../../assets/buttons/button-90px.svg';
 import cStyle from './button.module.scss';
 import Link from 'next/link';
 
-interface button {
-  text?: any;
+interface ButtonProps {
+  text?: string;
   link?: any;
-  onClick?: any;
-	large: any;
-	style?: any
+  onClick?: () => void;
+	large: boolean;
+	style?: string
 } 
 
-const Button: FC<button> = ({ text, link, onClick, large, style }) => {
+const Button: FC<ButtonProps> = ({ text, link, onClick, large, style }) => {
 
 	
 	return (

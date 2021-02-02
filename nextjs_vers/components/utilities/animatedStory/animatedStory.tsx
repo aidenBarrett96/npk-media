@@ -1,13 +1,18 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, FC } from 'react';
 import { Lottie } from '@crello/react-lottie';
-import t from 'prop-types';
 import style from './animatedStory.module.scss';
-import AnimationButtons from './animationButtons';
-import Button from '../button';
+import AnimationButtons from './animationButtons/animationButtons';
+
+
+interface animatedStoryProps {
+	animations: any,
+	buttons: any,
+	autoplay: any
+}
 
 const getAnimationData = (animation: any) => JSON.parse(animation?.content[0]?.content[0]?.text)
 
-const AnimatedStory = (props) => {
+const AnimatedStory: FC<animatedStoryProps> = (props) => {
 	let { animations, buttons, autoplay } = props
 
 
@@ -113,21 +118,6 @@ const AnimatedStory = (props) => {
 			)}
 		</div>
 	);
-};
-
-AnimatedStory.propTypes = {
-	/**
-	 * An array of JSON animation objects/ files, in the order they are to be played
-	 */
-	animations: t.arrayOf(t.object).isRequired,
-	/**
-	 * An array of buttons in the order to appear left to right, these buttons will show overlayed on the animation slightly
-	 */
-	buttons: t.arrayOf(t.object),
-	/**
-	 * Boolean to say wether the animation will progress right through automatically or need manual input
-	 */
-	autoplay: t.bool,
 };
 
 export default AnimatedStory;

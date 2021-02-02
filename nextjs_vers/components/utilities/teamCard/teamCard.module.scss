@@ -5,69 +5,69 @@ going to redoo this scss file while doing the animation on the team page.
 *********************************************************************/
 
 @import '../../../styles/variables';
-
 .team {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 30px 0 0;
+	position: relative;
 
 	.member {
 		width: 50%;
+		// min-height: 350px;
 		margin-bottom: 40px;
-		position: relative;
-		display:grid;
-		grid-template-columns: repeat(6, 1fr);
-		grid-template-rows: repeat(4, 1fr);
+		// position: relative;
 
-		img {
-			grid-area: 1 / 1 / 4 / 6;
-			min-height: 144px;
-			max-height: 144px;
-			max-width: 144px;
-			min-width: 144px;
-			border-radius: 50%;
-			background: #ccc;
-		}
+		display: flex;
+		flex-direction: column;
 
-		button {
-			margin:8px 0 0 8px;
-			grid-area: 3 / 4 / 4 / 6;
-			width: 44px;
-			height: 44px;
-			background: none;
-			border: solid 3px #D43F34;
-			border-radius: 50%;
-			font-size: 24px;
-			font-weight: bold;
-			&:hover {
-				cursor: pointer;
+		.innerWrap {
+
+
+
+			img {
+				min-height: 144px;
+				max-height: 144px;
+				max-width: 144px;
+				min-width: 144px;
+				border-radius: 50% !important;
+				background: #ccc;
+				margin-bottom: -12px;
 			}
-		}
 
-		.nameRole {
-			grid-area: 4 / 1 / 6 / 7;
-			margin-top: -8px;
-
-			p:first-of-type{
+			button {
+				width: 44px;
+				height: 44px;
+				background: none;
+				border: solid 3px #D43F34;
+				border-radius: 50% !important;
+				font-size: 24px;
 				font-weight: bold;
+				margin: 0 0 12px -34px;
+
+				&:hover {
+					cursor: pointer;
+				}
 			}
+		}			
+		
+		.nameRole {
+				margin-top: auto;
+
+				p:first-of-type{
+					font-weight: bold;
+				}
+			}
+	}
+
+	@media screen and (min-width: 960px) {
+		padding: 80px 0 0;
+
+		.member {
+			width: 25%;
 		}
 	}
 
-	@media screen and (min-width: $desktop) {
-		padding: 80px 0 0;
-	}
-
 }
-
-
-
-// activated classes
-.activated {
-	display:none!important;
-}
-
-
 
 
 // Member popup
@@ -82,8 +82,9 @@ going to redoo this scss file while doing the animation on the team page.
 	flex-direction: column;
 	text-align: center;
 	z-index: 4;
-	animation: popupIn 0.8s;
-
+	// animation: popupIn 0.8s;
+  will-change: opacity;
+  
 	.popupInner {
 		max-width: 280px;
 		margin: 240px auto;
@@ -94,7 +95,7 @@ going to redoo this scss file while doing the animation on the team page.
 			height: 144px;
 			width: 144px;
 			// min-width: 144px;
-			border-radius: 50%;
+			border-radius: 50%!important;
 			background: #ccc;
 		}
 
@@ -105,7 +106,7 @@ going to redoo this scss file while doing the animation on the team page.
 			height: 44px;
 			background: none;
 			border: solid 3px #D43F34;
-			border-radius: 50%;
+			border-radius: 50%!important;
 			font-size: 24px;
 			font-weight: bold;
 			position: absolute;
@@ -123,11 +124,11 @@ going to redoo this scss file while doing the animation on the team page.
 
 
 
-@keyframes popupIn {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
+// @keyframes popupIn {
+// 	from {
+// 		opacity: 0;
+// 	}
+// 	to {
+// 		opacity: 1;
+// 	}
+// }

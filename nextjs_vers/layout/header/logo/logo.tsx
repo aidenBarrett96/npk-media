@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import animationData from '../../../public/mainLogoHover.json';
-import { Lottie } from '@crello/react-lottie';
+import animationData from '../../../assets/header/animations/mainLogoHover.json';
+import Lottie from 'react-lottie';
 import style from './logo.module.scss';
 
 const animConfig = {
 	animationData: animationData,
 	loop: false,
-	autoplay: true,
+	autoplay: false,
 };
 
-export default () => {
+export default function Logo(){
 	const [direction, setDirection] = useState(-1);
 
 	return (
@@ -17,14 +17,13 @@ export default () => {
 			onPointerOver={() => setDirection(1)}
 			onPointerOut={() => setDirection(-1)}
 			className={style.container}>
-			<Lottie
-				height={200}
+			<Lottie 
+				options={animConfig}
+				height={80}
 				width={200}
-				speed={0.7}
-				config={animConfig}
 				direction={direction}
 				className={style.anim}
-			/>
+      />  
 		</span>
 	);
 };

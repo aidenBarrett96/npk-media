@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {FC} from 'react';
 import style from './projectCard.module.scss';
 import Link  from 'next/link';
-import Button from '../button';
+import Button from '../button/button';
+
+interface ProjectCardProps {
+
+}
 
 
-const ProjectCard = ({project}) => {
+const ProjectCard:FC<ProjectCardProps> = ({project}) => {
 	const {media, title} = project
 
 	return (

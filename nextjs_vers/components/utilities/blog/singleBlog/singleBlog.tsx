@@ -1,11 +1,16 @@
-import ContactSection from '../../contactSection'
+import ContactSection from '../../contactSection/contactSection'
 import style from './single.module.scss'
 import {render} from 'storyblok-rich-text-react-renderer'
-import Button from '../../button'
-import NextProjectOrArticle from '../../nextProjectOrArticle'
+// import Button from '../../button/button'
+import NextProjectOrArticle from '../../nextProjectOrArticle/nextProjectOrArticle'
+import {FC} from 'react'
 
 
-const SingleBlog = ({rest, blogsArr}) => {
+interface SingleBlogProps {
+
+}
+
+const SingleBlog:FC<SingleBlogProps> = ({rest, blogsArr}) => {
 
   // get the next blog in the array. Each one is seperated by -10 in the cms.
   const nextPositionInArray = rest.position + 10
