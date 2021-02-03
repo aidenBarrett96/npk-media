@@ -27,7 +27,7 @@ export const pageLinks = [
   },
   {
     title: 'Websites',
-    path: '/websites',
+    path: '/web-design-liverpool',
     imgSrc: websitesIcon,
     imgAlt: 'Websites icon',
     imgCName: 'websitesIcon',
