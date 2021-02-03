@@ -1,15 +1,19 @@
 import React, {FC} from 'react';
-import cStyle from './otherServices.module.scss';
+import style from './otherServices.module.scss';
 import OverlayButtonsArea from '../overlayButtonsArea/overlayButtonsArea';
 
 interface OtherServicesProps {
-
+	buttons: Array<any>
+	graphic: {
+		filename: string,
+		alt: string
+	}
 }
 
 const OtherServices:FC<OtherServicesProps> = ({buttons, graphic}) => {
 	return (
 		<OverlayButtonsArea buttons={buttons}>
-			<div className={cStyle.container}>
+			<div className={style.container}>
 				<h2>Other things we do</h2>
 				<img src={graphic.filename} alt={graphic.alt} />
 			</div>

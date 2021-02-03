@@ -4,13 +4,13 @@ import { useLocalStorage } from '../../hooks/localStorage'
 import style from './banner.module.scss'
 import {useGetScrollPosition} from '../../hooks/useGetScrollPosition'
 
+
 const GdprBanner = () => {
   const [cookiesEnabled, setCookiesEnabled] = useLocalStorage('cookiesEnabled')
   const scrollPos = useGetScrollPosition()
 
-
   useEffect(() => {
-    if(scrollPos < 300) {
+    if(scrollPos < 120) {
       return
     } 
     setTimeout(() => {

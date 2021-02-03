@@ -3,7 +3,10 @@ import Image from 'next/image'
 import {FC} from 'react'
 
 interface FeaturedImg {
-  image: any
+  image: {
+    filename: string,
+    alt: string
+  }
 }
 
 const FeaturedImage: FC<FeaturedImg> = ({image}) => {

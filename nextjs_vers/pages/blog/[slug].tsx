@@ -4,16 +4,14 @@ import SingleBlog from "../../components/utilities/blog/singleBlog/singleBlog"
 import style from './blog.module.scss'
 
 
-const BlogRoute = ({ data: story, blogsArr, allBlogs }) => {
+const BlogRoute = ({ data: story, blogsArr }) => {
   if(!story) return null
   const {...rest} = story
-
-  // console.log('all blogs in a blog', rest)
 
   return (
     <Layout>
       <div className={style.pageWrap}>
-        <SingleBlog rest={rest} blogsArr={blogsArr}/>
+        <SingleBlog position={rest.position} content={rest.content} stories={blogsArr.data.stories}/>
       </div>
     </Layout>
   )

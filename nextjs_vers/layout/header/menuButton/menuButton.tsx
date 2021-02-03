@@ -1,6 +1,6 @@
 import React, { Dispatch, FC, SetStateAction } from 'react';
-import compStyle from './menuButton.module.scss';
-import { Lottie } from '@crello/react-lottie';
+import style from './menuButton.module.scss';
+import Lottie  from 'react-lottie';
 import animationData from '../../../assets/header/animations/menu-closed-icon.json';
 
 interface MenuButtonProps {
@@ -14,20 +14,20 @@ const MenuButton: FC<MenuButtonProps> = ({ open, setOpen }) => {
 	const animConfig = {
 		animationData: animationData,
 		loop: false,
-		autoplay: true,
+		autoplay: false,
 	};
 	return (
 		<button
-			className={compStyle.wrapper}
+			className={style.wrapper}
 			onClick={() => setOpen(open ? false : true)}>
 			<Lottie
-				className={compStyle.anim}
-				height={200}
-				width={200}
-				config={animConfig}
+				className={style.anim}
+				height={52}
+				width={64}
+				options={animConfig}
 				direction={open ? 1 : -1}
 				speed={2.25}
-			/>
+			/>			
 		</button>
 	);
 };

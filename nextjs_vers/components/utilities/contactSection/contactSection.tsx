@@ -3,9 +3,8 @@ import style from './contactSection.module.scss';
 import Button from '../button/button';
 
 interface ContactSectionProps {
-
+	text: string
 }
-
 
 const ContactSection:FC<ContactSectionProps> = ({ text }) => (
 	<div className={style.container}>

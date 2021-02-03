@@ -3,7 +3,8 @@ import style from './overlayButtonsArea.module.scss';
 import Button from '../button/button';
 
 interface OverlayButtonsAreaProps {
-
+	buttons: Array<any>
+	children: any
 }
 
 

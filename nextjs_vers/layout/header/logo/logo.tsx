@@ -19,8 +19,8 @@ export default function Logo(){
 			className={style.container}>
 			<Lottie 
 				options={animConfig}
-				height={80}
-				width={200}
+				height={52}
+				width={142}
 				direction={direction}
 				className={style.anim}
       />  

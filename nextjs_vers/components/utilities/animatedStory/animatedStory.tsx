@@ -4,15 +4,15 @@ import style from './animatedStory.module.scss';
 import AnimationButtons from './animationButtons/animationButtons';
 
 
-interface animatedStoryProps {
-	animations: any,
+interface AnimatedStoryProps {
+	animations: Array<any>,
 	buttons: any,
-	autoplay: any
+	autoplay: boolean,
 }
 
 const getAnimationData = (animation: any) => JSON.parse(animation?.content[0]?.content[0]?.text)
 
-const AnimatedStory: FC<animatedStoryProps> = (props) => {
+const AnimatedStory: FC<AnimatedStoryProps> = (props) => {
 	let { animations, buttons, autoplay } = props
 
 
@@ -103,6 +103,7 @@ const AnimatedStory: FC<animatedStoryProps> = (props) => {
 				config={config}
 				height='350px'
 				width='350px'
+				// @ts-ignore
 				playingState={playing}
 				className='lottie-container'
 				lottieEventListeners={[

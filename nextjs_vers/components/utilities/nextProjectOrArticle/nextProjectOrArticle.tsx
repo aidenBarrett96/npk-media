@@ -4,7 +4,13 @@ import style from './style.module.scss';
 
 
 interface NextProjectProps {
-
+  title: string,
+  button_text: string,
+  link: any,
+  image: {
+    filename: string,
+    alt: string
+  }
 }
 
 const NextProjectOrArticle:FC<NextProjectProps> = ({title, button_text, link, image}) => {

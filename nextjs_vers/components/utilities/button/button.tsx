@@ -21,6 +21,7 @@ const Button: FC<ButtonProps> = ({ text, link, onClick, large, style }) => {
 			<button
 				className={large ? cStyle.buttonLarge : cStyle.buttonSmall}
 				onClick={onClick}
+				// @ts-ignore
 				style={style}>
 				<span>{text}</span>
 				<img src={large ? outerLarge : outerSmall} alt='button outline' />
@@ -28,6 +29,7 @@ const Button: FC<ButtonProps> = ({ text, link, onClick, large, style }) => {
 		)}
 		{link && (
 			<Link href={link}>
+				{/* @ts-ignore */}
 				<a className={large ? cStyle.buttonLarge : cStyle.buttonSmall} style={style}>
 					<span className='button-text__primary'>{text}</span>
 					<img src={large ? outerLarge : outerSmall} alt='button outline' />

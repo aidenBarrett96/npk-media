@@ -2,7 +2,7 @@ import style from './fullwidth.module.scss'
 import {FC} from 'react'
 
 interface FullWidthGalleryProps {
-
+  media: Array<any>
 }
 
 const FullWidthGallery:FC<FullWidthGalleryProps> = ({media}) => {

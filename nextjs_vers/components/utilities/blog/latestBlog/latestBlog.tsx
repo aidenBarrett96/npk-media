@@ -4,10 +4,15 @@ import {FC} from 'react'
 
 
 interface LatestBlogProps {
-
+  latestBlog: {
+    slug: string,
+    content: any,
+    name: string
+  },
 }
 
 const LatestBlog:FC<LatestBlogProps> = ({ latestBlog }) => {
+
   return (
     <section className={style.blogMain}>
       <Link href={`/blog/${latestBlog.slug}`}>

@@ -4,7 +4,14 @@ import Link  from 'next/link';
 import Button from '../button/button';
 
 interface ProjectCardProps {
-
+	project: {
+		title: string,
+		project: any,		
+		media: {
+			filename: string,
+			alt: string
+		}
+	}
 }
 
 

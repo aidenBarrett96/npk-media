@@ -3,7 +3,7 @@ import Link from 'next/link'
 import {FC} from 'react'
 
 interface BlogCardProps {
-
+  currentBlogs: Array<any>
 }
 
 const BlogCard:FC<BlogCardProps> = ({ currentBlogs }) => {

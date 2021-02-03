@@ -32,9 +32,7 @@ export default HomePage
 
 // Query to get data from cms
 export const getStaticProps = async () => {
-  // Query for data
   const res = await storyblok.get('cdn/stories/home', {version: 'draft'})
-  
   return {
     props: {
       data: res

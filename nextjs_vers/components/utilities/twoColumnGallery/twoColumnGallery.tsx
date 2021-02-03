@@ -2,7 +2,7 @@ import style from './gallery.module.scss'
 import {FC} from 'react'
 
 interface TwoColumnGalleryProps {
-
+  media: Array<any>
 }
 
 const TwoColumnGallery:FC<TwoColumnGalleryProps> = ({media}) => {

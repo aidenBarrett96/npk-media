@@ -2,7 +2,14 @@ import style from './testimonial.module.scss'
 import {FC} from 'react'
 
 interface TestimonialProps {
-
+  company: {
+    filename: string,
+    alt: string,
+  },
+  name: string,
+  quote: string,
+  role: string,
+  align: object
 }
 const Testimonial:FC<TestimonialProps> = ({company, name, quote, role, align}) => {
 

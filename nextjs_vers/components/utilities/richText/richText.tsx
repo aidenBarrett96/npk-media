@@ -4,15 +4,14 @@ import Link from 'next/link'
 import {FC} from 'react'
 
 interface RichTextProps {
-
+  body: Array<any>
 }
 
-const RichText:FC<RichTextProps> = (props) => {
-  const rich_text = props?.body
+const RichText:FC<RichTextProps> = ({body}) => {
 
   return (
     <section className={style.richTextBody}>
-      {render(rich_text, {
+      {render(body, {
         markResolvers: {
           [MARK_LINK]: (children: React.ReactNode, { href, linktype }: any) => 
           linktype === "story" ? (

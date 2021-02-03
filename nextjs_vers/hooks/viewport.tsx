@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
 
-interface viewportWidthReturns {
+interface ViewportWidthReturns {
   width: null | number
   isDesktop: null | boolean
 }
 
-export const useGetViewportWidth = (): viewportWidthReturns => {
+export const useGetViewportWidth = (): ViewportWidthReturns => {
   // Hold screen size in local state
   const [width, setWidth] = useState<number | null>(null)
   // Logic for whether is desktop

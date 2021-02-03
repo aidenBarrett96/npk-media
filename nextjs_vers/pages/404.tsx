@@ -2,7 +2,7 @@ import Button from "../components/utilities/button/button"
 import Layout from "../layout/layout"
 
 
-// Basic styles required so their in global.scss instead of a module
+// Basic styles required so they're in global.scss instead of a module
 const Custom404 = () => {
   return (
     <Layout>

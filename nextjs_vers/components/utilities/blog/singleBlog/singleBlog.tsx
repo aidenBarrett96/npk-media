@@ -7,32 +7,37 @@ import {FC} from 'react'
 
 
 interface SingleBlogProps {
-
+  position: number,
+  content: {
+    image: any,
+    title: string,
+    tags: string,
+    long_text: string,
+  },
+  stories: Array<any>
 }
 
-const SingleBlog:FC<SingleBlogProps> = ({rest, blogsArr}) => {
+const SingleBlog:FC<SingleBlogProps> = ({position, content, stories}) => {
 
   // get the next blog in the array. Each one is seperated by -10 in the cms.
-  const nextPositionInArray = rest.position + 10
-  const nextBlogPost = blogsArr.data.stories.find(nextBlog => nextBlog.position === nextPositionInArray);
+  const nextPositionInArray = position + 10
+  const nextBlogPost = stories.find(nextBlog => nextBlog.position === nextPositionInArray);
 
   // if on the final blog in the arrays page, above will return undefined, so pass first blog in the array as the "next blog"
-  const firstBlogInArray = blogsArr.data.stories[0]
+  const firstBlogInArray = stories[0]
 
-  console.log('next one;;;', nextBlogPost)
-  console.log('if no next;;;;', firstBlogInArray)
 
   return (
     <div className={style.singleBlog}>
       <section className={style.blogHero}>
-        <img src={rest.content.image.filename} alt={rest.content.image.alt} />
+        <img src={content.image.filename} alt={content.image.alt} />
       </section>
       <section className={style.intro}>
-        <h1>{rest.content.title}</h1>
-        <p className={style.tags}>{rest.content.tags}</p>
+        <h1>{content.title}</h1>
+        <p className={style.tags}>{content.tags}</p>
       </section>
       <section className={style.blogContent}>
-        {render(rest.content.long_text)}
+        {render(content.long_text)}
       </section>
 
       <div>

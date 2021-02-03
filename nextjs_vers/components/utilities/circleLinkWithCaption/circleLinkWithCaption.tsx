@@ -4,7 +4,15 @@ import style from './circleLinkWithCaption.module.scss';
 
 
 interface CircleLinkProps {
-
+	title: string,
+	button_text: string,
+	link: {
+		cached_url: string
+	}
+	image: {
+		filename: string,
+		alt: string
+	}
 }
 
 const CircleLinkWithCaption:FC<CircleLinkProps> = ({title, button_text, link, image}) => {

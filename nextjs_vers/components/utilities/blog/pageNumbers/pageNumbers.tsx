@@ -1,29 +1,31 @@
-import { FC, useEffect, useRef, useState } from 'react'
+import Link from 'next/link'
+import { Router } from 'next/router'
+import { Dispatch, FC, SetStateAction, useEffect, useRef, useState } from 'react'
 import { useGetViewportWidth } from '../../../../hooks/viewport'
 import style from './page-numbers.module.scss'
 
 
 
 interface PageNumbersProps {
-
+  currentPage: number
+  totalPages: number
+  changePage,
+  scrollTop?: () => void,
+  previousPage: () => void,
+  nextPage: () => void,
+  setCurrentPage: Dispatch<SetStateAction<number>>
 }
 
 const PageNumbers:FC<PageNumbersProps> = ({
   currentPage,
-  setCurrentPage, 
-  allOtherBlogs, 
-  blogsPerPage, 
+  totalPages,
   changePage, 
-  scrollTop
+  scrollTop,
+  previousPage,
+  nextPage
 }) => {
 // will put scrollTop function back in (scrolls to top of page when a next/previous or number button is clicked)
   
-
-  
-
-  // Calculate total pages
-  const totalPages = Math.ceil(allOtherBlogs / blogsPerPage)
-
   // Create array of page numbers
   const pageNums = []
   for ( let i = 1; i <= totalPages; i++ ) {
@@ -31,19 +33,7 @@ const PageNumbers:FC<PageNumbersProps> = ({
   }
 
 
-  // Previous / next page buttons
-  const previousPage = () => {
-    // Don't reduce current page if on the first page
-    if (currentPage === 1) return;
-    setCurrentPage(currentPage - 1)    
-  }
-  const nextPage = () => {
-    // Don't increase current page if on the last page
-    if (currentPage === totalPages) return;
-    setCurrentPage(currentPage + 1)
-  }
-
-
+  
 // Set new page number array (newPageNums) - max 5 in array for desktop, 3 for mobile.
 // On page change, shift the new array forward/backwards.
  
@@ -111,8 +101,6 @@ const PageNumbers:FC<PageNumbersProps> = ({
     }
   }, [currentPage])
 
-
-  console.log('theres ', pageNums.length, ' pages with ', blogsPerPage, 'per page (- featured)')
 
   return (
     <nav role="navigation" aria-label="Blog pagination" className={style.pagination}>

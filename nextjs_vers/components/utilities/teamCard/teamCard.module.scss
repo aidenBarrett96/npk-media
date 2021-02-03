@@ -13,16 +13,11 @@ going to redoo this scss file while doing the animation on the team page.
 
 	.member {
 		width: 50%;
-		// min-height: 350px;
 		margin-bottom: 40px;
-		// position: relative;
-
 		display: flex;
 		flex-direction: column;
 
 		.innerWrap {
-
-
 
 			img {
 				min-height: 144px;
@@ -49,14 +44,13 @@ going to redoo this scss file while doing the animation on the team page.
 				}
 			}
 		}			
-		
 		.nameRole {
-				margin-top: auto;
+			margin-top: auto;
 
-				p:first-of-type{
-					font-weight: bold;
-				}
+			p:first-of-type{
+				font-weight: bold;
 			}
+		}
 	}
 
 	@media screen and (min-width: 960px) {
@@ -82,8 +76,6 @@ going to redoo this scss file while doing the animation on the team page.
 	flex-direction: column;
 	text-align: center;
 	z-index: 4;
-	// animation: popupIn 0.8s;
-  will-change: opacity;
   
 	.popupInner {
 		max-width: 280px;
@@ -91,28 +83,23 @@ going to redoo this scss file while doing the animation on the team page.
 
 		img {
 			margin: 24px auto;
-			// min-height: 144px;
 			height: 144px;
 			width: 144px;
-			// min-width: 144px;
 			border-radius: 50%!important;
 			background: #ccc;
 		}
 
 		button {
-			margin-top:8px;
-			grid-area: 3 / 4 / 4 / 6;
 			width: 44px;
 			height: 44px;
 			background: none;
 			border: solid 3px #D43F34;
-			border-radius: 50%!important;
+			border-radius: 50% !important;
 			font-size: 24px;
 			font-weight: bold;
-			position: absolute;
-			bottom: 24px;
-			left: 50%;
-			transform: translateX(-50%) rotate(45deg);			
+			// margin: 0 0 12px -34px;
+			margin-top: 80px;
+			transform: rotate(45deg);
 
 			&:hover {
 				cursor: pointer;
@@ -120,15 +107,3 @@ going to redoo this scss file while doing the animation on the team page.
 		}
 	}
 }
-
-
-
-
-// @keyframes popupIn {
-// 	from {
-// 		opacity: 0;
-// 	}
-// 	to {
-// 		opacity: 1;
-// 	}
-// }
