@@ -19,6 +19,7 @@ const OverlayButtonsArea:FC<OverlayButtonsAreaProps> = ({ buttons, children }) =
 						link={button.url.cached_url && button.url.cached_url}
 						onClick={button.onClick && button.onClick}
 						large={button.large}
+						key={button.text}
 					/>
 				))}
 			</div>
