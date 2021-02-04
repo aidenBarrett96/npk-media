@@ -75,12 +75,12 @@ const AnimatedStory: FC<AnimatedStoryProps> = (props) => {
 			if (playingRef.current === 'stopped') {
 				setPlaying('playing'); // If the playing state is set to stopped then we know the animation is on the last step and we can restart it
 			} else {
-				console.log('not ready');
+				// console.log('not ready');
 			}
 		} else if (rtpRef.current) {
 			setProgress(progressRef.current + 1);
 		} else {
-			console.log('not ready');
+			// console.log('not ready');
 		}
 	};
 

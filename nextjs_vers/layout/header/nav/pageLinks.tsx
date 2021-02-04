@@ -46,11 +46,11 @@ export const pageLinks = [
     imgAlt: null,
     imgCName: null,
   },
-  // {
-  //   title: 'Blog',
-  //   path: '/blog',
-  //   imgSrc: null,
-  //   imgAlt: null,
-  //   imgCName: null,
-  // }
+  {
+    title: 'Blog',
+    path: '/blog',
+    imgSrc: null,
+    imgAlt: null,
+    imgCName: null,
+  }
 ]

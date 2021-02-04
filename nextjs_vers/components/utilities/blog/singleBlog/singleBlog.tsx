@@ -23,7 +23,7 @@ const SingleBlog:FC<SingleBlogProps> = ({position, content, stories}) => {
   const nextPositionInArray = position + 10
   const nextBlogPost = stories.find(nextBlog => nextBlog.position === nextPositionInArray);
 
-  // if on the final blog in the arrays page, above will return undefined, so pass first blog in the array as the "next blog"
+  // if on the final blog in the array, above will return undefined, so pass first blog in the array as the "next blog"
   const firstBlogInArray = stories[0]
 
 

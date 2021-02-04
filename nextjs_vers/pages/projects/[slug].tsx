@@ -67,7 +67,6 @@ const ProjectsPages = ({ data: story }) => {
           title="Next Project"
           image={nextProject.Image}
         />
-        {console.log('project btn image. ', nextProject.Image)}
         <section className={style.contact}>
           <ContactSection
             text="Want to work with us?"

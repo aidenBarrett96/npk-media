@@ -31,7 +31,7 @@ interface componentProps {
 
 export const Component: FC<componentProps> = ({component}) => {
     const {component: componentName, ...rest} = component
-    console.log('componentName', componentName)
+    // console.log('componentName', componentName)
     return createElement(getComponent(componentName), {component: componentName, ...rest})
 }
 

@@ -8,8 +8,6 @@ interface LatestProjectsProps {
 }
 
 const LatestProjects:FC<LatestProjectsProps> = ({projects}) => {
-
-	console.log('projectsssss;', projects)
 	return (
 		<div className={style.container}>
 			{/* <h2>{projects.title}</h2> */}

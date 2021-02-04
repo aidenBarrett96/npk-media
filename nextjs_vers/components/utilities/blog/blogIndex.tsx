@@ -1,9 +1,9 @@
 import { useRef, useState, FC, useEffect } from 'react'
 import { storyblok } from '../../../utils/storyblok/storyblok'
 import ContactSection from '../contactSection/contactSection'
-import BlogCard from './blogCard/blogCard'
+import AllBlogsGrid from './allBlogsGrid/allBlogsGrid'
 import style from './blogIndex.module.scss'
-import LatestBlog from './latestBlog/latestBlog'
+import FirstBlog from './firstBlog/firstBlog'
 import PageNumbers from './pageNumbers/pageNumbers'
 
 
@@ -43,11 +43,11 @@ const BlogIndex:FC<BlogIndexProps> = ({content, perPage, total}) => {
 
   return (
     <>
-      <LatestBlog latestBlog={data[0]}/> 
+      <FirstBlog firstBlog={data[0]}/> 
       <section className={style.allBlogs} id="mainBlogContent">
         <h2>Latest Articles</h2>
         <div className={style.blogsGrid}>
-        <BlogCard currentBlogs={data.slice(1)}/>
+        <AllBlogsGrid allBlogs={data.slice(1)}/>
           <div className={style.pageBtns}>
             <PageNumbers 
               totalPages={totalPages}

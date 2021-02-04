@@ -2,14 +2,14 @@ import style from './card.module.scss'
 import Link from 'next/link'
 import {FC} from 'react'
 
-interface BlogCardProps {
-  currentBlogs: Array<any>
+interface AllBlogsGridProps {
+  allBlogs: Array<any>
 }
 
-const BlogCard:FC<BlogCardProps> = ({ currentBlogs }) => {
+const AllBlogsGrid:FC<AllBlogsGridProps> = ({ allBlogs }) => {
   return ( 
     <>
-      {currentBlogs.map((blog) => (
+      {allBlogs.map((blog) => (
         <div key={blog.name} className={style.blog}>
           <p className={style.tags}>{blog.content.tags}</p>
           <Link href={`/blog/${blog.slug}`}>
@@ -28,4 +28,4 @@ const BlogCard:FC<BlogCardProps> = ({ currentBlogs }) => {
   )
 }
 
-export default BlogCard
+export default AllBlogsGrid
