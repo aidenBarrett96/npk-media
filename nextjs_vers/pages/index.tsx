@@ -5,16 +5,17 @@ import style from './homepage.module.scss'
 import Link from "next/link"
 import { ComponentArray } from "../components/components"
 import Head from "next/head"
+import SeoComponent from "../components/utilities/seo/seo"
 
 const HomePage = ({ data: story }) => {
 // Set the type for the story and extract nessesary data
   const {...rest}: storyblokStory = story
+  const seoContent = story.data.story.content.meta
+
 
   return (
     <>
-    <Head>
-      <title>NPK MEDIA - Creative digital agency Liverpool</title>
-    </Head>
+    <SeoComponent content={seoContent}/>
       <Layout>
         <div className={style.pageWrap}>
           <section className={style.hero}>

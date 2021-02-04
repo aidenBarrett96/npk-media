@@ -2,6 +2,7 @@ import Layout from "../../layout/layout"
 import { storyblok } from "../../utils/storyblok/storyblok"
 import SingleBlog from "../../components/utilities/blog/singleBlog/singleBlog"
 import style from './blog.module.scss'
+import Head from "next/head"
 
 
 const BlogRoute = ({ data: story, blogsArr }) => {
@@ -9,11 +10,17 @@ const BlogRoute = ({ data: story, blogsArr }) => {
   const {...rest} = story
 
   return (
-    <Layout>
-      <div className={style.pageWrap}>
-        <SingleBlog position={rest.position} content={rest.content} stories={blogsArr.data.stories}/>
-      </div>
-    </Layout>
+    <>
+      <Head>
+        <title>{rest.content.title} | NPK Media</title>
+        <meta name="description" content={rest.content.intro}/>
+      </Head>
+      <Layout>
+        <div className={style.pageWrap}>
+          <SingleBlog position={rest.position} content={rest.content} stories={blogsArr.data.stories}/>
+        </div>
+      </Layout>
+    </>
   )
 }
 

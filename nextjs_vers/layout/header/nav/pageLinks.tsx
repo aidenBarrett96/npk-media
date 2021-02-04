@@ -13,7 +13,7 @@ export const pageLinks = [
   },
   {
     title: 'Videos',
-    path: '/videos',
+    path: '/video-production-liverpool',
     imgSrc: videosIcon,
     imgAlt: 'Videos icon',
     imgCName: 'videoIcon',

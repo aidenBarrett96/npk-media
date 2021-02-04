@@ -1,3 +1,4 @@
+import Head from "next/head"
 import BlogIndex from "../../components/utilities/blog/blogIndex"
 import Layout from "../../layout/layout"
 import { storyblokStory } from "../../types/storyblok"
@@ -14,15 +15,20 @@ const BlogPage = ({ data: story}) => {
   const {...rest}: storyblokStory = story
 
   return (
-    <Layout>      
-      <div className={style.pageWrap}>
-        <BlogIndex 
-          content={story.data.stories}
-          perPage={story.perPage}
-          total={story.total}
-        />
-      </div>
-    </Layout>
+    <>
+    <Head>
+      <title>NPK Media Blog</title>
+    </Head>
+      <Layout>      
+        <div className={style.pageWrap}>
+          <BlogIndex 
+            content={story.data.stories}
+            perPage={story.perPage}
+            total={story.total}
+          />
+        </div>
+      </Layout>
+    </>
   )
 }
 export default BlogPage

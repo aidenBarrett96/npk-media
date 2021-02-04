@@ -28,43 +28,45 @@ const SingleBlog:FC<SingleBlogProps> = ({position, content, stories}) => {
 
 
   return (
-    <div className={style.singleBlog}>
-      <section className={style.blogHero}>
-        <img src={content.image.filename} alt={content.image.alt} />
-      </section>
-      <section className={style.intro}>
-        <h1>{content.title}</h1>
-        <p className={style.tags}>{content.tags}</p>
-      </section>
-      <section className={style.blogContent}>
-        {render(content.long_text)}
-      </section>
+    <>
+      <div className={style.singleBlog}>
+        <section className={style.blogHero}>
+          <img src={content.image.filename} alt={content.image.alt} />
+        </section>
+        <section className={style.intro}>
+          <h1>{content.title}</h1>
+          <p className={style.tags}>{content.tags}</p>
+        </section>
+        <section className={style.blogContent}>
+          {render(content.long_text)}
+        </section>
 
-      <div>
-        {nextBlogPost 
-          ? (
-            <NextProjectOrArticle 
-              link={`/blog/${nextBlogPost.slug}`}
-              button_text={nextBlogPost.content.title}
-              title="Next Article"
-              image={nextBlogPost.content.image}
-            />
-          )
-          : (
-            <NextProjectOrArticle 
-              link={`/blog/${firstBlogInArray.slug}`}
-              button_text={firstBlogInArray.content.title}
-              title="Next Article"
-              image={firstBlogInArray.content.image}
-            />
-          )
-        }
+        <div>
+          {nextBlogPost 
+            ? (
+              <NextProjectOrArticle 
+                link={`/blog/${nextBlogPost.slug}`}
+                button_text={nextBlogPost.content.title}
+                title="Next Article"
+                image={nextBlogPost.content.image}
+              />
+            )
+            : (
+              <NextProjectOrArticle 
+                link={`/blog/${firstBlogInArray.slug}`}
+                button_text={firstBlogInArray.content.title}
+                title="Next Article"
+                image={firstBlogInArray.content.image}
+              />
+            )
+          }
+        </div>
+
+        <ContactSection 
+          text="Want to work with us?"
+        />
       </div>
-
-      <ContactSection 
-        text="Want to work with us?"
-      />
-    </div>
+    </>
   )
 }
 export default SingleBlog

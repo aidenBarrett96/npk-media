@@ -2,20 +2,23 @@ import { storyblok } from '../utils/storyblok/storyblok'
 import Layout from '../layout/layout'
 import { ComponentArray } from '../components/components'
 import style from './slug.module.scss'
+import SeoComponent from '../components/utilities/seo/seo'
 
 const DynamicPage = ({ data: story }) => {
   if(!story) return null
   const { ...rest } = story || {}
 
-
   return (
-    <Layout>
-      <div className={style.pageWrap}>
-        <section className={style.dynamicContent}>
-          <ComponentArray components={story.content.body} />
-        </section>
-      </div>
-    </Layout>
+    <>
+      <SeoComponent content={story.content.meta}/>
+      <Layout>
+        <div className={style.pageWrap}>
+          <section className={style.dynamicContent}>
+            <ComponentArray components={story.content.body} />
+          </section>
+        </div>
+      </Layout>
+    </>
   )
 }
 export default DynamicPage
@@ -42,12 +45,6 @@ export async function getStaticPaths() {
   return {
     paths,
     fallback: false
-  //   filter_query:{ 
-  //     component: { 
-  //       in_array: 'animations' 
-  //      } 
-  //    }
-  // })
   }
 }
 
@@ -55,20 +52,10 @@ export async function getStaticPaths() {
 // // page contents
 export async function getStaticProps({ params }) {
   const res = await storyblok.get(`cdn/stories/${params.slug}`, {version: 'draft'})
-  // const animations = await storyblok.get(`cdn/stories/${params.slug}`, 
-  // {
-  //   version: 'draft',
-  //   filter_query:{ 
-  //     component: { 
-  //       in: 'animations' 
-  //      } 
-  //    }
-  // })
 
   return {
     props: {
       data: res?.data?.story,
-      // animations: animations?.data?.story.content.body
     }
   }
 }

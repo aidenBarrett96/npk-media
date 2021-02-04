@@ -10,7 +10,6 @@
   "dependencies": {
     "@crello/react-lottie": "^0.0.11",
     "@sendgrid/mail": "^7.4.2",
-    "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "framer-motion": "^3.3.0-beta.22",
     "lottie-web": "^5.7.6",
