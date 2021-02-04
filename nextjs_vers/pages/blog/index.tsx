@@ -16,9 +16,9 @@ const BlogPage = ({ data: story}) => {
 
   return (
     <>
-    <Head>
-      <title>NPK Media Blog</title>
-    </Head>
+      <Head>
+        <title>NPK Media Blog</title>
+      </Head>
       <Layout>      
         <div className={style.pageWrap}>
           <BlogIndex 

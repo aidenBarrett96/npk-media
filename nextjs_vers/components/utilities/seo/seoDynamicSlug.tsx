@@ -1,13 +1,15 @@
 import Head from "next/head"
 
-const SeoComponent = ({ content }) => {
+// Used on homepage, [slug].tsx and contact page
+// The pages named above have all their extra seo content specified in the cms
+
+const SeoDynamicSlug = ({ content }) => {
   
   // get objects from the meta array
   const title = content?.find(element => element.component === 'seo_title')
   const description = content?.find(element => element.component === 'seo_description')
   const image = content?.find(element => element.component === 'seo_image')
   const markup = content?.find(element => element.component === 'json-ld_markup')
-  const markupTwo = content?.find(element => element.component === 'json-ld_markup_two')
 
   return (
     <Head>
@@ -26,13 +28,8 @@ const SeoComponent = ({ content }) => {
             {markup.content}
           </script>
         : null}
-        {markupTwo
-        ? <script type="application/ld+json">
-            {markupTwo.content}
-          </script>
-        : null}
       </>
     </Head>
   )
 }
-export default SeoComponent
+export default SeoDynamicSlug

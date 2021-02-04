@@ -2,15 +2,16 @@ import { storyblok } from '../utils/storyblok/storyblok'
 import Layout from '../layout/layout'
 import { ComponentArray } from '../components/components'
 import style from './slug.module.scss'
-import SeoComponent from '../components/utilities/seo/seo'
+import SeoDynamicSlug from '../components/utilities/seo/seoDynamicSlug'
 
 const DynamicPage = ({ data: story }) => {
   if(!story) return null
   const { ...rest } = story || {}
+  const seoContent = story.content.meta
 
   return (
     <>
-      <SeoComponent content={story.content.meta}/>
+      <SeoDynamicSlug content={seoContent}/>
       <Layout>
         <div className={style.pageWrap}>
           <section className={style.dynamicContent}>

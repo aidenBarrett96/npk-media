@@ -2,19 +2,25 @@ import Layout from "../../layout/layout"
 import { storyblok } from "../../utils/storyblok/storyblok"
 import SingleBlog from "../../components/utilities/blog/singleBlog/singleBlog"
 import style from './blog.module.scss'
-import Head from "next/head"
+import SeoSingleBlog from "../../components/utilities/seo/seoSingleBlog"
 
 
 const BlogRoute = ({ data: story, blogsArr }) => {
   if(!story) return null
-  const {...rest} = story
+  const {...rest} = story 
 
   return (
     <>
-      <Head>
-        <title>{rest.content.title} | NPK Media</title>
-        <meta name="description" content={rest.content.intro}/>
-      </Head>
+      <SeoSingleBlog 
+        title={rest.name}
+        intro={rest.content.intro}
+        image={rest.content.image.filename}
+        pubDate={rest.created_at}
+        editDate={rest.published_at}   
+        slug={rest.slug} 
+        author={rest.content.author}
+        tags={rest.content.tags}
+      />
       <Layout>
         <div className={style.pageWrap}>
           <SingleBlog position={rest.position} content={rest.content} stories={blogsArr.data.stories}/>
@@ -30,7 +36,7 @@ export default BlogRoute
 export async function getStaticPaths() {
   const res = await storyblok.get(`cdn/stories`, {
     version: 'draft',
-    filter_query:{
+    filter_query: {
       component: {
         eq: 'post'
       }

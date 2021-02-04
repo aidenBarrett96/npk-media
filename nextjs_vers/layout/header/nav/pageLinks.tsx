@@ -20,7 +20,7 @@ export const pageLinks = [
   },
   {
     title: 'Social Media',
-    path: '/social-media',
+    path: '/social-media-content-creation-services',
     imgSrc: socialMediaIcon,
     imgAlt: 'Social media icon',
     imgCName: 'socialMediaIcon',
