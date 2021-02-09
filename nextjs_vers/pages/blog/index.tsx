@@ -14,8 +14,6 @@ import style from './blog.module.scss'
 const BlogPage = ({ data: story}) => {
   const {...rest}: storyblokStory = story
 
-  console.log('story index blog', rest)
-
   return (
     <>
       <Head>

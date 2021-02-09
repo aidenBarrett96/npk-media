@@ -9,9 +9,6 @@ const BlogRoute = ({ data: story, blogsArr }) => {
   if(!story) return null
   const {...rest} = story 
 
-  console.log('story', story)
-  console.log('blogsarr', blogsArr)
-
   return (
     <>
       <SeoSingleBlog 

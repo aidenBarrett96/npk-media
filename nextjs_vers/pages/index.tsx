@@ -7,7 +7,7 @@ import { ComponentArray } from "../components/components"
 import SeoDynamicSlug from "../components/utilities/seo/seoDynamicSlug"
 
 
-const HomePage = ({ data: story, testFetch }) => {
+const HomePage = ({ data: story }) => {
 // Set the type for the story and extract nessesary data
   const {...rest}: storyblokStory = story
   const seoContent = story.data.story.content.meta
@@ -42,12 +42,10 @@ export default HomePage
 // Query to get data from cms
 export const getStaticProps = async () => {
   const res = await storyblok.get('cdn/stories/home', {version: 'draft'})
-  const test = await storyblok.get('cdn/stories/', {version: 'draft'})
 
   return {
     props: {
       data: res,
-      testFetch: test
     }
   }
 }
