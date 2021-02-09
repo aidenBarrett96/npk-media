@@ -1,12 +1,13 @@
 const withPlugins = require('next-compose-plugins')
 const withImages = require('next-images')
+
+// remove before going live
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true'
+})
+
+
 const nextConfig = {
-  // webpack: (config, {isServer}) => {
-  //   if (isServer) {
-  //     require('./utils/sitemap.tsx')
-  //   }
-  //   return config
-  // }
   async rewrites() {
     return [
       {
@@ -17,22 +18,11 @@ const nextConfig = {
   }
 }
 
+
 module.exports = withPlugins([
-  withImages
+  [withImages],
+  [withBundleAnalyzer]
 ], nextConfig)
-
-
-
-
-// module.exports = {
-//     webpack: (config, {isServer}) => {
-//       if (isServer) {
-//         require('./utils/sitemap.tsx')
-//       }
-//       return config
-//     }
-//   },
-//   withImages({})
 
 // ,
   // { 
