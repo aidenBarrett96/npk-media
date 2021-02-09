@@ -33,6 +33,7 @@ const ContactForm:FC<ContactFormProps> = () => {
 		}
   })
 
+	//@ts-ignore
 	const { errorList, totalErrors } = useValidation(values);
 
 	const [showErrors, setShowErrors] = useState(false);

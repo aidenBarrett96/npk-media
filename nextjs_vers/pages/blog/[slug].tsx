@@ -9,6 +9,9 @@ const BlogRoute = ({ data: story, blogsArr }) => {
   if(!story) return null
   const {...rest} = story 
 
+  console.log('story', story)
+  console.log('blogsarr', blogsArr)
+
   return (
     <>
       <SeoSingleBlog 
@@ -34,7 +37,7 @@ export default BlogRoute
 
 
 export async function getStaticPaths() {
-  const res = await storyblok.get(`cdn/stories`, {
+  const res = await storyblok.get(`cdn/stories/?starts_with=blog/`, {
     version: 'draft',
     filter_query: {
       component: {
@@ -43,6 +46,7 @@ export async function getStaticPaths() {
     }
   })
 
+  
 
   const {data: {stories}} = res
 
@@ -53,7 +57,7 @@ export async function getStaticPaths() {
       }
     }
   ))
-
+console.log('thepaths', paths)
   return {
     paths,
     fallback: false

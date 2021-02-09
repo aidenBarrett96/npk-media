@@ -224,7 +224,12 @@ const contactPageSchema = {
       "contactType": "Enquiries"
    }]
 }
+/* title and desc
+Get in Touch or Send us an Enquiry | NPK Media
 
+Have an enquiry or want to discuss a potential project with us? Enquire today using the form or give us a call and we'll get back to you within 24 hours.
+
+*/
 
 const ourTeam = {
    "@context": "http://schema.org/", 

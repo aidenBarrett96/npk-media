@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://npk.media/npk-sitemap.xml

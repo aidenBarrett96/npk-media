@@ -1,6 +1,5 @@
 import style from './testimonial.module.scss'
 import {FC} from 'react'
-import Head from 'next/head'
 import SeoReviewSnippet from '../seo/seoReviewSnippet'
 
 interface TestimonialProps {

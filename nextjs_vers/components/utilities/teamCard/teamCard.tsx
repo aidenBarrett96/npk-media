@@ -25,6 +25,7 @@ const MembersPage:FC<MembersPageProps> = ({members}) => {
 				<MembersGrid memberClickHandler={memberClickHandler} focusedMember={focusedMember} team={members}/>
 				<AnimatePresence>
 					{focusedMember
+					//@ts-ignore
 						? <MemberPopup memberClickHandler={memberClickHandler} focusedMember={focusedMember} key={focusedMember._uid}/>
 						: null
 					}

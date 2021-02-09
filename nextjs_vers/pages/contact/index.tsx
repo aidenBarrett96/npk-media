@@ -12,7 +12,7 @@ import { storyblokStory } from "../../types/storyblok"
 const ContactPage = ({ data: story }) => {
   // Set the type for the story and extract nessesary data
   const {...rest}: storyblokStory = story
-  const seoContent = story.data.story.content.meta
+  // const seoContent = story.data.story.content.meta
 
   const [igUp, setIgUp] = useState(true)
   const [fbUp, setFbUp] = useState(false)
@@ -51,7 +51,7 @@ const ContactPage = ({ data: story }) => {
 
   return (
     <>
-      <SeoDynamicSlug content={seoContent}/>
+      {/* <SeoDynamicSlug content={seoContent}/> */}
       <Layout>
         <div className={style.pageWrap}>
           <main className={style.main}>
@@ -141,11 +141,11 @@ export default ContactPage
 
 
 // Query to get data from cms
-export const getStaticProps = async () => {
-  const res = await storyblok.get('cdn/stories/contact', {version: 'draft'})
-  return {
-    props: {
-      data: res
-    }
-  }
-}
+// export const getStaticProps = async () => {
+//   const res = await storyblok.get('cdn/stories/contact', {version: 'draft'})
+//   return {
+//     props: {
+//       data: res
+//     }
+//   }
+// }

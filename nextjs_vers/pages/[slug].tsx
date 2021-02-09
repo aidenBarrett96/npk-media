@@ -9,6 +9,8 @@ const DynamicPage = ({ data: story }) => {
   const { ...rest } = story || {}
   const seoContent = story.content.meta
 
+ 
+
   return (
     <>
       <SeoDynamicSlug content={seoContent}/>
@@ -42,11 +44,12 @@ export async function getStaticPaths() {
       slug
     }
   }))
-  
+
   return {
     paths,
     fallback: false
   }
+  
 }
 
 

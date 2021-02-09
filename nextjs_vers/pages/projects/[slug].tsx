@@ -6,7 +6,6 @@ import ContactSection from "../../components/utilities/contactSection/contactSec
 import FullWidthGallery from "../../components/utilities/fullWidthGallery/fullWidthGallery"
 import TwoColumnGallery from "../../components/utilities/twoColumnGallery/twoColumnGallery"
 import NextProjectOrArticle from "../../components/utilities/nextProjectOrArticle/nextProjectOrArticle"
-import Head from "next/head"
 import SeoProjectPage from "../../components/utilities/seo/seoProjectPage"
 
 
@@ -26,12 +25,12 @@ const ProjectsPages = ({ data: story }) => {
       <SeoProjectPage 
         title={story.content.project_title}
         description={story.content.problem}
-        image={story.content.featured_media.filename}
+        image={story.content.featured_media?.filename || '/fallback-img.png' }
       />
       <Layout>
         <div className={style.pageWrap}>
           <div className={style.hero}>
-            <img src={story.content.featured_media.filename} alt={story.content.featured_media.alt}/>
+            <img src={story.content.featured_media?.filename || null} alt={story.content.featured_media?.alt || null}/>
           </div>
           <h1 className={style.title}>{story.content.project_title}</h1>
           <div className={style.content}>
@@ -48,10 +47,13 @@ const ProjectsPages = ({ data: story }) => {
             <p className={style.tagsDesktop}>{story.content.project_tags || 'Branding, Videos, Social Media'}</p>
           </div>
 
+          {fullGal
+          ? <FullWidthGallery 
+              media={fullGal.media}
+            />
+          : <p>***Add images to the full width gallery for this project in the cms***</p>
+          }
 
-          <FullWidthGallery 
-            media={fullGal.media}
-          />
 
           <div className={style.xNarrowWidthDesktop}>
             <Testimonial 
@@ -65,9 +67,14 @@ const ProjectsPages = ({ data: story }) => {
             />
           </div>
           <div className={style.narrowWidthDesktop}>
-            <TwoColumnGallery 
+          
+          {twoColGal
+          ? <TwoColumnGallery 
               media={twoColGal.media}
             />
+          : <p>***Add images to the two column gallery for this project in the cms***</p>
+          }
+
           </div>
 
           <NextProjectOrArticle

@@ -5,7 +5,7 @@ interface ValidationProps {
 
 }
 
-
+	//@ts-ignore
 export const useValidation:FC<ValidationProps> = (values) => {
 	// set initial error list to empty
 	let errorList = {
@@ -13,7 +13,9 @@ export const useValidation:FC<ValidationProps> = (values) => {
 		email: [],
 	};
 
+	//@ts-ignore
 	isEmpty(values.name) && errorList.name.push('Please enter your name');
+		//@ts-ignore
 	!isEmail(values.email) && errorList.email.push('Please enter a valid email');
 
 	const total = errorList.name.length + errorList.email.length;

@@ -52,6 +52,7 @@ const MembersGrid:FC<MembersGridProps> = ({focusedMember, memberClickHandler, te
       {team.map((member) => (
         <MemberCard 
           member={member} 
+          //@ts-ignore
           focusedMember={focusedMember === member} 
           key={member._uid} 
           memberClickHandler={memberClickHandler}

@@ -14,6 +14,8 @@ import style from './blog.module.scss'
 const BlogPage = ({ data: story}) => {
   const {...rest}: storyblokStory = story
 
+  console.log('story index blog', rest)
+
   return (
     <>
       <Head>
@@ -36,7 +38,7 @@ export default BlogPage
 
 // get all blogs data
 export async function getStaticProps() {
-  const allBlogs = await storyblok.get('cdn/stories/?per_page=3&page=1&starts_with=blog/', { version: 'draft' })
+  const allBlogs = await storyblok.get('cdn/stories/?starts_with=blog/&per_page=3&page=1', { version: 'draft' })
   return {
     props: {
       data: allBlogs,

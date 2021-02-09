@@ -5,8 +5,8 @@ import Button from '../../button/button';
 
 
 interface AnimationButtonProps {
-	buttons: Array<any>,
-	animationProgress: any
+	buttons: any,
+	animationProgress: number
 }
 
 const AnimationButtons:FC<AnimationButtonProps> = ({ buttons, animationProgress }) => {
