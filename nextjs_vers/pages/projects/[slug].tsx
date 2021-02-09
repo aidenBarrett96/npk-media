@@ -37,7 +37,7 @@ const ProjectsPages = ({ data: story }) => {
           <div className={style.content}>
             <section className={style.intro}>
               
-              <p className={style.tagsMobile}>project tags. need to setup in cms</p>
+              <p className={style.tagsMobile}>{story.content.project_tags || 'Branding, Videos, Social Media'}</p>
         
               <h2>The Problem</h2>
               <p>{story.content.problem}</p>
@@ -45,7 +45,7 @@ const ProjectsPages = ({ data: story }) => {
               <h2>The Solution</h2>
               <p>{story.content.solution}</p>
             </section>
-            <p className={style.tagsDesktop}>project tags. need to setup in cms</p>
+            <p className={style.tagsDesktop}>{story.content.project_tags || 'Branding, Videos, Social Media'}</p>
           </div>
 
 

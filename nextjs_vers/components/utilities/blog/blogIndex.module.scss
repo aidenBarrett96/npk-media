@@ -2,6 +2,12 @@
 
 .allBlogs {
   padding: 40px 0 80px;
+
+  .left {
+    h3 {
+      padding-bottom: 40px;
+    }
+  }
 }
 
 
@@ -11,8 +17,12 @@
     display: flex;
     max-width: 800px;
     margin: auto;
-    h2 {
+    .left {
       width: 30%;
+      h3 {
+        width: 50%;
+        padding-bottom: 0;
+      }
     }
     .blogsGrid {
       width: 70%;

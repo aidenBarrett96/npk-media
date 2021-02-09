@@ -45,7 +45,9 @@ const BlogIndex:FC<BlogIndexProps> = ({content, perPage, total}) => {
     <>
       <FirstBlog firstBlog={data[0]}/> 
       <section className={style.allBlogs} id="mainBlogContent">
-        <h2>Latest Articles</h2>
+        <div className={style.left}>
+          <h3>Latest Articles</h3>
+        </div>
         <div className={style.blogsGrid}>
         <AllBlogsGrid allBlogs={data.slice(1)}/>
           <div className={style.pageBtns}>

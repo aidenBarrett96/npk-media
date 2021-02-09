@@ -22,11 +22,13 @@ const SeoProjectPage = ({title, description, image }) => {
             {
               "@context": "https://schema.org",
               "@type": "WebPage",
-              "mainEntity": { 
-                "type": "CreativeWork",
-                "about": "some description of the page"
+              "name": `${title}`,
+              "description": `${description}`,
+              "publisher": {
+                  "name": "NPK Media - All in one media agency.",
+                  "image": "https://npk.media/fallback_img.png"
               }
-           }
+          }
           )}}
         />
       </Head>

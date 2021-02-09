@@ -3,11 +3,38 @@
 .hero {
   text-align: center;
   padding-top: 80px;
+  max-width: 290px;
+  margin: auto;
+
+  .desktop {
+    display: none;
+  }
+  h1 {
+    font-size: 26px;
+    a {
+      color: #d43f34;
+      text-decoration: underline;
+    }
+  }
 }
 
 @media screen and (min-width: $desktop) {
   .pageWrap {
     max-width: 800px;
     margin: auto;
+    
+
+    .hero {
+      max-width: 800px;
+      padding-top: 113px;
+
+      .mobile {
+        display: none;
+      }
+      .desktop {
+        display: block;
+        padding-bottom: 48px;
+      }
+    }
   }
 }

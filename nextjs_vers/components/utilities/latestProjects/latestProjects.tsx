@@ -4,13 +4,14 @@ import ProjectCard from '../projectCard/projectCard'
 
 
 interface LatestProjectsProps {
-	projects: Array<any>
+	projects: Array<any>,
+	title: string
 }
 
-const LatestProjects:FC<LatestProjectsProps> = ({projects}) => {
+const LatestProjects:FC<LatestProjectsProps> = ({projects, title}) => {
 	return (
 		<div className={style.container}>
-			{/* <h2>{projects.title}</h2> */}
+			<h2>{title}</h2>
 			<div className={style.inner}>
 				{projects.map((project) => (
 					<ProjectCard project={project} key={project.title}/>					

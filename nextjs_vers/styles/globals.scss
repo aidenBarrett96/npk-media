@@ -11,7 +11,8 @@ body {
   padding: 0;
   margin: 0;
 	box-sizing: border-box;
-	font-family: Jubilat;
+	// font-family: Jubilat;
+  font-family: brandon-grotesque, sans-serif !important;
 	font-weight: 300;
 	font-size: 20px;
 	color: #000;
@@ -21,10 +22,12 @@ body {
   box-sizing: border-box;
   margin: 0;
 }
+.p-small {
+  font-size: 16px;
+}
 a {
   color: inherit;
   text-decoration: none;
-  font-size: inherit;
   font-family: inherit;
 }
 img, video {
@@ -32,13 +35,15 @@ img, video {
 }
 
 h1 {
-  font-size: 30px
+  font-size: 30px;
+  font-family: Jubilat;
 }
-h2, h3, h4 {
+h2, h3, h4, h5 {
   font-size: 20px;
+  font-family: Jubilat;
 }
 button, a {
-  // font-family: brandon-grotesque, sans-serif !important;
+  font-family: Jubilat;
   color: $primary;
   transition: all 0.4s ease;
 }
@@ -49,12 +54,12 @@ a:hover {
 
 .button-text__primary {
   font-weight: bold;
-  font-size: 0.6rem;
+  font-size: 12px;
 }
 
 .button-text__secondary {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 15px;
   color: #d43f34;
   text-transform: uppercase;
   text-decoration: underline;
@@ -67,6 +72,9 @@ section.hero {
 @media only screen and (min-width: 1024px) {
   html, body {
     font-size: 24px;
+  }
+  .p-small {
+    font-size: 20px;
   }
   h1 {
     font-size: 40px;

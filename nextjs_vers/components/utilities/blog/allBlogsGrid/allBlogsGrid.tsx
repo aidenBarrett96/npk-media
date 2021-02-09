@@ -11,11 +11,11 @@ const AllBlogsGrid:FC<AllBlogsGridProps> = ({ allBlogs }) => {
     <>
       {allBlogs.map((blog) => (
         <div key={blog.name} className={style.blog}>
-          <p className={style.tags}>{blog.content.tags}</p>
+          <p className={`${style.tags} p-small`}>{blog.content.tags}</p>
           <Link href={`/blog/${blog.slug}`}>
-            <a><h3>{blog.name}</h3></a>
+            <a><h2>{blog.name}</h2></a>
           </Link>
-          <p>
+          <p className="p-small">
             Written by {blog.content.author || 'someone at NPK Media'} on {/* */} 
             {
               new Date(blog.created_at)

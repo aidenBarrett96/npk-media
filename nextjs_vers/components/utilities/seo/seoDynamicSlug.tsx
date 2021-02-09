@@ -10,6 +10,7 @@ const SeoDynamicSlug = ({ content }) => {
   const description = content?.find(element => element.component === 'seo_description')
   const image = content?.find(element => element.component === 'seo_image')
   const markup = content?.find(element => element.component === 'json-ld_markup')
+  const otherMarkup = content?.find(element => element.component === 'json-ld_other_markup')
 
   return (
     <Head>
@@ -26,6 +27,11 @@ const SeoDynamicSlug = ({ content }) => {
         {markup
         ? <script type="application/ld+json">
             {markup.content}
+          </script>
+        : null}
+        {otherMarkup
+        ? <script type="application/ld+json">
+            {otherMarkup.content}
           </script>
         : null}
       </>

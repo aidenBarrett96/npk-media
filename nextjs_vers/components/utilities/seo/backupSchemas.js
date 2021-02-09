@@ -7,7 +7,6 @@
 */
 
 
-// need to double check which phone number is correct for all the markups
 
 const homepageSchema = {
   "@context": "https://schema.org",
@@ -16,7 +15,7 @@ const homepageSchema = {
   "image": "https://npk.media/placeholder.png",
   "@id":"https://npk.media",
   "url": "https://npk.media",
-  "telephone": "07375075214",
+  "telephone": "01513192439",
   "address": {
      "@type": "PostalAddress",
      "streetAddress": "G40, Ayrton House, Commerce Way",
@@ -43,6 +42,41 @@ const homepageSchema = {
   }
 }
 
+// used on homepage
+const siteLinks = {
+   "@context":"http://schema.org",
+   "@type":"ItemList",
+   "itemListElement":[
+      {
+         "@type":"SiteNavigationElement",
+         "position":1,
+         "name": "Home",
+         "description": "NPK Media, an all in one media agency.",
+         "url":"https://npk.media"
+      },
+      {
+         "@type":"SiteNavigationElement",
+         "position":2,
+         "name": "Video Production",
+         "description": "Video production Liverpool - Film, video and media producers",
+         "url":"https://npk.media/video-production-liverpool"
+      },
+      {
+         "@type":"SiteNavigationElement",
+         "position":3,
+         "name": "Web Design",
+         "description": "Web design and development Liverpool.",
+         "url":"https://npk.media/web-design-liverpool"
+      },
+      {
+         "@type":"SiteNavigationElement",
+         "position":4,
+         "name": "Social Media",
+         "description": "Social media content creation services.",
+         "url":"https://npk.media/social-media-content-creation-services"
+      }
+   ]
+ }
 
 const videosSchema = {
    "@context": "http://schema.org",
@@ -51,7 +85,7 @@ const videosSchema = {
    "areaServed": "Worldwide",
    "provider": {
       "@type": "LocalBusiness",
-      "name": "NPK Media",
+      "name": "NPK Media - Video production Liverpool",
       "@id": "https://npk.media",
       "address": {
          "@type": "PostalAddress",
@@ -66,14 +100,14 @@ const videosSchema = {
          "longitude": -2.950797
       },
       "image": "https://npk.media/fallback_img.png",
-      "telephone": "07375075214"
+      "telephone": "01513192439"
    },
    "availableChannel":{
       "@type": "ServiceChannel",
       "serviceUrl": "https://npk.media",
       "servicePhone": {
          "@type": "ContactPoint",
-         "telephone": "07375075214",
+         "telephone": "01513192439",
          "name": "NPK Media Phone Contact",
          "description": "Enquiries phone number for NPK Media",
          "contactType": "Enquiries",
@@ -94,7 +128,7 @@ const websitesSchema = {
    "areaServed": "Worldwide",
    "provider": {
       "@type": "LocalBusiness",
-      "name": "NPK Media",
+      "name": "NPK Media - Web design Liverpool",
       "@id": "https://npk.media",
       "address": {
          "@type": "PostalAddress",
@@ -109,14 +143,14 @@ const websitesSchema = {
          "longitude": -2.950797
       },
       "image": "https://npk.media/fallback_img.png",
-      "telephone": "07375075214"
+      "telephone": "01513192439"
    },
    "availableChannel": {
       "@type": "ServiceChannel",
       "serviceUrl": "https://npk.media",
       "servicePhone": {
          "@type": "ContactPoint",
-         "telephone": "07375075214",
+         "telephone": "01513192439",
          "name": "NPK Media Phone Contact",
          "description": "Enquiries phone number for NPK Media",
          "contactType": "Enquiries",
@@ -137,7 +171,7 @@ const socialMediaSchema = {
    "areaServed": "Worldwide",
    "provider": {
       "@type": "LocalBusiness",
-      "name": "NPK Media",
+      "name": "NPK Media - Social media services",
       "@id": "https://npk.media",
       "address": {
          "@type": "PostalAddress",
@@ -152,14 +186,14 @@ const socialMediaSchema = {
          "longitude": -2.950797
       },
       "image": "https://npk.media/fallback_img.png",
-      "telephone": "07375075214"
+      "telephone": "01513192439"
    },
    "availableChannel": {
       "@type": "ServiceChannel",
       "serviceUrl": "https://npk.media",
       "servicePhone": {
          "@type": "ContactPoint",
-         "telephone": "07375075214",
+         "telephone": "01513192439",
          "name": "NPK Media Phone Contact",
          "description": "Enquiries phone number for NPK Media",
          "contactType": "Enquiries",
@@ -192,13 +226,22 @@ const contactPageSchema = {
 }
 
 
+const ourTeam = {
+   "@context": "http://schema.org/", 
+   "@type": "AboutPage", 
+   "name":  "About Our Team | NPK Media", 
+   "description": "Our team consists of incredible individual talents which combine to create beautiful content.", 
+   "url": "https://npk.media/our-team"
+}
 
-
-// this ones not in the cms.. just finding the best type of content to put into it
-const projectschema = {
+// this ones not in the cms - it's added into the projects/[slug].tsx file
+const projectschema =             {
    "@context": "https://schema.org",
    "@type": "WebPage",
-   "mainEntity": { 
-      "about": "some description of the page"
+   "name": `${title}`,
+   "description": `${description}`,
+   "publisher": {
+       "name": "NPK Media - All in one media agency.",
+       "image": "https://npk.media/fallback_img.png"
    }
 }

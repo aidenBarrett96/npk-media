@@ -15,15 +15,15 @@
   }
   .intro {
     margin: 40px 0 8px;
-
+    h1 {
+      margin-bottom: 24px;
+    }
     .tags {
-      font-size:16px;
       color: #D43F34;
     }
   }
 
   .blogContent {
-
     h1, h2, h3, h4, h5 {
       padding: 0 0 16px;
     }
@@ -37,28 +37,6 @@
       padding: 16px 0;
     }
   }
-
-  // .next {
-  //   margin: 80px 0;
-  //   text-align: center;
-  //   display: flex;
-  //   justify-content: center;
-  //   flex-direction: column;
-  //   h2 {
-  //     font-size: 24px;
-  //   }
-  //   a {
-  //     margin: -24px auto 24px;
-  //   }
-  //   .nextLink {
-  //     margin-top: 24px;
-  //     .nextImage {
-  //       height: 146px;
-  //       width: 100%;
-  //       object-fit: cover;
-  //     }
-  //   }
-  // }
 
   @media screen and (min-width: $desktop) {
     padding-top: 32px;
@@ -74,13 +52,13 @@
     .intro {
       margin: 80px auto 32px;
       max-width: 700px;
+      h1 {
+        margin-bottom: 32px;
+      }
     }
     .blogContent {
       max-width: 700px;
       margin: auto; 
     }
-    // .next {
-    //   margin: 120px 0;
-    // }
   }
 }

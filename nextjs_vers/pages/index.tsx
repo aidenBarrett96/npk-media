@@ -17,8 +17,12 @@ const HomePage = ({ data: story }) => {
       <Layout>
         <div className={style.pageWrap}>
           <section className={style.hero}>
-            <h1>All in one media agency.<br/><br/>
+            <h1 className={style.mobile}>All in one media agency.<br/><br/>
               We elevate your brand with our expertise in&nbsp;
+              <Link href="/video-production-liverpool"><a>video</a></Link>, <Link href="/web-design-liverpool"><a>websites</a></Link> and <Link href="/social-media-content-creation-services"><a>social media</a></Link>
+            </h1>
+            <h1 className={style.desktop}>All in one media agency.<br/><br/>
+              We elevate your brand with our expertise<br/> in&nbsp;
               <Link href="/video-production-liverpool"><a>video</a></Link>, <Link href="/web-design-liverpool"><a>websites</a></Link> and <Link href="/social-media-content-creation-services"><a>social media</a></Link>
             </h1>
           </section>

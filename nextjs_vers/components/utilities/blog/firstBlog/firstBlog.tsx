@@ -24,7 +24,7 @@ const FirstBlog:FC<FirstBlogProps> = ({ firstBlog }) => {
           >
             <div className={style.latestBlog}>
               <p>{firstBlog.content.tags}</p>
-              <h1>{firstBlog.name}</h1> 
+              <h2>{firstBlog.name}</h2> 
             </div>
           </section>
         </a>
