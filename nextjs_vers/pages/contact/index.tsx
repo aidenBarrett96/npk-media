@@ -65,7 +65,7 @@ const ContactPage = () => {
                 {!mobile
                 ? <div>
                     <div className={style.socialIcons}>
-                      <a href='' onMouseOver={() => setIgUp(false)} onMouseLeave={() => setIgUp(true)}>
+                      <a href='https://www.instagram.com/npk_media/?hl=en' target="_blank" rel="noopener nofollow" onMouseOver={() => setIgUp(false)} onMouseLeave={() => setIgUp(true)}>
                         <Lottie 
                           options={config.instagram}
                           height={32}
@@ -73,7 +73,7 @@ const ContactPage = () => {
                           isStopped={igUp}
                         />  
                       </a>
-                      <a href='' onMouseOver={() => setFbUp(false)} onMouseLeave={() => setFbUp(true)}>
+                      <a href='https://www.facebook.com/NPKMedia/' target="_blank" rel="noopener nofollow" onMouseOver={() => setFbUp(false)} onMouseLeave={() => setFbUp(true)}>
                         <Lottie 
                           options={config.facebook}
                           height={32}
@@ -81,7 +81,7 @@ const ContactPage = () => {
                           isStopped={fbUp}
                         />  
                       </a>
-                      <a href='' onMouseOver={() => setVmUp(false)} onMouseLeave={() => setVmUp(true)}>
+                      <a href='https://vimeo.com/npkmedia' target="_blank" rel="noopener nofollow" onMouseOver={() => setVmUp(false)} onMouseLeave={() => setVmUp(true)}>
                         <Lottie 
                           options={config.vimeo}
                           height={32}
@@ -110,22 +110,20 @@ const ContactPage = () => {
                 ? <div>
                     <h2>Social Media</h2>
                     <div className={style.socialIcons}>
-                      <a href=''>
+                      <a href='https://www.instagram.com/npk_media/?hl=en' target="_blank" rel="noopener nofollow">
                         <Image src="/instagram.svg" alt="instagram logo" width="32" height="32"/>
                       </a>
-                      <a href=''> 
+                      <a href='https://www.facebook.com/NPKMedia/' target="_blank" rel="noopener nofollow"> 
                         <Image src="/facebook.svg" alt="facebook logo" width="32" height="32"/>
                       </a>
-                      <a href=''>
+                      <a href='https://vimeo.com/npkmedia' target="_blank" rel="noopener nofollow">
                         <Image src="/vimeo.svg" alt="vimeo logo"  width="32" height="32"/>
                       </a>
                     </div>
                   </div>
                 : null
               }
-
               
-            
             </section>
           </main>
         </div>

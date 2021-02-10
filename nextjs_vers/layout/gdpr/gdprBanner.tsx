@@ -23,7 +23,7 @@ const GdprBanner = () => {
 
   return (
     <div className={style.wrap}>
-      <p>We use cookies to improve our site.</p>
+      <p className="p-small">We use cookies to improve our site.</p>
       <div className={style.btns}>
         <Link href="/privacy-policy">
           <a>READ MORE</a>

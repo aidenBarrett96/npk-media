@@ -22,8 +22,9 @@ const MembersPage:FC<MembersPageProps> = ({members}) => {
   return (
     <div>
       <AnimateSharedLayout type="crossfade">
-				<MembersGrid memberClickHandler={memberClickHandler} focusedMember={focusedMember} team={members}/>
+				
 				<AnimatePresence>
+					<MembersGrid memberClickHandler={memberClickHandler} focusedMember={focusedMember} team={members}/>
 					{focusedMember
 					//@ts-ignore
 						? <MemberPopup memberClickHandler={memberClickHandler} focusedMember={focusedMember} key={focusedMember._uid}/>

@@ -34,7 +34,14 @@ const MemberCard:FC<MemberCardProps> = ({ member, memberClickHandler }) => {
           alt={`Profile image of ${member.name}`} 
           layoutId={member._uid}
         />
-        <motion.button onClick={() => memberClickHandler(member)} layoutId={`btnActive${member._uid}`}>+</motion.button>
+        <motion.div 
+          className={style.button}
+          layoutId={`btn_${member._uid}`}
+          onClick={() => memberClickHandler(member)}
+        >
+          <button>+</button>
+        </motion.div>
+        
       </div>
       <div className={style.nameRole}>
         <p>{member.name}</p>

@@ -3,6 +3,7 @@ import style from './menuButton.module.scss';
 import Lottie  from 'react-lottie';
 import animationData from '../../../assets/header/animations/menu-closed-icon.json';
 
+
 interface MenuButtonProps {
 	open: boolean,
 	setOpen: Dispatch<SetStateAction<boolean>>
