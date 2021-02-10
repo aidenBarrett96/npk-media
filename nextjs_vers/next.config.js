@@ -1,5 +1,11 @@
 const withPlugins = require('next-compose-plugins')
 const withImages = require('next-images')
+const nextImages = {
+  images: {
+    domains: ['a.storyblok.com']
+  }
+}
+
 
 // remove before going live
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
@@ -21,12 +27,6 @@ const nextConfig = {
 
 module.exports = withPlugins([
   [withImages],
-  [withBundleAnalyzer]
+  [withBundleAnalyzer],
+  [nextImages]
 ], nextConfig)
-
-// ,
-  // { 
-  //   images: {
-  //     domains: ['https://a.storyblok.com/'],
-  //   }
-  // }

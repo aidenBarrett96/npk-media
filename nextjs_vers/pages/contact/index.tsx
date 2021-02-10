@@ -5,18 +5,12 @@ import Lottie from 'react-lottie'
 import {useState} from 'react'
 import {useGetViewportWidth} from '../../hooks/viewport'
 import Image from 'next/image'
-import SeoDynamicSlug from "../../components/utilities/seo/seoDynamicSlug"
-import { storyblok } from "../../utils/storyblok/storyblok"
-import { storyblokStory } from "../../types/storyblok"
+import Head from "next/head"
 
-const ContactPage = ({ data: story }) => {
-  // Set the type for the story and extract nessesary data
-  const {...rest}: storyblokStory = story
-  // const seoContent = story.data.story.content.meta
-
+const ContactPage = () => {
   const [igUp, setIgUp] = useState(true)
-  const [fbUp, setFbUp] = useState(false)
-  const [vmUp, setVmUp] = useState(false)
+  const [fbUp, setFbUp] = useState(true)
+  const [vmUp, setVmUp] = useState(true)
 
   const isDesktop = useGetViewportWidth()
   const mobile = isDesktop.width < 960
@@ -51,7 +45,10 @@ const ContactPage = ({ data: story }) => {
 
   return (
     <>
-      {/* <SeoDynamicSlug content={seoContent}/> */}
+      <Head>
+        <title>Get in Touch or Send us an Enquiry | NPK Media</title>
+        <meta property="description" content="Have an enquiry or want to discuss a potential project with us? Enquire today using the form or give us a call and we'll get back to you within 24 hours."/>
+      </Head>
       <Layout>
         <div className={style.pageWrap}>
           <main className={style.main}>
@@ -138,14 +135,3 @@ const ContactPage = ({ data: story }) => {
 }
 
 export default ContactPage 
-
-
-// Query to get data from cms
-// export const getStaticProps = async () => {
-//   const res = await storyblok.get('cdn/stories/contact', {version: 'draft'})
-//   return {
-//     props: {
-//       data: res
-//     }
-//   }
-// }

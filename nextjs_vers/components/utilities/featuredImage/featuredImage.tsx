@@ -14,9 +14,12 @@ const FeaturedImage: FC<FeaturedImg> = ({image}) => {
   
   return (
     <div className={style.imageWrap}>
-      <img 
+      <Image 
         src={filename} 
         alt={alt} 
+        width={350}
+        height={87}
+        layout="intrinsic"
       />
     </div>
   )

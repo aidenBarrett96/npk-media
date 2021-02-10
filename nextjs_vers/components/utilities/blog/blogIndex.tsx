@@ -1,4 +1,4 @@
-import { useRef, useState, FC, useEffect } from 'react'
+import { useState, FC, useEffect } from 'react'
 import { storyblok } from '../../../utils/storyblok/storyblok'
 import ContactSection from '../contactSection/contactSection'
 import AllBlogsGrid from './allBlogsGrid/allBlogsGrid'

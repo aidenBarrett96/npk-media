@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React, {FC} from 'react';
 import Button from '../button/button';
 import style from './circleLinkWithCaption.module.scss';
@@ -21,7 +22,14 @@ const CircleLinkWithCaption:FC<CircleLinkProps> = ({title, button_text, link, im
 		<div className={style.container}>
 			<h2>{title}</h2>
 			{image
-				? <img src={image.filename} alt={image.alt} className={style.nextImage}/>
+				? <Image 
+						src={image.filename} 
+						alt={image.alt} 
+						className={style.nextImage}
+						width={312}
+						height={146}
+						layout="responsive"
+					/>
 				: null
 			}
 			<Button text={button_text} link={`/${link.cached_url}`} large />

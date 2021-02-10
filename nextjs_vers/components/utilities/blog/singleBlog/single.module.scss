@@ -5,7 +5,9 @@
 
   .blogHero {
     background:#EFEFEF;
-
+    height: 328px;
+    position:relative;
+    
     img {
       display: flex;
       height: 328px;
@@ -42,6 +44,9 @@
     padding-top: 32px;
 
     .blogHero {
+      height: 480px;
+      width: 960px;
+
       img {
         display: flex;
         height: 480px;

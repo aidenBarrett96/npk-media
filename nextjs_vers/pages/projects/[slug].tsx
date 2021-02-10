@@ -7,6 +7,7 @@ import FullWidthGallery from "../../components/utilities/fullWidthGallery/fullWi
 import TwoColumnGallery from "../../components/utilities/twoColumnGallery/twoColumnGallery"
 import NextProjectOrArticle from "../../components/utilities/nextProjectOrArticle/nextProjectOrArticle"
 import SeoProjectPage from "../../components/utilities/seo/seoProjectPage"
+import Image from "next/image"
 
 
 const ProjectsPages = ({ data: story }) => {
@@ -25,12 +26,17 @@ const ProjectsPages = ({ data: story }) => {
       <SeoProjectPage 
         title={story.content.project_title}
         description={story.content.problem}
-        image={story.content.featured_media?.filename || '/fallback-img.png' }
+        image={story.content.featured_media?.filename || '/fallback_img.png' }
       />
       <Layout>
         <div className={style.pageWrap}>
           <div className={style.hero}>
-            <img src={story.content.featured_media?.filename || null} alt={story.content.featured_media?.alt || null}/>
+            <Image 
+              src={story.content.featured_media?.filename || null} 
+              alt={story.content.featured_media?.alt || null}
+              layout="fill"
+              objectFit="cover"
+            />
           </div>
           <h1 className={style.title}>{story.content.project_title}</h1>
           <div className={style.content}>

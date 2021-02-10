@@ -27,7 +27,7 @@ const FullWidthGallery:FC<FullWidthGalleryProps> = ({media}) => {
                 </video>
               )
               : (
-                <img src={single.filename} />
+                <img src={single.filename} alt={single.alt}/>
               )
             }
           </div>

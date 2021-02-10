@@ -4,6 +4,7 @@ import {render} from 'storyblok-rich-text-react-renderer'
 // import Button from '../../button/button'
 import NextProjectOrArticle from '../../nextProjectOrArticle/nextProjectOrArticle'
 import {FC} from 'react'
+import Image from 'next/image'
 
 
 interface SingleBlogProps {
@@ -31,7 +32,11 @@ const SingleBlog:FC<SingleBlogProps> = ({position, content, stories}) => {
     <>
       <div className={style.singleBlog}>
         <section className={style.blogHero}>
-          <img src={content.image.filename} alt={content.image.alt} />
+          <Image 
+            src={content.image.filename} 
+            alt={content.image.alt} 
+            layout="fill"
+          />
         </section>
         <section className={style.intro}>
           <h1>{content.title}</h1>
