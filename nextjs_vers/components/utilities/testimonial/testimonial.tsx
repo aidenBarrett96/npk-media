@@ -1,6 +1,7 @@
 import style from './testimonial.module.scss'
 import {FC} from 'react'
 import SeoReviewSnippet from '../seo/seoReviewSnippet'
+import Image from 'next/image'
 
 interface TestimonialProps {
   company: {
@@ -29,7 +30,14 @@ const Testimonial:FC<TestimonialProps> = ({company, name, quote, role, align, ra
       <div className={style.reviewWrap} style={align}>
         <h2>"{quote}"</h2>
         {company.filename
-          ? <img src={company.filename} alt={company.alt}/>
+          ? <div className={style.img}>
+              <Image 
+                src={company.filename} 
+                alt={company.alt}
+                height={35}
+                width={64}
+              />
+            </div>
           : <div className={style.spacer} />
         }
         <h3>{name}</h3>
