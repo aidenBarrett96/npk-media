@@ -1,13 +1,18 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, FC } from 'react';
 import { Lottie } from '@crello/react-lottie';
-import t from 'prop-types';
-import cStyle from './animatedStory.module.scss';
-import AnimationButtons from './animationButtons';
-import Button from '../button';
+import style from './animatedStory.module.scss';
+import AnimationButtons from './animationButtons/animationButtons';
+
+
+interface AnimatedStoryProps {
+	animations: Array<any>,
+	buttons: any,
+	autoplay: boolean,
+}
 
 const getAnimationData = (animation: any) => JSON.parse(animation?.content[0]?.content[0]?.text)
 
-const AnimatedStory = (props) => {
+const AnimatedStory: FC<AnimatedStoryProps> = (props) => {
 	let { animations, buttons, autoplay } = props
 
 
@@ -70,12 +75,12 @@ const AnimatedStory = (props) => {
 			if (playingRef.current === 'stopped') {
 				setPlaying('playing'); // If the playing state is set to stopped then we know the animation is on the last step and we can restart it
 			} else {
-				console.log('not ready');
+				// console.log('not ready');
 			}
 		} else if (rtpRef.current) {
 			setProgress(progressRef.current + 1);
 		} else {
-			console.log('not ready');
+			// console.log('not ready');
 		}
 	};
 
@@ -93,11 +98,12 @@ const AnimatedStory = (props) => {
 		<div
 			onMouseEnter={attemptProgress}
 			onClick={attemptProgress}
-			className={cStyle.container}>
+			className={style.container}>
 			<Lottie
 				config={config}
 				height='350px'
 				width='350px'
+				// @ts-ignore
 				playingState={playing}
 				className='lottie-container'
 				lottieEventListeners={[
@@ -113,21 +119,6 @@ const AnimatedStory = (props) => {
 			)}
 		</div>
 	);
-};
-
-AnimatedStory.propTypes = {
-	/**
-	 * An array of JSON animation objects/ files, in the order they are to be played
-	 */
-	animations: t.arrayOf(t.object).isRequired,
-	/**
-	 * An array of buttons in the order to appear left to right, these buttons will show overlayed on the animation slightly
-	 */
-	buttons: t.arrayOf(t.object),
-	/**
-	 * Boolean to say wether the animation will progress right through automatically or need manual input
-	 */
-	autoplay: t.bool,
 };
 
 export default AnimatedStory;

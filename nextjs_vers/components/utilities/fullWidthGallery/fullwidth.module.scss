@@ -1,0 +1,17 @@
+.wrap {
+  padding: 0 0 40px 0;
+  .item {
+    padding-bottom: 16px;
+    display: flex;
+
+    img { 
+      margin: auto;
+    }
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+    video {
+      width:100%;
+    }
+  }
+}

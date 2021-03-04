@@ -1,0 +1,202 @@
+@import '../../../styles/variables';
+
+.navWrap {
+  position: absolute;
+  top: 0;
+  left: 0;    
+  width: 100%;
+  margin: 80px 0;    
+  background: white;
+  transition: all 0.4s ease;
+  opacity: 0;
+  visibility: hidden; 
+
+  &.navOpen {
+		opacity: 1;
+		visibility: visible;
+  }
+
+  .nav {
+    display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+    height: calc(100vh - 40px);
+		transform: translateY(-20px);
+		transition: all 0.4s ease-out;
+    padding-left: 32px;
+    position: relative;
+    
+    .navLink {
+      list-style: none;
+      position: relative;
+      margin-bottom: 22px;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 50px;
+      text-align: center;
+      transform: translateY(-40px);
+      
+      // all nav links
+      a {
+        color: #000;
+				text-align: center;
+				text-decoration: none;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-family: jubilat !important;
+				font-weight: normal;  
+        transition: all 0.4s ease-out;  
+        &:hover {
+          span {
+            display: block;
+            position: absolute;
+            background-color: #46444c;
+            left: 0;					
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            transition: all 0.4s ease-out;
+          }
+        }  
+      }
+      .activeNavLink {
+        span {
+          display: block;
+					position: absolute;
+          background-color: #46444c;
+          left: 0;					
+          right: 0;
+          bottom: 0;
+          height: 2px;
+        }
+      }
+
+      // Get in touch link
+      &:nth-child(6) {
+        a {
+          color: #DE4A3F !important;
+          &:hover {
+            color: #000 !important;
+            span {
+              background-color: #DE4A3F !important;
+            }
+          }
+        }
+        .activeNavLink {
+          span {
+            display: block;
+            position: absolute;
+            background-color: #DE4A3F;
+            left: 0;					
+            right: 0;
+            bottom: 0;
+            height: 2px;
+          }
+        }
+      }      
+      // last nav link
+      &:nth-child(7) {
+        margin-bottom:0;
+      }
+
+      img {
+        margin-right:15px;
+        width: 40px!important;
+        height: 40px;
+        align-items: center; 
+        justify-content: center;
+      }
+      .navIcon {
+        margin-right: 16px;
+      }
+			.videoIcon {
+        width: 30px;
+			}
+			.websitesIcon {
+				width: 18px;
+			}
+			.socialMediaIcon {
+				width: 26px;
+			}
+    }
+    // The lower links in the mobile menu
+    .mobileParts {
+      display:flex;
+      justify-content: space-between;
+      position: absolute;
+      bottom: 31px;
+      right: 32px;
+      left: 32px;
+
+      a, p {
+        color:#000;
+        margin:0;
+        font-size: 14px;
+        font-family: jubilat !important;
+      }
+    }
+  }
+
+  @media only screen and (min-width: $desktop) {
+		position: static;
+		opacity: 1;
+		visibility: visible;
+		width: auto;
+		margin: 0;
+    flex: 1;
+
+
+		.nav {
+			flex-direction: row;
+			height: auto;
+			transform: none !important;
+			align-items: center;
+			justify-content: space-between;
+			margin: 0;
+			max-width: fit-content;
+			padding-left: 0;
+			margin-left: auto;
+
+			.navLink {
+				font-size: 16px;
+        margin-bottom: 0;
+        margin-right: 30px;
+        transform: none;
+        &:last-child {
+          margin-right:0;
+        }
+        img {
+          margin-right: 10px;
+          width: 20px!important;
+          height: 20px;
+          align-items: center; 
+          justify-content: left;
+        }
+        .navIcon {
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          margin-right: 10px;
+        }
+				.videoIcon {
+					width: 20px;
+				}
+				.websitesIcon {
+					width: 11px;
+				}
+				.socialMediaIcon {
+					width: 18px;
+				}
+				span {
+					top: 80%;
+					z-index: 1;
+				}
+				
+			}
+		}
+	}
+}
+
+

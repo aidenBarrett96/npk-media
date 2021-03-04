@@ -1,0 +1,52 @@
+@import '../../../styles/variables';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 100px 0 80px;
+
+	h2 {
+		padding-bottom: 24px;
+		font-size: 24px;
+	}
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+
+    .image {
+      margin-bottom: 48px;
+      height: 146px;
+      width: 312px;
+      position: relative;
+    }
+  }
+
+	@media screen and (min-width: $desktop) {
+    padding: 120px 0;
+    
+    .inner {
+      width: 460px;
+      display: flex;
+      text-align: left;
+      flex-direction: row;
+      align-items: flex-start;
+
+      .image {
+        width: 400px;
+        height: 298px;
+        position: relative;
+      }
+      a {
+        position: absolute;
+        right: 0;
+        bottom: 24px;
+      }
+    }
+	}
+}

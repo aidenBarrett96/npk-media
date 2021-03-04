@@ -1,0 +1,69 @@
+@import '../../../../styles/variables';
+
+.singleBlog {
+  padding-top: 16px; 
+
+  .blogHero {
+    background:#EFEFEF;
+    height: 328px;
+    position:relative;
+    
+    img {
+      display: flex;
+      height: 328px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .intro {
+    margin: 40px 0 8px;
+    h1 {
+      margin-bottom: 24px;
+    }
+    .tags {
+      color: #D43F34;
+    }
+  }
+
+  .blogContent {
+    h1, h2, h3, h4, h5 {
+      padding: 0 0 16px;
+    }
+    p {
+      padding-bottom: 28px;
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+    }
+    img, video, svg {
+      padding: 16px 0;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 32px;
+
+    .blogHero {
+      height: 480px;
+      width: 960px;
+
+      img {
+        display: flex;
+        height: 480px;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .intro {
+      margin: 80px auto 32px;
+      max-width: 700px;
+      h1 {
+        margin-bottom: 32px;
+      }
+    }
+    .blogContent {
+      max-width: 700px;
+      margin: auto; 
+    }
+  }
+}
