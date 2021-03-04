@@ -47,14 +47,12 @@ export async function getStaticPaths() {
 
   const {data: {stories}} = res
 
-  const paths = stories.map(({slug}) => (
-    {
-      params: {
-        slug
-      }
+  const paths = stories.map(({slug}) => ({
+    params: {
+       slug
     }
-  ))
-console.log('thepaths', paths)
+  }))
+
   return {
     paths,
     fallback: false

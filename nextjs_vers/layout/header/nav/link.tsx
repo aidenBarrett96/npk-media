@@ -13,7 +13,8 @@ const CustomNavLink = ({ href, children }) => {
   let className = children.props.className || ''
 
   // apply active class if the pathname and href match
-  if (router.pathname === href) {
+  // for dynamic routes - if the query matches the href, apply active class
+  if (router.pathname === href || `/${router.query.slug}` === href) {
     className = `${className} ${style.activeNavLink}`
   }
 
