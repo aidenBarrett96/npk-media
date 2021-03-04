@@ -1,8 +1,7 @@
-import ContactSection from '../../contactSection/contactSection'
+import ContactSection from '../../../utilities/contactSection/contactSection'
 import style from './single.module.scss'
 import {render} from 'storyblok-rich-text-react-renderer'
-// import Button from '../../button/button'
-import NextProjectOrArticle from '../../nextProjectOrArticle/nextProjectOrArticle'
+import NextProjectOrArticle from '../../../utilities/nextProjectOrArticle/nextProjectOrArticle'
 import {FC} from 'react'
 import Image from 'next/image'
 
@@ -17,7 +16,7 @@ interface SingleBlogProps {
   },
   stories: Array<any>
 }
-
+ 
 const SingleBlog:FC<SingleBlogProps> = ({position, content, stories}) => {
 
   // get the next blog in the array. Each one is seperated by -10 in the cms.

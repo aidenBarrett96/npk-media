@@ -1,6 +1,6 @@
 import style from './testimonial.module.scss'
 import {FC} from 'react'
-import SeoReviewSnippet from '../seo/seoReviewSnippet'
+import SeoReviewSnippet from '../../misc/seo/seoReviewSnippet'
 import Image from 'next/image'
 
 interface TestimonialProps {
@@ -16,7 +16,6 @@ interface TestimonialProps {
   date_of_review: string
 }
 const Testimonial:FC<TestimonialProps> = ({company, name, quote, role, align, rating, date_of_review}) => {
-
 
   return (
     <>

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import style from './latest.module.scss'
+import style from './heroBlog.module.scss'
 import {FC} from 'react'
 
 

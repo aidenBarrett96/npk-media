@@ -6,7 +6,7 @@ import ContactSection from "../../components/utilities/contactSection/contactSec
 import FullWidthGallery from "../../components/utilities/fullWidthGallery/fullWidthGallery"
 import TwoColumnGallery from "../../components/utilities/twoColumnGallery/twoColumnGallery"
 import NextProjectOrArticle from "../../components/utilities/nextProjectOrArticle/nextProjectOrArticle"
-import SeoProjectPage from "../../components/utilities/seo/seoProjectPage"
+import SeoProjectPage from "../../components/misc/seo/seoProjectPage"
 import Image from "next/image"
 
 

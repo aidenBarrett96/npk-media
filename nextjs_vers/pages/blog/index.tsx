@@ -1,5 +1,5 @@
 import Head from "next/head"
-import BlogIndex from "../../components/utilities/blog/blogIndex"
+import BlogIndex from "../../components/page-specific/blog/index/blogIndex"
 import Layout from "../../layout/layout"
 import { storyblokStory } from "../../types/storyblok"
 import { storyblok } from "../../utils/storyblok/storyblok"
@@ -36,6 +36,7 @@ export default BlogPage
 
 // get all blogs data
 export async function getStaticProps() {
+  // initial array of blogs to show
   const allBlogs = await storyblok.get('cdn/stories/?starts_with=blog/&per_page=3&page=1', { version: 'draft' })
   return {
     props: {

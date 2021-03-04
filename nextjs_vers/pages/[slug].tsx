@@ -2,7 +2,7 @@ import { storyblok } from '../utils/storyblok/storyblok'
 import Layout from '../layout/layout'
 import { ComponentArray } from '../components/components'
 import style from './slug.module.scss'
-import SeoDynamicSlug from '../components/utilities/seo/seoDynamicSlug'
+import SeoDynamicSlug from '../components/misc/seo/seoDynamicSlug'
 
 const DynamicPage = ({ data: story }) => {
   if(!story) return null

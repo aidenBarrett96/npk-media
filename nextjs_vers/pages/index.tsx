@@ -4,7 +4,7 @@ import {storyblokStory} from '../types/storyblok'
 import style from './homepage.module.scss'
 import Link from "next/link"
 import { ComponentArray } from "../components/components"
-import SeoDynamicSlug from "../components/utilities/seo/seoDynamicSlug"
+import SeoDynamicSlug from "../components/misc/seo/seoDynamicSlug"
 
 
 const HomePage = ({ data: story }) => {
