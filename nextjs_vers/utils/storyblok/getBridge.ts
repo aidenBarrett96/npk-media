@@ -26,7 +26,7 @@ const getParam = (val: string) => {
   return result
 }
 
-export const useGetBridge = (): storyblokStory || null => {
+export const useGetBridge = (): storyblokStory  => {
   // Hold the current story in hook state
   const [story, setStory] = useState(null)
 

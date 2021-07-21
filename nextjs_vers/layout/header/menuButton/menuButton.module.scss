@@ -1,0 +1,26 @@
+@import '../../../styles/variables';
+
+/* Dont show menu button on large screen */
+.wrapper {
+	display: flex;
+	align-items: center;
+	font-size: 20px;
+	color: #46444c;
+	border: none;
+	background: none;
+	position: relative;
+	outline: none;
+	font-family: 'Brandon Grotesque Black';
+	font-size: 20px;
+	color: #46444c;
+	line-height: 0;
+
+	.anim {
+		width: 60px !important;
+		height: 80px !important;
+	}
+
+	@media only screen and (min-width: $desktop) {
+		display: none;
+	}
+}

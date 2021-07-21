@@ -1,0 +1,68 @@
+@import '../../../../../styles/variables';
+
+.pagination {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+
+  .btnsWrap {
+    display:flex; 
+    position: relative;
+    ul {
+      list-style: none;
+      margin: 0 auto;
+      padding:0;
+      display: flex;
+      white-space: nowrap;
+      overflow: hidden;   
+      width: 100%;
+      justify-content: center;    
+    }
+    span {
+      color: #d43f34;
+    }
+    button {
+      list-style: none;
+      font-size: 15px;
+      font-weight: bold;
+      background: none;
+      border: none;
+      color: #D43F34;
+      padding: 12px;
+      // margin: 0 12px;
+      &.active {
+        color: black;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .ellipses {
+      color: black;
+      padding: 0 0;
+      margin: 0;
+      &:hover {
+        cursor: default
+      }
+    }
+  }
+
+  // Previous/next buttons
+  .pageBtn {
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    background: #fff;
+    padding: 0;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .btnPrevious {
+    margin-right: 12px;
+  }
+  .btnNext {
+    margin-left: 24px;
+  }
+}
+

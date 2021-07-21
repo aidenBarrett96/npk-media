@@ -1,0 +1,8 @@
+@import '../../styles/variables';
+
+@media screen and (min-width: $desktop) {
+  .pageWrap {
+    max-width: 960px;
+    margin: auto;
+  }  
+}

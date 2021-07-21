@@ -1,0 +1,11 @@
+@import '/../styles/variables';
+
+.main {
+	margin: 0 auto 80px;
+	
+	@media screen and (max-width: $desktop) {
+		padding: 0 24px 0;
+		max-width: 800px;
+		margin: 80px auto 24px;
+	}
+}

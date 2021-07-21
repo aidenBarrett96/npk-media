@@ -1,0 +1,56 @@
+import socialMediaIcon from '../../../assets/header/social-media-icon.svg';
+import videosIcon from '../../../assets/header/videos-icon.svg';
+import websitesIcon from '../../../assets/header/websites-icon.svg';
+
+// navbar links - mapped through in Nav.tsx
+export const pageLinks = [
+  {
+    title: 'Home',
+    path: '/',
+    imgSrc: null,
+    imgAlt: null,
+    imgCName: null,
+  },
+  {
+    title: 'Videos',
+    path: '/video-production-liverpool',
+    imgSrc: videosIcon,
+    imgAlt: 'Videos icon',
+    imgCName: 'videoIcon',
+  },
+  {
+    title: 'Social Media',
+    path: '/social-media-content-creation-services',
+    imgSrc: socialMediaIcon,
+    imgAlt: 'Social media icon',
+    imgCName: 'socialMediaIcon',
+  },
+  {
+    title: 'Websites',
+    path: '/web-design-liverpool',
+    imgSrc: websitesIcon,
+    imgAlt: 'Websites icon',
+    imgCName: 'websitesIcon',
+  },
+  {
+    title: 'Our Team',
+    path: '/our-team',
+    imgSrc: null,
+    imgAlt: null,
+    imgCName: null,
+  },
+  {
+    title: 'Get in Touch',
+    path: '/contact',
+    imgSrc: null,
+    imgAlt: null,
+    imgCName: null,
+  },
+  {
+    title: 'Blog',
+    path: '/blog',
+    imgSrc: null,
+    imgAlt: null,
+    imgCName: null,
+  }
+]

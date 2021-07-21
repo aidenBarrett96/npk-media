@@ -1,0 +1,27 @@
+.hero {
+  padding: 21px 0 0;
+}
+.content {
+  padding-top: 8px;
+
+  h1, h2, h3, h4, h5 {
+    padding: 32px 0 16px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  p {
+    padding-bottom: 0;
+  }
+  button {
+    margin: 20px 0 32px;
+    font-size: 15px;
+    font-weight: bold;
+    border: solid 2px #D43F34;
+    background: none;
+    padding: 8px 20px;
+  }
+}

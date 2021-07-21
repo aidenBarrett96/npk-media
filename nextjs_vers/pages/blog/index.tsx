@@ -1,52 +1,46 @@
-import Link from "next/link"
-import Layout from "../../components/layout/layout"
+import Head from "next/head"
+import BlogIndex from "../../components/page-specific/blog/index/blogIndex"
+import Layout from "../../layout/layout"
+import { storyblokStory } from "../../types/storyblok"
 import { storyblok } from "../../utils/storyblok/storyblok"
-
-const BlogPage = ({ data: story }) => {
-  if(!story) return null
-
-  return (
-    <Layout>
-      <div>
-        blog page
-        <hr/>
-        {/* all relevant data loaded with getStaticProps to build out the page soon */}
-        <BlogLinks data={story}/>
-
-        <hr/>
-      </div>
-    </Layout>
-  )
-}
-
-export default BlogPage
+import style from './blog.module.scss'
 
 
-// get all blogs data 
-export async function getStaticProps() {
-  const allBlogs = await storyblok.get('cdn/stories/?starts_with=blog/', { version: 'draft' })
-
-  return {
-    props: {
-      data: allBlogs
-    }
-  }
-}
+/* *******************************************************************************************************************
+      set per_page in the get request below and components/utilities/blog/blogIndex for the page changes
+*********************************************************************************************************************** */
 
 
-// component to map out the blog urls
-const BlogLinks = ({data: story}) => {
-  const {...rest} = story
+const BlogPage = ({ data: story}) => {
+  const {...rest}: storyblokStory = story
 
   return (
     <>
-        {rest.data.stories.map((link) => (
-          <div key={link.name}>
-            <Link href={`/blog/${link.slug}`}>
-              <a>{link.name}</a>
-            </Link>
-          </div>
-        ))}
+      <Head>
+        <title>NPK Media Blog</title>
+      </Head>
+      <Layout>      
+        <div className={style.pageWrap}>
+          <BlogIndex 
+            content={story.data.stories}
+            perPage={story.perPage}
+            total={story.total}
+          />
+        </div>
+      </Layout>
     </>
-  ) 
+  )
+}
+export default BlogPage
+
+
+// get all blogs data
+export async function getStaticProps() {
+  // initial array of blogs to show
+  const allBlogs = await storyblok.get('cdn/stories/?starts_with=blog/&per_page=3&page=1', { version: 'draft' })
+  return {
+    props: {
+      data: allBlogs,
+    }
+  }
 }

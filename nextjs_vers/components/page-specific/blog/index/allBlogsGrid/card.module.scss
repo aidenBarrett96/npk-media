@@ -1,0 +1,19 @@
+@import '../../../../../styles/variables';
+
+
+.blog {
+  padding-bottom: 40px;
+  h2 {
+    color: black;
+    margin: 8px 0 16px;
+  }
+  .tags {
+    color: #D43F34
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .blog {
+    padding-bottom: 80px;
+  }
+}

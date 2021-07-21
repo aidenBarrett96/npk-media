@@ -1,44 +1,102 @@
-import { ComponentArray } from "../../components/components"
-import Layout from "../../components/layout/layout"
+import Layout from "../../layout/layout"
 import { storyblok } from "../../utils/storyblok/storyblok"
-import ContentWithImages from '../../components/utilities/contentWithImages'
+import style from './project.module.scss'
+import Testimonial from "../../components/utilities/testimonial/testimonial"
+import ContactSection from "../../components/utilities/contactSection/contactSection"
+import FullWidthGallery from "../../components/utilities/fullWidthGallery/fullWidthGallery"
+import TwoColumnGallery from "../../components/utilities/twoColumnGallery/twoColumnGallery"
+import NextProjectOrArticle from "../../components/utilities/nextProjectOrArticle/nextProjectOrArticle"
+import SeoProjectPage from "../../components/misc/seo/seoProjectPage"
+import Image from "next/image"
+
 
 const ProjectsPages = ({ data: story }) => {
   if(!story) return null
   const {...rest} = story
 
-  console.log(story)
+  // extract the data for components
+  const nextProject = rest.content.internal_link && rest.content.internal_link[0] || null
+  const testimonial = rest.content.testimonial && rest.content.testimonial[0] || null
+  const fullGal = rest.content.content_section.find(nameIs => nameIs.component === 'full_width_gallery');
+  const twoColGal = rest.content.content_section.find(nameIs => nameIs.component === '2_column_gallery');
 
 
   return (
-    <Layout>
-      <section>
-        <img src={rest.content.featured_media.filename} alt={rest.content.featured_media.alt} />
-        <h1>{rest.content.project_title}</h1>
-        <p>{rest.type_of_work || '*project tags here* need adding on cms'}</p>
-        {/* <ContentWithImages props={story}/> */}
-      </section>
-      
-      <section>
-        <h2>The problem</h2>
-        <p>{rest.content.problem}</p>
-        <h2>The solution</h2>
-        <p>{rest.content.solution}</p>
-      </section>
-
-      <section>
-        Other content (reviews and 2 image sections), needs components
-      </section>
-
-      <section>
-        {rest.content.internal_link.map((link) => (
-          <div>
-            <h3>{link.title}</h3>
-            
+    <>
+      <SeoProjectPage 
+        title={story.content.project_title}
+        description={story.content.problem}
+        image={story.content.featured_media?.filename || '/fallback_img.png' }
+      />
+      <Layout>
+        <div className={style.pageWrap}>
+          <div className={style.hero}>
+            <Image 
+              src={story.content.featured_media?.filename || null} 
+              alt={story.content.featured_media?.alt || null}
+              layout="fill"
+              objectFit="cover"
+            />
           </div>
-        ))}
-      </section>
-    </Layout>
+          <h1 className={style.title}>{story.content.project_title}</h1>
+          <div className={style.content}>
+            <section className={style.intro}>
+              
+              <p className={style.tagsMobile}>{story.content.project_tags || 'Branding, Videos, Social Media'}</p>
+        
+              <h2>The Problem</h2>
+              <p>{story.content.problem}</p>
+
+              <h2>The Solution</h2>
+              <p>{story.content.solution}</p>
+            </section>
+            <p className={style.tagsDesktop}>{story.content.project_tags || 'Branding, Videos, Social Media'}</p>
+          </div>
+
+          {fullGal
+          ? <FullWidthGallery 
+              media={fullGal.media}
+            />
+          : <p>***Add images to the full width gallery for this project in the cms***</p>
+          }
+
+
+          <div className={style.xNarrowWidthDesktop}>
+            <Testimonial 
+              align={{textAlign: "left"}}
+              company={testimonial.company}
+              name={testimonial.name}
+              quote={testimonial.quote}
+              role={testimonial.role}
+              rating={testimonial.rating}
+              date_of_review={testimonial.date_of_review}
+            />
+          </div>
+          <div className={style.narrowWidthDesktop}>
+          
+          {twoColGal
+          ? <TwoColumnGallery 
+              media={twoColGal.media}
+            />
+          : <p>***Add images to the two column gallery for this project in the cms***</p>
+          }
+
+          </div>
+
+          <NextProjectOrArticle
+            link={nextProject.link}
+            button_text={nextProject.button_text}
+            title="Next Project"
+            image={nextProject.Image}
+          />
+          <section className={style.contact}>
+            <ContactSection
+              text="Want to work with us?"
+            />
+          </section>
+        </div>
+      </Layout>
+    </>
   )
 }
 export default ProjectsPages
@@ -65,8 +123,7 @@ export async function getStaticPaths() {
       }
     }
   ))
-    // console.log(paths)
-    console.log({stories})
+
   return {
     paths,
     fallback: false

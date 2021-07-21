@@ -2,12 +2,13 @@ import React, {createElement, FC} from 'react'
 import AnimatedStory from './utilities/animatedStory/animatedStory'
 import ComponentNotFound from './misc/componentNotFound/componentNotFound'
 import {storyblokComponent} from '../types/storyblok'
-import LatestProjects from './utilities/latestProjects'
+import LatestProjects from './utilities/latestProjects/latestProjects'
 import RichText from './utilities/richText/richText'
-import CircleLinkWithCaption from './utilities/circleLinkWithCaption'
-import OtherServices from './utilities/otherServices'
-import TeamCard from './utilities/teamCard'
+import CircleLinkWithCaption from './utilities/circleLinkWithCaption/circleLinkWithCaption'
+import OtherServices from './utilities/otherServices/otherServices'
+import TeamCard from './utilities/teamCard/teamCard'
 import FeaturedImage from './utilities/featuredImage/featuredImage'
+import Testimonial from './utilities/testimonial/testimonial'
 
 const componentList = {
     'animated_story': AnimatedStory,
@@ -17,6 +18,7 @@ const componentList = {
     'other_services': OtherServices,
     'team_members': TeamCard,
     'featured_image': FeaturedImage,
+    'testimonial': Testimonial
 }
 
 const getComponent = (componentName: string) => {
@@ -29,7 +31,7 @@ interface componentProps {
 
 export const Component: FC<componentProps> = ({component}) => {
     const {component: componentName, ...rest} = component
-    console.log('componentName', componentName)
+    // console.log('componentName', componentName)
     return createElement(getComponent(componentName), {component: componentName, ...rest})
 }
 

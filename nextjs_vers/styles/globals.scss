@@ -11,28 +11,39 @@ body {
   padding: 0;
   margin: 0;
 	box-sizing: border-box;
-	font-family: Jubilat;
+	// font-family: Jubilat;
+  font-family: brandon-grotesque, sans-serif !important;
 	font-weight: 300;
 	font-size: 20px;
 	color: #000;
-
-	@media only screen and (min-width: 1024px) {
-		font-size: 24px;
-	}
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+}
+.p-small {
+  font-size: 16px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  font-family: inherit;
+}
+img, video {
+  max-width: 100%;
 }
 
-button,
-a {
-  font-family: brandon-grotesque, sans-serif !important;
+h1 {
+  font-size: 30px;
+  font-family: Jubilat;
+}
+h2, h3, h4, h5 {
+  font-size: 20px;
+  font-family: Jubilat;
+}
+button, a {
+  font-family: Jubilat;
   color: $primary;
   transition: all 0.4s ease;
 }
@@ -43,12 +54,12 @@ a:hover {
 
 .button-text__primary {
   font-weight: bold;
-  font-size: 0.6rem;
+  font-size: 12px;
 }
 
 .button-text__secondary {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 15px;
   color: #d43f34;
   text-transform: uppercase;
   text-decoration: underline;
@@ -57,3 +68,71 @@ a:hover {
 section.hero {
   margin-bottom: 30px;
 }
+
+@media only screen and (min-width: 1024px) {
+  html, body {
+    font-size: 24px;
+  }
+  .p-small {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 404 page
+.notFoundWrap {
+  padding: 114px 0 113px;
+
+  .notFoundInner {
+    text-align: center;
+    padding-top: 80px;
+
+    p {
+      padding: 16px 0 24px;
+    }
+    a {
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 960px) {
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
+    margin: auto;
+    img, div {
+      width: 50%;
+    }
+  }
+}
+
+
+
